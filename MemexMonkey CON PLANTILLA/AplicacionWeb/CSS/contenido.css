@@ -1,0 +1,99 @@
+﻿a
+{
+    display: block;
+}
+
+a img:hover
+{
+    opacity: 0.9;
+}
+
+#contenido
+{
+    /* Es para limitar el tamano del contenido y que tenga su scroll pero tengo que programar su funcionamiento.
+    overflow-y: auto;
+    height: 1000px;
+    max-height: 1000px;
+    */
+
+    /* Es para efectos de pruebas en navegadores. */
+    height: 1000px;
+}
+
+.default, .error, .imagen, .imagen a
+{
+    width: 600px;
+    max-width: 600px;
+}
+
+.default, .individuales, .error{
+    margin: 0 auto;
+}
+
+/* TODO. Quitar esta declaracion cuando se una el backend y front end */
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+.default h3, .default h4, .default h5, .default h6, .individuales h3, .individuales h4, .individuales h5, .individuales h6, .error h3, .error h4, .error h5, .error h6
+{
+    color: gray;
+    text-align: justify;
+}
+
+.imagen
+{
+    margin-bottom: 50px;
+}
+
+.imagen img
+{
+    border: solid 20px black;
+    width: 560px;
+}
+
+.imagen h2, h3{
+    display: block !important;
+}
+
+/* Individuales */
+.individuales
+{
+    width: 90%;
+}
+
+.imagenIndividual, .imagenIndividual img
+{
+    width: 100%;
+}
+/* Termina individuales */
+
+/* Errores */
+.error img{
+    width: 100%;
+}
+/* Termina errores */
+
+/* Control para subir archivos */
+.fileUploadControl
+{
+    width: 500px;
+}
+
+.mensajeError
+{
+    color: red;
+}
+
+.mensajeCorrecto{
+    color: green;
+}
+/* Termina control para subir archivos */
+
+/* Facebook */
+.fb-comments 
+{
+    background-color: #333 !important;
+}
+/* Termina Facebook */

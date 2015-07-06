@@ -1,0 +1,29 @@
+@media all and (min-width: 540px) and (max-width: 599px) {
+
+#headerContenido, #section, #footer{
+	width: 540px;
+}
+
+#navEquipos{
+	height: 40px;
+}
+
+#sectionIzquierda, #sectionDerecha{
+	display: none;
+}
+
+#sectionContenido{
+	width: auto; 
+	margin-right: 0;
+	padding: 20px;
+}
+
+#humanstxt{
+	width: 70%;
+}
+
+#header, #section, #footer{
+	color: gold !important;
+}
+
+}

@@ -1,0 +1,25 @@
+@media all and (min-width: 1024px) and (max-width: 1079px) {
+
+#headerContenido, #section, #footer{
+	width: 1024px;
+}
+
+#section{
+	height: 1100px;
+}
+
+#sectionIzquierda{
+	height: 100px;
+	width: 100%;
+}
+
+#sectionContenido{
+	padding: 20px 50px;
+	margin-right: 24px;
+}
+
+#header, #section, #footer{
+	color: orange !important;
+}
+
+}
