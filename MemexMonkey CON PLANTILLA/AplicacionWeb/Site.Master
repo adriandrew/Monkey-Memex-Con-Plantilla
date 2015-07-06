@@ -86,7 +86,7 @@
            <%-- <form runat="server">--%>
 		        <div id="headerLogin">
                     <asp:ContentPlaceHolder ID="cphLogin" runat="server">     
-                        <%--    <div id="statusUsuario"                
+                            <div id="statusUsuario"                
         <asp:LoginView ID="LoginView" runat="server">
                             <AnonymousTemplate>
                                 <asp:Login ID="Login" runat="server" DestinationPageUrl="~/Default.aspx" Orientation="Horizontal" UserNameLabelText="Usuario:" FailureText="Error, intenta de nuevo por favor.">
@@ -139,7 +139,7 @@
                                 <asp:LinkButton ID="lnkEnviarAporteMiembros" runat="server" PostBackUrl="EnviarAporte">Enviar Aporte</asp:LinkButton>
                             </LoggedInTemplate>
                         </asp:LoginView>                  
-    </div>--%>
+    </div>
                     </asp:ContentPlaceHolder>
 		        </div>
           <%--  </form>--%>

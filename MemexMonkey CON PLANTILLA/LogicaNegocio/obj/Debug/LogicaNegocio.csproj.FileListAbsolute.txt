@@ -1,0 +1,19 @@
+C:\Users\SYS21-VIII\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\SYS21-VIII\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\SYS21-VIII\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\SYS21-VIII\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\SYS21-VIII\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Andrew\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Andrew\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Andrew\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\Administrator\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Administrator\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Administrator\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Administrator\Documents\GitHub\MonkeyMemex\MemexMonkey\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
