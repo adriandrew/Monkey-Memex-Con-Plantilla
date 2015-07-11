@@ -82,9 +82,14 @@
 			<div id="headerTexto">
 				<h1>MeMex</h1>
 			</div>
+            <div id="mostrarLogin">
+                <a href="IniciarSesion.aspx" id="logoLogin" class ="iframe" onmouseover="InvocarFancyboxLogin()">
+				    <img src="Images/estatus.png">
+			    </a>
+            </div>
 
            <%-- <form runat="server">--%>
-		        <div id="headerLogin">
+<%--		        <div id="headerLogin">
                     <asp:ContentPlaceHolder ID="cphLogin" runat="server">     
                             <div id="statusUsuario"                
         <asp:LoginView ID="LoginView" runat="server">
@@ -141,7 +146,7 @@
                         </asp:LoginView>                  
     </div>
                     </asp:ContentPlaceHolder>
-		        </div>
+		        </div>--%>
           <%--  </form>--%>
 
 			<div id="headerCompartir">

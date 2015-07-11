@@ -49,6 +49,32 @@ function InvocarFancybox() {
 
 }
 
+function InvocarFancyboxLogin() {
+
+    //Aplicando efectos a todos los enlaces con el id iframe.
+
+    $("a.iframe").fancybox({
+
+        'width': '50%',
+
+        'height': '20%',
+
+        'autoScale': false,
+
+        'transitionIn': 'elastic',
+
+        'transitionOut': 'elastic',
+
+        'overlayOpacity': '.8',
+
+        'overlayColor': 'black',
+
+        'type': 'iframe'
+
+    });
+
+}
+
 window.onload = function ()
 {
 
