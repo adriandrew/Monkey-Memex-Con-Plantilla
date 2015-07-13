@@ -32,6 +32,8 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute ( "ControlarErrores", "Error", "~/Error.aspx" );
 
+            rutas.MapPageRoute("IniciarSesion", "IniciarSesion", "~/IniciarSesion.aspx");
+
         }
 
         protected void Application_Start(object sender, EventArgs e)

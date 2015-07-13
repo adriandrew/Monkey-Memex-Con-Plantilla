@@ -13,6 +13,26 @@ namespace AplicacionWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Membership.GetUser() == null)
+            {
+
+                // Se redirecciona .
+                lnkEnviarAporteNoMiembros.PostBackUrl = "../Registrarse";
+
+                // Se cambia la imagen si el usuario no esta loggueado.
+                imagenStatus.Src = "Images/estatusFuera.png";
+
+            }
+            else
+            {
+
+                lnkEnviarAporteNoMiembros.PostBackUrl = "../EnviarAporte";
+
+                // Se cambia la imagen si el usuario esta loggueado.
+                imagenStatus.Src = "Images/estatusDentro.png";
+
+            }          
+
         }
 
     }

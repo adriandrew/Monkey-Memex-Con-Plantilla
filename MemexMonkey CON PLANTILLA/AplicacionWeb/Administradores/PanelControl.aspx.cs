@@ -10,12 +10,12 @@ namespace AplicacionWeb.Administradores
 {
     public partial class PanelControl : System.Web.UI.Page
     {
-
+        
         #region Eventos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             if ( User.IsInRole ( "Administradores" ) )
 
                 AdministrarImagenes();

@@ -16,6 +16,14 @@ namespace AplicacionWeb.Miembros
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Membership.GetUser() != null)
+            {
+
+                 // Esta funcion se invoca desde el lado del servidor, se tiene que registrar el script.
+                ScriptManager.RegisterStartupScript(this, GetType(), "", "parent.jQuery.fancybox.close();", true);
+
+            }
+
         }
 
         protected void CreateUserWizard_CreatedUser(object sender, EventArgs e)

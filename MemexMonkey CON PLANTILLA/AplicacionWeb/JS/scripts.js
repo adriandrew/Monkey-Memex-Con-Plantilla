@@ -25,7 +25,7 @@ function MuestraOculta ( id )
 
 function InvocarFancybox() {
 
-    //Aplicando efectos a todos los enlaces con el id iframe.
+    // Aplicando efectos a todos los enlaces con el id iframe.
 
     $ ( "a.iframe" ) .fancybox ( {
 
@@ -49,23 +49,23 @@ function InvocarFancybox() {
 
 }
 
-function InvocarFancyboxLogin() {
+function InvocarFancybox(ancho, alto, autoescala, opacidad) {
 
-    //Aplicando efectos a todos los enlaces con el id iframe.
+    // Aplicando efectos a todos los enlaces con el id iframe.
 
     $("a.iframe").fancybox({
 
-        'width': '50%',
+        'width': ancho,
 
-        'height': '20%',
+        'height': alto,
 
-        'autoScale': false,
+        'autoScale': autoescala,
 
         'transitionIn': 'elastic',
 
         'transitionOut': 'elastic',
 
-        'overlayOpacity': '.8',
+        'overlayOpacity': opacidad,
 
         'overlayColor': 'black',
 

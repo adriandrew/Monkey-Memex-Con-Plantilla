@@ -76,19 +76,18 @@
 
         <header id="header">
 		    <div id="headerContenido">
-			<a href="http://www.memex.net" title="Memex" id="logo">
-				<img src="Images/logo.png">
+			<a href="./Inicio" title="Memex" id="logo">
+				<img src="Images/logo.png"/>
 			</a>
 			<div id="headerTexto">
 				<h1>MeMex</h1>
 			</div>
-            <div id="mostrarLogin">
-                <a href="IniciarSesion.aspx" id="logoLogin" class ="iframe" onmouseover="InvocarFancyboxLogin()">
-				    <img src="Images/estatus.png">
+            <div id="mostrarLogin" runat="server">
+                <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(640, 85, false, .8)">
+				    <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
 			    </a>
             </div>
-
-           <%-- <form runat="server">--%>
+           <%-- <form runat="server"> --%>
 <%--		        <div id="headerLogin">
                     <asp:ContentPlaceHolder ID="cphLogin" runat="server">     
                             <div id="statusUsuario"                
@@ -147,8 +146,7 @@
     </div>
                     </asp:ContentPlaceHolder>
 		        </div>--%>
-          <%--  </form>--%>
-
+          <%--  </form> --%>
 			<div id="headerCompartir">
 				<ul>
 					<li><a href="http://www.facebook.com" title="Facebook" id="facebook"></a></li>
@@ -157,6 +155,9 @@
 					<li><a href="http://www.instagram.com" title="Instagram" id="instagram"></a></li>
 				</ul>
 			</div> <!-- end headerCompartir -->
+            <div id="enviarAporte">
+                <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
+            </div>
 			<nav id="navPrincipal">
 				<ul>
 					<li><a href="#" id="ahora">Ahora</a></li>
