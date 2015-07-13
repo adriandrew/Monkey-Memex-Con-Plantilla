@@ -1,0 +1,147 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 960px;
+	 height: 475px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Colorused373737 
+{ 
+	 left: -30px; 
+	 top: -28px; 
+	 position: absolute; 
+	 width: 1020px;
+	 height: 768px;
+	 z-index:1;
+} 
+
+ #outercircel 
+{ 
+	 left: 603px; 
+	 top: 211px; 
+	 position: absolute; 
+	 width: 53px;
+	 height: 53px;
+	 z-index:2;
+} 
+
+ #inactive 
+{ 
+	 left: 608px; 
+	 top: 216px; 
+	 position: absolute; 
+	 width: 44px;
+	 height: 44px;
+	 z-index:3;
+} 
+
+ #hover 
+{ 
+	 left: 608px; 
+	 top: 216px; 
+	 position: absolute; 
+	 width: 44px;
+	 height: 44px;
+	 z-index:4;
+} 
+
+ #active 
+{ 
+	 left: 608px; 
+	 top: 216px; 
+	 position: absolute; 
+	 width: 44px;
+	 height: 44px;
+	 z-index:5;
+} 
+
+ #arrow 
+{ 
+	 left: 620px; 
+	 top: 230px; 
+	 position: absolute; 
+	 width: 21px;
+	 height: 16px;
+	 z-index:6;
+} 
+
+ #Forgotyourpassword 
+{ 
+	 left: 321px; 
+	 top: 292px; 
+	 position: absolute; 
+	 width: 133px;
+	 height: 14px;
+	 z-index:7;
+} 
+
+ #inputfield 
+{ 
+	 left: 321px; 
+	 top: 243px; 
+	 position: absolute; 
+	 width: 308px;
+	 height: 40px;
+	 z-index:8;
+} 
+
+ #layer_9 
+{ 
+	 left: 331px; 
+	 top: 261px; 
+	 position: absolute; 
+	 width: 60px;
+	 height: 5px;
+	 z-index:9;
+} 
+
+ #Password 
+{ 
+	 left: 245px; 
+	 top: 256px; 
+	 position: absolute; 
+	 width: 65px;
+	 height: 13px;
+	 z-index:10;
+} 
+
+ #inputfield_0 
+{ 
+	 left: 321px; 
+	 top: 193px; 
+	 position: absolute; 
+	 width: 308px;
+	 height: 40px;
+	 z-index:11;
+} 
+
+ #johnsmithstrategysof 
+{ 
+	 left: 330px; 
+	 top: 206px; 
+	 position: absolute; 
+	 width: 209px;
+	 height: 16px;
+	 z-index:12;
+} 
+
+ #Email 
+{ 
+	 left: 272px; 
+	 top: 206px; 
+	 position: absolute; 
+	 width: 38px;
+	 height: 13px;
+	 z-index:13;
+} 
