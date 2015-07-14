@@ -44,7 +44,7 @@
                                                                 <td colspan="6" style="color:Red;">
                                                                     <asp:CheckBox ID="RememberMe" runat="server" ForeColor="Black" Text="Recordar la próxima vez." />
                                                                     <asp:Literal ID="FailureText" runat="server"></asp:Literal>
-                                                                    <asp:LinkButton ID="LinkButton" runat="server" Font-Overline="False" PostBackUrl="Registrarse">Registrarse</asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButton" runat="server" Font-Overline="False" PostBackUrl="Registrarse" OnClientClick="parent.CerrarFancyboxYRedireccionar('Registrarse');">Registrarse</asp:LinkButton>
                                                                 </td>
                                                             </tr>
                                                         </table>

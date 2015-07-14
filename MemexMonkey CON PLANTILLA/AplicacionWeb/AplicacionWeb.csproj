@@ -139,8 +139,11 @@
     <Content Include="Images\Equipos\tijuana.png" />
     <Content Include="Images\Equipos\toluca.png" />
     <Content Include="Images\Equipos\veracruz.png" />
+    <Content Include="Images\estatusDentro.png" />
+    <Content Include="Images\estatusFuera.png" />
     <Content Include="Images\icoInfo.png" />
     <Content Include="Images\icoNew.png" />
+    <Content Include="Images\iconoBusqueda.png" />
     <Content Include="Images\icoWarning.png" />
     <Content Include="Images\Ligas\LogoEspañola.png" />
     <Content Include="Images\Ligas\LogoLibertadores.png" />

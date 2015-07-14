@@ -68,7 +68,7 @@
         <p class="chromeframe">Estas usando una version <strong>muy antigua</strong> de navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
 	<![endif]-->
 
- <form runat="server">
+ <form runat="server" id="busqueda">
 
    	<div id="principal">
            
@@ -82,6 +82,7 @@
 			<div id="headerTexto">
 				<h1>MeMex</h1>
 			</div>
+
             <div id="mostrarLogin" runat="server">
                 <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(640, 85, false, .8)">
 				    <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
@@ -146,7 +147,10 @@
     </div>
                     </asp:ContentPlaceHolder>
 		        </div>--%>
-          <%--  </form> --%>
+          <%--  </form> --%>    
+            <div id="enviarAporte">
+                <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
+            </div> <!-- end enviarAporte -->
 			<div id="headerCompartir">
 				<ul>
 					<li><a href="http://www.facebook.com" title="Facebook" id="facebook"></a></li>
@@ -155,9 +159,6 @@
 					<li><a href="http://www.instagram.com" title="Instagram" id="instagram"></a></li>
 				</ul>
 			</div> <!-- end headerCompartir -->
-            <div id="enviarAporte">
-                <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
-            </div>
 			<nav id="navPrincipal">
 				<ul>
 					<li><a href="#" id="ahora">Ahora</a></li>
@@ -166,9 +167,9 @@
 					<li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
 				</ul> 
 			</nav> <!-- end navPrincipal -->
-			<!-- busqueda 
-			<input type="search" id="busqueda" placeholder="Buscar">
-			-->
+			<!-- busqueda -->
+<%--			<input type="search" id="busqueda" size="40" placeholder="Buscar"/>--%>
+
 			<nav id="navEquipos">
 				<ul>
 					<li><a href="#" title="América" id="america"></a></li>
@@ -195,7 +196,13 @@
 	    </header>
 
         <section id="section">
-		<section id="sectionIzquierda"></section>
+		<section id="sectionIzquierda">
+            <%--<form method="get" action="/search" id="search">--%>
+                <input name="q" type="text" size="40" placeholder="Buscar..." />
+            <%--</form>--%>
+
+
+		</section>
 
         <section id="sectionContenido">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        

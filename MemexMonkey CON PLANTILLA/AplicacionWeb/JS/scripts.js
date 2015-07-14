@@ -86,6 +86,18 @@ window.onload = function ()
 
 }
 
+function CerrarFancyboxYRedireccionar(url) {
+
+    $.fancybox.close();
+
+    window.location = url;
+
+    // Esta instruccion hace lo mismo, pero va en algun evento (onclick, onmouseover, etc.) del control (boton, link, etc.).
+    // self.parent.location.href = 'Registrarse'
+
+}
+
+
 // TODO. Intento de flappy bird al iniciar la pagina de error.
 //$(document).ready(function () {
 
