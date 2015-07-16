@@ -34,6 +34,8 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute("IniciarSesion", "IniciarSesion", "~/IniciarSesion.aspx");
 
+            rutas.MapPageRoute("Busqueda", "Busqueda", "~/Busqueda.aspx");
+
         }
 
         protected void Application_Start(object sender, EventArgs e)

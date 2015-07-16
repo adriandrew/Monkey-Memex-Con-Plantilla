@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administradores\PanelControl.aspx" />
+    <Content Include="Busqueda.aspx" />
     <Content Include="Controles\SubirArchivo.ascx" />
     <Content Include="Css\1024-1080.css" />
     <Content Include="Css\1080-1152.css" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Administradores\PanelControl.aspx.designer.cs">
       <DependentUpon>PanelControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda.aspx.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Busqueda.aspx.designer.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controles\SubirArchivo.ascx.cs">
       <DependentUpon>SubirArchivo.ascx</DependentUpon>

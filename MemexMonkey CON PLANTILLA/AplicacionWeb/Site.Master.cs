@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 
 namespace AplicacionWeb
 {
@@ -16,8 +17,8 @@ namespace AplicacionWeb
             if (Membership.GetUser() == null)
             {
 
-                // Se redirecciona .
-                lnkEnviarAporteNoMiembros.PostBackUrl = "../Registrarse";
+                // Se redirecciona si es que no está loggueado.
+                lnkEnviarAporteNoMiembros.PostBackUrl = "Registrarse";
 
                 // Se cambia la imagen si el usuario no esta loggueado.
                 imagenStatus.Src = "Images/estatusFuera.png";
@@ -26,12 +27,23 @@ namespace AplicacionWeb
             else
             {
 
-                lnkEnviarAporteNoMiembros.PostBackUrl = "../EnviarAporte";
+                // Se redirecciona para que pueda enviar aportes.
+                lnkEnviarAporteNoMiembros.PostBackUrl = "EnviarAporte";
 
-                // Se cambia la imagen si el usuario esta loggueado.
+                // Se cambia la imagen si el usuario esta loggueado, obviamente hasta que se recargue la pagina.
                 imagenStatus.Src = "Images/estatusDentro.png";
 
             }          
+
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            //txtBusqueda.Text = "prueba";
+            AplicacionWeb.Busqueda.TextoBusqueda = txtBusqueda.Text;
+
+            this.Response.Redirect("Busqueda");
 
         }
 
