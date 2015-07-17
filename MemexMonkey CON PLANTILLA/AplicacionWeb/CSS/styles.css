@@ -228,15 +228,19 @@ img{
 	margin-right: 25px;
 }
 
-#busqueda {
+.formulario {
 
 }
 
-#busqueda input[type="text"] {
-    background: url(../Images/iconoBusqueda.png) no-repeat 10px 6px #444;
+.formulario #txtBusqueda{
+    background: url(../Images/lupa.png) no-repeat 10px 6px #6e6e6e;
+}
+
+.formulario input[type="text"], input[type="password"], select {
+    background: 10px 6px #6e6e6e;
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
-    color: #777;
+    color: white !important;
     width: 100px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
@@ -252,7 +256,7 @@ img{
     transition: all 0.7s ease 0s;
 }
 
-#busqueda input[type="text"]:focus {
+.formulario input[type="text"]:focus, input[type="password"]:focus {
     width: 150px;
 }
 /* Termina Section Izquierda */

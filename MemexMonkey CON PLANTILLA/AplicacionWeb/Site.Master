@@ -68,7 +68,7 @@
         <p class="chromeframe">Estas usando una version <strong>muy antigua</strong> de navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
 	<![endif]-->
 
- <form runat="server" id="busqueda" method="post">
+ <form runat="server" id="form1" method="post" class="formulario">
 
    	<div id="principal">
            

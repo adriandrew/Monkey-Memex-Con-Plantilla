@@ -40,6 +40,8 @@ namespace AplicacionWeb
 
             var htmlImagenes = new StringBuilder();
 
+            string inyectarImagenes = string.Empty;
+
             Entidades.ImagenesAspNet_Users imagenes = new Entidades.ImagenesAspNet_Users();
 
             List<Entidades.ImagenesAspNet_Users> listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
@@ -52,7 +54,7 @@ namespace AplicacionWeb
                 if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
                 {
 
-                    VerificarArchivoImagen(htmlImagenes, elementoImagenes);
+                   inyectarImagenes += VerificarArchivoImagen(htmlImagenes, elementoImagenes);
 
                 }
                 else if (!string.IsNullOrEmpty(elementoImagenes.EnlaceExterno))
@@ -64,9 +66,11 @@ namespace AplicacionWeb
 
             }
 
+            imagenesBusqueda.InnerHtml = inyectarImagenes;
+
         }
 
-        private void VerificarArchivoImagen(StringBuilder htmlImagenes, Entidades.ImagenesAspNet_Users elementoImagenes)
+        private string VerificarArchivoImagen(StringBuilder htmlImagenes, Entidades.ImagenesAspNet_Users elementoImagenes)
         {
 
             string idImagen = elementoImagenes.IdImagen.ToString();
@@ -105,6 +109,8 @@ namespace AplicacionWeb
 
             string lastActivityDate = elementoImagenes.LastActivityDate.ToString();
 
+            string inyectarImagen = string.Empty;
+
             System.IO.DirectoryInfo directorio = new System.IO.DirectoryInfo(HttpContext.Current.Server.MapPath(directorioRelativo));
 
             if (directorio.Exists)
@@ -136,13 +142,13 @@ namespace AplicacionWeb
 
                         string contenidoDivImagen = string.Format("{0}{1}{2}{3}{4}", tituloImagen, nombreUsuario, fechaPublicacionImagen, linkImagen, etiquetas);
 
-                        string imagen = string.Format("<div class={0}>{1}</div>", "imagen", contenidoDivImagen);
+                        inyectarImagen = string.Format("<div class={0}>{1}</div>", "imagen", contenidoDivImagen);
 
                         // TODO. Pendiente optimizar y checar que se inyecten todas las imagenes buscadas, no nadamas una.
                         // Falta un return al metodo principal y despues hacer el innerhtml.
                         //htmlImagenes.AppendFormat(imagen);
 
-                        imagenesBusqueda.InnerHtml = imagen;
+                        //imagenesBusqueda.InnerHtml = inyectarImagen;
 
                         esArchivoEncontrado = true;
 
@@ -173,7 +179,7 @@ namespace AplicacionWeb
 
             }
 
-          
+            return inyectarImagen;
 
         }
 

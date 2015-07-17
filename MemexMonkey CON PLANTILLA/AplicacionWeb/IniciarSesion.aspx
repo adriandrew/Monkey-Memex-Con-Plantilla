@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title></title>    
+    <link rel="stylesheet" type="text/css" href="Css/styles.css"/>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="formulario">
         
         <div id="headerLogin">
             <div id="statusUsuario">              

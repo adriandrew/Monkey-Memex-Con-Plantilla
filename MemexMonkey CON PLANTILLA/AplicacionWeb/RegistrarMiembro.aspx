@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <asp:CreateUserWizard ID="CreateUserWizard" runat="server" OnCreatedUser="CreateUserWizard_CreatedUser" CreateUserButtonText="Registrarse" DuplicateEmailErrorMessage="La dirección de correo que ha especificado ya está en uso. Especifique una diferente por favor." DuplicateUserNameErrorMessage="Especifique un nombre de usuario diferente por favor." InvalidAnswerErrorMessage="Especifique una respuesta de seguridad diferente por favor." InvalidEmailErrorMessage="Especifique una dirección de correo electrónico válida por favor." InvalidPasswordErrorMessage="Longitud mínima de contraseña: {0}. Se requieren caracteres no alfanuméricos: {1}." InvalidQuestionErrorMessage="Especifique una pregunta de seguridad diferente por favor." UnknownErrorMessage="La cuenta no se ha creado. Inténtelo de nuevo por favor.">
+    <asp:CreateUserWizard ID="CreateUserWizard" runat="server" OnCreatedUser="CreateUserWizard_CreatedUser" CreateUserButtonText="Registrarse" DuplicateEmailErrorMessage="La dirección de correo que ha especificado ya está en uso. Especifique una diferente por favor." DuplicateUserNameErrorMessage="Especifique un nombre de usuario diferente por favor." InvalidAnswerErrorMessage="Especifique una respuesta de seguridad diferente por favor." InvalidEmailErrorMessage="Especifique una dirección de correo electrónico válida por favor." InvalidPasswordErrorMessage="Longitud mínima de contraseña: {0}. Se requieren caracteres no alfanuméricos: {1}." InvalidQuestionErrorMessage="Especifique una pregunta de seguridad diferente por favor." UnknownErrorMessage="La cuenta no se ha creado. Inténtelo de nuevo por favor." Width="100%">
     <WizardSteps>
         <asp:CreateUserWizardStep runat="server">
             <ContentTemplate>
-                <table>
+                <table style="width:100%;">
                     <tr>
                         <td align="center" colspan="2">Regístrese para obtener una nueva cuenta</td>
                     </tr>
@@ -79,7 +79,7 @@
         </asp:CreateUserWizardStep>
         <asp:CompleteWizardStep runat="server">
             <ContentTemplate>
-                <table>
+                <table style="width:100%;">
                     <tr>
                         <td align="center">Completar</td>
                     </tr>

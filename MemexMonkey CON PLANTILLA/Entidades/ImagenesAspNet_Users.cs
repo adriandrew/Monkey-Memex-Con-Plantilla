@@ -366,7 +366,7 @@ namespace Entidades
             try
             {
 
-                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 AND (Imagenes.EtiquetasBasicas LIKE '%'+@etiquetasBasicas+'%' OR Imagenes.Titulo LIKE '%'+@titulo+'%') ORDER BY FechaPublicacion DESC";
+                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 AND ( Imagenes.EtiquetasBasicas LIKE '%'+@etiquetasBasicas+'%' OR Imagenes.EtiquetasOpcionales LIKE '%'+@etiquetasOpcionales+'%' OR Imagenes.Titulo LIKE '%'+@titulo+'%' ) ORDER BY FechaPublicacion DESC";
 
                 SqlCommand comando = new SqlCommand();
 
@@ -375,6 +375,8 @@ namespace Entidades
                 comando.CommandText = sql;
 
                 comando.Parameters.AddWithValue("@etiquetasBasicas", textoBusqueda);
+
+                comando.Parameters.AddWithValue("@etiquetasOpcionales", textoBusqueda);
 
                 comando.Parameters.AddWithValue("@titulo", textoBusqueda);
 
