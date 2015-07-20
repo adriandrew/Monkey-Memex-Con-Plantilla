@@ -37,7 +37,7 @@ namespace AplicacionWeb
 
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void btnBusqueda_Click(object sender, EventArgs e)
         {
 
             //txtBusqueda.Text = "prueba";

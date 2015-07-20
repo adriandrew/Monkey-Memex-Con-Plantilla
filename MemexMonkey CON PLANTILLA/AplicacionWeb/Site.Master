@@ -88,8 +88,7 @@
 				    <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
 			    </a>
             </div>
-           <%-- <form runat="server"> --%>
-<%--		        <div id="headerLogin">
+                <%-- <form runat="server"> --%><%--		        <div id="headerLogin">
                     <asp:ContentPlaceHolder ID="cphLogin" runat="server">     
                             <div id="statusUsuario"                
         <asp:LoginView ID="LoginView" runat="server">
@@ -146,8 +145,7 @@
                         </asp:LoginView>                  
     </div>
                     </asp:ContentPlaceHolder>
-		        </div>--%>
-          <%--  </form> --%>    
+		        </div>--%>          <%--  </form> --%>    
             <div id="enviarAporte">
                 <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
             </div> <!-- end enviarAporte -->
@@ -167,8 +165,6 @@
 					<li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
 				</ul> 
 			</nav> <!-- end navPrincipal -->
-			<!-- busqueda -->
-<%--			<input type="search" id="busqueda" size="40" placeholder="Buscar"/>--%>
 
 			<nav id="navEquipos">
 				<ul>
@@ -197,24 +193,22 @@
 
         <section id="section">
 		<section id="sectionIzquierda">
-            <%--<form method="get" action="/search" id="search">--%>
-            <%--<input name="q" type="text" size="40" placeholder="Buscar..." />--%>
-            <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
-            <%--</form>--%>
-
-
+            <div id="busqueda">
+                <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
+                <asp:Button ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
+            </div> <!-- end busqueda -->
+            <nav id="navPublicidad"></nav>
 		</section>
 
         <section id="sectionContenido">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        
-<%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--%>        
-        </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        
+                <%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--%>        
+            </asp:ContentPlaceHolder>
         </section>
 
 		<section id="sectionDerecha">
@@ -259,8 +253,7 @@
 		<aside id="asideFondo">
 			<img src="Images/map.png">
 		</aside>
-	</footer>--%>
-         
+	</footer>--%>         
     <%--</div> <!-- end contenido -->--%>
 
 	</div> <!-- Termina Principal -->

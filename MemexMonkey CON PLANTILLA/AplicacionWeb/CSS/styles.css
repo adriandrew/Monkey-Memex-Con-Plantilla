@@ -5,8 +5,12 @@ body{
 	background-position: top;
     background-attachment: fixed;
 	margin: 0 auto;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 	/*overflow-y: hidden !important;*/ 
+}
+
+input, textarea{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
 body, html {
@@ -207,14 +211,14 @@ img{
 	background-color: rgba(0, 0, 0, 0.2);	
 }
 
-#sectionIzquierda, #sectionDerecha li{
+#sectionIzquierda nav, #sectionDerecha li{
 	background-color: rgba(0, 0, 0, 0.5);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
 }
 
-#sectionIzquierda:hover, #sectionDerecha li:hover{
-	background-color: white;
+#sectionIzquierda nav:hover, #sectionDerecha li:hover{
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 #sectionIzquierda, #sectionContenido, #sectionDerecha{
@@ -228,12 +232,44 @@ img{
 	margin-right: 25px;
 }
 
-.formulario {
-
+#navPublicidad, #busqueda{
+	width: auto;
 }
 
-.formulario #txtBusqueda{
+#busqueda{
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+
+#navPublicidad{
+    height: 920px;
+}
+
+#busqueda:hover, #navPublicidad:hover{
+    background-color: black;
+	opacity: 0.7;
+}
+
+#txtBusqueda{
+    width: 150px;
     background: url(../Images/lupa.png) no-repeat 10px 6px #6e6e6e;
+}
+
+#txtBusqueda:focus {
+    background-color: lightgray;
+    color: black !important;
+}
+
+#btnBusqueda{
+    width: 200px;
+    height: 35px;
+    background-color: black;
+    color: white;
+}
+
+#btnBusqueda:hover {
+    background-color: rgb(27, 27, 27);
 }
 
 .formulario input[type="text"], input[type="password"], select {
@@ -250,10 +286,27 @@ img{
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    -webkit-transition: all 0.7s ease 0s;
-    -moz-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
-    transition: all 0.7s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.formulario input[type="submit"]{
+    background-color: #6e6e6e;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22); 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44); 
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .formulario input[type="text"]:focus, input[type="password"]:focus {

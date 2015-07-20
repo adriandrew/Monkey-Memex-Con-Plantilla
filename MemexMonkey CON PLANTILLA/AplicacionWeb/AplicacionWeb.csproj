@@ -155,6 +155,7 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\estatus.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\lupa.png" />
     <Content Include="Images\map.png" />
     <Content Include="Images\monkey.png" />
     <Content Include="Images\nocturn.png" />

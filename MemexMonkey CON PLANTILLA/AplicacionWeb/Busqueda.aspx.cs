@@ -66,7 +66,18 @@ namespace AplicacionWeb
 
             }
 
-            imagenesBusqueda.InnerHtml = inyectarImagenes;
+            if (string.IsNullOrEmpty(inyectarImagenes)) 
+            {
+
+                imagenesBusqueda.InnerHtml = "<p>No se encontraron resultados con esta busqueda :(</p><br/><br/><p>Intenta una nueva busqueda por favor.</p>";
+
+            }
+            else
+            {
+
+                imagenesBusqueda.InnerHtml = inyectarImagenes;
+
+            }
 
         }
 
