@@ -108,8 +108,13 @@ img{
 	margin-left: 10px;
 }
 
-#headerTexto{
+#headerTexto, #nombreUsuario{
 	float: left;
+    height: inherit;
+}
+
+#nombreUsuarioTexto {
+    padding-left: 10px;
 }
 
 #mostrarLogin{

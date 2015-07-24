@@ -22,6 +22,18 @@ namespace AplicacionWeb
 
                 // Se cambia la imagen si el usuario no esta loggueado.
                 imagenStatus.Src = "Images/estatusFuera.png";
+                
+                imagenStatus.Alt = "Usuario Anonimo";
+
+                // TODO. Cambiar contrasena.
+                //string username = "andrew";
+                //string password = "andrew";
+                //MembershipUser mu = Membership.GetUser(username);
+                //mu.ChangePassword(mu.ResetPassword(), password);
+
+                imagenStatus.Attributes.Add("title", "Usuario Anonimo");
+
+                nombreUsuarioTexto.InnerText = "Hola Usuario Anonimo";
 
             }
             else
@@ -32,6 +44,14 @@ namespace AplicacionWeb
 
                 // Se cambia la imagen si el usuario esta loggueado, obviamente hasta que se recargue la pagina.
                 imagenStatus.Src = "Images/estatusDentro.png";
+
+                string nombreUsuarioActual = HttpContext.Current.User.Identity.Name;
+
+                imagenStatus.Alt = nombreUsuarioActual;
+
+                imagenStatus.Attributes.Add("title",  nombreUsuarioActual);
+
+                nombreUsuarioTexto.InnerText = "Hola " + nombreUsuarioActual;
 
             }          
 

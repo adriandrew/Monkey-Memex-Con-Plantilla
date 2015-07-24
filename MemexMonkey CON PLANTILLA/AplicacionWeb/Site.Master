@@ -82,6 +82,9 @@
 			<div id="headerTexto">
 				<h1>MeMex</h1>
 			</div>
+            <div id="nombreUsuario">
+				<p id="nombreUsuarioTexto" runat="server">Hola</p>
+			</div>
 
             <div id="mostrarLogin" runat="server">
                 <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(640, 85, false, .8)">
