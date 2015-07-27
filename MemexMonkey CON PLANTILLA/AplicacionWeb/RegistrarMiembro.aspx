@@ -66,7 +66,7 @@
                     </tr>
                     <tr>
                         <td align="center" colspan="2">
-                            <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="Contraseña y Confirmar contraseña deben coincidir." ValidationGroup="CreateUserWizard"></asp:CompareValidator>
+                            <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="Contraseña y Confirmar contraseña deben coincidir." ValidationGroup="CreateUserWizard" ForeColor="Orange"></asp:CompareValidator>
                         </td>
                     </tr>
                     <tr>

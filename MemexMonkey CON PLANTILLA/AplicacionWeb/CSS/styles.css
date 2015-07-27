@@ -269,8 +269,6 @@ img{
 #btnBusqueda{
     width: 200px;
     height: 35px;
-    background-color: black;
-    color: white;
 }
 
 #btnBusqueda:hover {
@@ -279,9 +277,9 @@ img{
 
 .formulario input[type="text"], input[type="password"], select {
     background: 10px 6px #6e6e6e;
+    color: white !important;
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
-    color: white !important;
     width: 100px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
@@ -298,7 +296,11 @@ img{
 }
 
 .formulario input[type="submit"]{
-    background-color: #6e6e6e;
+    /*background-color: #6e6e6e;*/
+    background-color: rgb(41, 40, 40) !important;
+    color: white !important;
+    /*width: calc(100% + 25px) !important;*/
+    border: gray 2px solid !important;
     font: bold 12px Arial,Helvetica,Sans-serif;
     text-shadow: 1px 1px 1px rgba(255,255,255, .22); 
     -webkit-border-radius: 10px;
@@ -329,7 +331,6 @@ img{
 	background-color: rgba(255, 255, 255, 0.5);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
-
 }
 
 #sectionContenido:hover{
@@ -572,3 +573,20 @@ img{
 	height: 70%;
 }
 /* ---------------------------- Termina Tecnologias -------------------------- */
+
+
+/* ---------------------------- Otros -------------------------- */
+
+#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton, #ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
+    height: 30px;
+}
+
+#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton{
+    width: 90px;
+}
+
+#ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
+    width: 80px;
+}
+
+/* ---------------------------- Termina Otros -------------------------- */

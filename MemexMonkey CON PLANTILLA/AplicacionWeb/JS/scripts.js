@@ -23,6 +23,8 @@ function MuestraOculta ( id )
 
 }
 
+// Metodo obsoleto.
+
 function InvocarFancybox() {
 
     // Aplicando efectos a todos los enlaces con el id iframe.

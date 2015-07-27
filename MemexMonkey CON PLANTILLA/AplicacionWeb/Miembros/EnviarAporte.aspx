@@ -39,7 +39,7 @@
     <asp:TextBox ID="txtEtiquetasOpcionales" runat="server" Width="296px" ForeColor="Gray">#etiquetas opcionales #memex fan</asp:TextBox>
     <br />
     <br />
-    <asp:Button ID="btnEnviarAporte" runat="server" BackColor="#00CC66" OnClick="btnEnviarAporte_Click" Text="Enviar Aporte" />
-    <asp:Button ID="btnReiniciar" runat="server" BackColor="#00CC66" Text="Reiniciar" OnClick="btnReiniciar_Click" />
+    <asp:Button ID="btnEnviarAporte" runat="server" OnClick="btnEnviarAporte_Click" Text="Enviar Aporte" Height="30px" Width="120px" />
+    <asp:Button ID="btnReiniciar" runat="server" Text="Reiniciar" OnClick="btnReiniciar_Click" Height="30px" Width="100px" />
     <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="False"></asp:Label>
     </asp:Content>

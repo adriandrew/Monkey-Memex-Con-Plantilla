@@ -14,6 +14,8 @@ namespace AplicacionWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Membership.DeleteUser("andrew", true);
+
             if (Membership.GetUser() == null)
             {
 
@@ -24,12 +26,6 @@ namespace AplicacionWeb
                 imagenStatus.Src = "Images/estatusFuera.png";
                 
                 imagenStatus.Alt = "Usuario Anonimo";
-
-                // TODO. Cambiar contrasena.
-                //string username = "andrew";
-                //string password = "andrew";
-                //MembershipUser mu = Membership.GetUser(username);
-                //mu.ChangePassword(mu.ResetPassword(), password);
 
                 imagenStatus.Attributes.Add("title", "Usuario Anonimo");
 

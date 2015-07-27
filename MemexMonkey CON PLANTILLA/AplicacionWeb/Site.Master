@@ -68,198 +68,136 @@
         <p class="chromeframe">Estas usando una version <strong>muy antigua</strong> de navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
 	<![endif]-->
 
- <form runat="server" id="form1" method="post" class="formulario">
+    <form runat="server" id="form1" method="post" class="formulario">
 
-   	<div id="principal">
+   	    <div id="principal">
            
-     <%--<div id="contenido">--%>
-
-        <header id="header">
-		    <div id="headerContenido">
-			<a href="./Inicio" title="Memex" id="logo">
-				<img src="Images/logo.png"/>
-			</a>
-			<div id="headerTexto">
-				<h1>MeMex</h1>
-			</div>
-            <div id="nombreUsuario">
-				<p id="nombreUsuarioTexto" runat="server">Hola</p>
-			</div>
-
-            <div id="mostrarLogin" runat="server">
-                <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(640, 85, false, .8)">
-				    <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
+            <header id="header">
+		        <div id="headerContenido">
+			    <a href="./Inicio" title="Memex" id="logo">
+				    <img src="Images/logo.png"/>
 			    </a>
-            </div>
-                <%-- <form runat="server"> --%><%--		        <div id="headerLogin">
-                    <asp:ContentPlaceHolder ID="cphLogin" runat="server">     
-                            <div id="statusUsuario"                
-        <asp:LoginView ID="LoginView" runat="server">
-                            <AnonymousTemplate>
-                                <asp:Login ID="Login" runat="server" DestinationPageUrl="~/Default.aspx" Orientation="Horizontal" UserNameLabelText="Usuario:" FailureText="Error, intenta de nuevo por favor.">
-                                    <LayoutTemplate>
-                                        <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
-                                            <tr>
-                                                <td>
-                                                    <table cellpadding="0">
-                                                        <tr>
-                                                            <td>
-                                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Usuario:</asp:Label>
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
-                                                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="El nombre de usuario es obligatorio." ToolTip="El nombre de usuario es obligatorio." ValidationGroup="ctl00$ctl02$Login">*</asp:RequiredFieldValidator>
-                                                            </td>
-                                                            <td>
-                                                                <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Contraseña:</asp:Label>
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
-                                                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="La contraseña es obligatoria." ToolTip="La contraseña es obligatoria." ValidationGroup="ctl00$ctl02$Login">*</asp:RequiredFieldValidator>
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                            <td>
-                                                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Iniciar sesión" ValidationGroup="ctl00$ctl02$Login" />
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="6" style="color:Red;">
-                                                                <asp:CheckBox ID="RememberMe" runat="server" ForeColor="Black" Text="Recordar la próxima vez." />
-                                                                <asp:Literal ID="FailureText" runat="server"></asp:Literal>
-                                                                <asp:LinkButton ID="LinkButton" runat="server" Font-Overline="False" PostBackUrl="Registrarse">Registrarse</asp:LinkButton>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </LayoutTemplate>
-                                </asp:Login>
-                                <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
-                            </AnonymousTemplate>
-                            <LoggedInTemplate>
-                                Hola:
-                                <asp:LoginName ID="LoginName" runat="server" />
-                                <br />
-                                <asp:LoginStatus ID="LoginStatus" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" />
-                                <br />
-                                <asp:LinkButton ID="lnkEnviarAporteMiembros" runat="server" PostBackUrl="EnviarAporte">Enviar Aporte</asp:LinkButton>
-                            </LoggedInTemplate>
-                        </asp:LoginView>                  
-    </div>
+			    <div id="headerTexto">
+				    <h1>MeMex</h1>
+			    </div>
+                <div id="nombreUsuario">
+				    <p id="nombreUsuarioTexto" runat="server">Hola</p>
+			    </div> <!-- end nombreUsuario -->
+                <div id="mostrarLogin" runat="server">
+                    <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(790, 140, false, .8)">
+				        <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
+			        </a>
+                </div> <!-- end mostrarLogin -->                                   
+                <div id="enviarAporte">
+                    <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
+                </div> <!-- end enviarAporte -->
+			    <div id="headerCompartir">
+				    <ul>
+					    <li><a href="http://www.facebook.com" title="Facebook" id="facebook"></a></li>
+					    <li><a href="http://www.twitter.com" title="Twitter" id="twitter"></a></li>
+					    <li><a href="http://www.plus.google.com" title="Google+" id="googlePlus"></a></li>
+					    <li><a href="http://www.instagram.com" title="Instagram" id="instagram"></a></li>
+				    </ul>
+			    </div> <!-- end headerCompartir -->
+			    <nav id="navPrincipal">
+				    <ul>
+					    <li><a href="#" id="ahora">Ahora</a></li>
+					    <li><a href="#" id="mejores">Mejores</a></li>
+					    <li><a href="#" id="clasicos" onclick="MuestraOculta('navCompeticiones')">Competiciones</a></li>
+					    <li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
+				    </ul> 
+			    </nav> <!-- end navPrincipal -->
+
+			    <nav id="navEquipos">
+				    <ul>
+					    <li><a href="#" title="América" id="america"></a></li>
+					    <li><a href="#" title="Atlante" id="atlante"></a></li>
+					    <li><a href="#" title="Atlas" id="atlas"></a></li>
+					    <li><a href="#" title="Chiapas" id="chiapas"></a></li>
+					    <li><a href="#" title="Cruz Azul" id="cruzAzul"></a></li>
+				        <li><a href="#" title="Guadalajara" id="guadalajara"></a></li>
+					    <li><a href="#" title="León" id="leon"></a></li>
+					    <li><a href="#" title="Monterrey" id="monterrey"></a></li>
+					    <li><a href="#" title="Morelia" id="morelia"></a></li>
+					    <li><a href="#" title="Pachuca" id="pachuca"></a></li>
+					    <li><a href="#" title="Puebla" id="puebla"></a></li>
+					    <li><a href="#" title="Pumas" id="pumas"></a></li>
+					    <li><a href="#" title="Querétaro" id="queretaro"></a></li>
+					    <li><a href="#" title="Santos" id="santos"></a></li>
+					    <li><a href="#" title="Tigres" id="tigres"></a></li>
+					    <li><a href="#" title="Tijuana" id="tijuana"></a></li>
+					    <li><a href="#" title="Toluca" id="toluca"></a></li>
+					    <li><a href="#" title="Veracruz" id="veracruz"></a></li>
+				    </ul>
+			    </nav> <!-- end navEquipos -->
+		        </div> <!-- end headerContenido -->
+	        </header>
+
+            <section id="section">
+		        <section id="sectionIzquierda">
+                    <div id="busqueda">
+                        <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
+                    </div> <!-- end busqueda -->
+                    <nav id="navPublicidad"></nav>
+		        </section>
+
+                <section id="sectionContenido">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        
+                        <%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--%>        
                     </asp:ContentPlaceHolder>
-		        </div>--%>          <%--  </form> --%>    
-            <div id="enviarAporte">
-                <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
-            </div> <!-- end enviarAporte -->
-			<div id="headerCompartir">
-				<ul>
-					<li><a href="http://www.facebook.com" title="Facebook" id="facebook"></a></li>
-					<li><a href="http://www.twitter.com" title="Twitter" id="twitter"></a></li>
-					<li><a href="http://www.plus.google.com" title="Google+" id="googlePlus"></a></li>
-					<li><a href="http://www.instagram.com" title="Instagram" id="instagram"></a></li>
-				</ul>
-			</div> <!-- end headerCompartir -->
-			<nav id="navPrincipal">
-				<ul>
-					<li><a href="#" id="ahora">Ahora</a></li>
-					<li><a href="#" id="mejores">Mejores</a></li>
-					<li><a href="#" id="clasicos" onclick="MuestraOculta('navCompeticiones')">Competiciones</a></li>
-					<li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
-				</ul> 
-			</nav> <!-- end navPrincipal -->
+                </section>
 
-			<nav id="navEquipos">
-				<ul>
-					<li><a href="#" title="América" id="america"></a></li>
-					<li><a href="#" title="Atlante" id="atlante"></a></li>
-					<li><a href="#" title="Atlas" id="atlas"></a></li>
-					<li><a href="#" title="Chiapas" id="chiapas"></a></li>
-					<li><a href="#" title="Cruz Azul" id="cruzAzul"></a></li>
-				    <li><a href="#" title="Guadalajara" id="guadalajara"></a></li>
-					<li><a href="#" title="León" id="leon"></a></li>
-					<li><a href="#" title="Monterrey" id="monterrey"></a></li>
-					<li><a href="#" title="Morelia" id="morelia"></a></li>
-					<li><a href="#" title="Pachuca" id="pachuca"></a></li>
-					<li><a href="#" title="Puebla" id="puebla"></a></li>
-					<li><a href="#" title="Pumas" id="pumas"></a></li>
-					<li><a href="#" title="Querétaro" id="queretaro"></a></li>
-					<li><a href="#" title="Santos" id="santos"></a></li>
-					<li><a href="#" title="Tigres" id="tigres"></a></li>
-					<li><a href="#" title="Tijuana" id="tijuana"></a></li>
-					<li><a href="#" title="Toluca" id="toluca"></a></li>
-					<li><a href="#" title="Veracruz" id="veracruz"></a></li>
-				</ul>
-			</nav> <!-- end navEquipos -->
-		    </div> <!-- end headerContenido -->
-	    </header>
+		        <section id="sectionDerecha">
+			        <h2>Competiciones</h2>
+			        <nav id="navCompeticiones">
+				        <ul>
+					        <li><a href="#" title="Liga Mexicana"><img src="Images/Ligas/LogoMexico.png"></a></li>
+					        <li><a href="#" title="Liga Española"><img src="Images/Ligas/LogoEspañola.png"></a></li>
+					        <li><a href="#" title="Liga Premier"><img src="Images/Ligas/LogoPremier.png"></a></li>
+					        <li><a href="#" title="UEFA Champions"><img src="Images/Ligas/LogoUEFA.png"></a></li>
+					        <li><a href="#" title="Libertadores"><img src="Images/Ligas/LogoLibertadores.png"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+				        </ul>
+			        </nav>
+			        <nav id="navTopicos">
+				        <ul>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+					        <li><a href="#"></a></li>
+				        </ul>
+			        </nav>
+			        <nav id="navMasVotado">
+				        <ul>
+					        <li><a href="#"></a></li>
+				        </ul>
+			        </nav>
+		        </section>
+	        </section>
 
-        <section id="section">
-		<section id="sectionIzquierda">
-            <div id="busqueda">
-                <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
-                <asp:Button ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
-            </div> <!-- end busqueda -->
-            <nav id="navPublicidad"></nav>
-		</section>
+	       <%-- <footer id="footer">	
+		    <aside id="asideIconos">
+			    <a href="./humans.txt" target="_blank" id="humanstxt"><img src="Images/Tecnologias/humanstxt-bn.png"></a>
+			    <a href="http://www.monkey.net" target="_blank" id="monkey"><img src="Images/monkey.png"></a>
+		    </aside>
+		    <aside id="asideFondo">
+			    <img src="Images/map.png">
+		    </aside>
+	    </footer>--%>         
 
-        <section id="sectionContenido">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        
-                <%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--%>        
-            </asp:ContentPlaceHolder>
-        </section>
-
-		<section id="sectionDerecha">
-			<h2>Competiciones</h2>
-			<nav id="navCompeticiones">
-				<ul>
-					<li><a href="#" title="Liga Mexicana"><img src="Images/Ligas/LogoMexico.png"></a></li>
-					<li><a href="#" title="Liga Española"><img src="Images/Ligas/LogoEspañola.png"></a></li>
-					<li><a href="#" title="Liga Premier"><img src="Images/Ligas/LogoPremier.png"></a></li>
-					<li><a href="#" title="UEFA Champions"><img src="Images/Ligas/LogoUEFA.png"></a></li>
-					<li><a href="#" title="Libertadores"><img src="Images/Ligas/LogoLibertadores.png"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-				</ul>
-			</nav>
-			<nav id="navTopicos">
-				<ul>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-				</ul>
-			</nav>
-			<nav id="navMasVotado">
-				<ul>
-					<li><a href="#"></a></li>
-				</ul>
-			</nav>
-		</section>
-	    </section>
-
-	   <%-- <footer id="footer">	
-		<aside id="asideIconos">
-			<a href="./humans.txt" target="_blank" id="humanstxt"><img src="Images/Tecnologias/humanstxt-bn.png"></a>
-			<a href="http://www.monkey.net" target="_blank" id="monkey"><img src="Images/monkey.png"></a>
-		</aside>
-		<aside id="asideFondo">
-			<img src="Images/map.png">
-		</aside>
-	</footer>--%>         
-    <%--</div> <!-- end contenido -->--%>
-
-	</div> <!-- Termina Principal -->
+	    </div> <!-- Termina Principal -->
 
     </form>
 

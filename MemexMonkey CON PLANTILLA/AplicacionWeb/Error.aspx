@@ -12,7 +12,7 @@
         </div> <!-- Termina imagen -->
 
         <!-- Falta checar esto del flappy bird para que se haga automaticamente -->
-        <a class="iframe" href="http://flappybird.io/" onmouseover="InvocarFancybox()">         
+        <a class="iframe" href="http://flappybird.io/" onmouseover="InvocarFancybox('75%','100%','false','0.8')">         
             <h2>Click aqui para jugar flappybird</h2>
         </a>
 
