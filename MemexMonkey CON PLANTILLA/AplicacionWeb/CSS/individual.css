@@ -1,4 +1,8 @@
-﻿a
+﻿#bodyIndividual {
+    background-color: lightgray;
+}
+
+a
 {
     display: block;
 }

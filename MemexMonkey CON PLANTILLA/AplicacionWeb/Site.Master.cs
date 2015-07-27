@@ -14,7 +14,7 @@ namespace AplicacionWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Membership.DeleteUser("andrew", true);
+            //Membership.DeleteUser("andrew", true);
 
             if (Membership.GetUser() == null)
             {

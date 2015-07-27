@@ -589,4 +589,8 @@ img{
     width: 80px;
 }
 
+#fancybox-content {
+ border-color: black !important; /* or whatever */
+}
+
 /* ---------------------------- Termina Otros -------------------------- */

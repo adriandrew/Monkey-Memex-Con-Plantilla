@@ -5,14 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Memex Monkey</title>    
 
-    <link href="~/Css/contenido.css" rel="stylesheet" type="text/css" />    
+    <!-- Css -->
+    <link href="~/Css/individual.css" rel="stylesheet" type="text/css" />    
 
+    <!-- Scripts -->
     <script src="../Js/scripts.js" type="text/javascript"></script>
-
 </head>
-<body>
+<body id="bodyIndividual">
     <form id="form1" runat="server">
 
         <div runat="server" id="imagenes" class="individuales"></div>
