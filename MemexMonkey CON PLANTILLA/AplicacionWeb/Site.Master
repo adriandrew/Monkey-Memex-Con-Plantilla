@@ -68,7 +68,7 @@
         <p class="chromeframe">Estas usando una version <strong>muy antigua</strong> de navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
 	<![endif]-->
 
-    <form runat="server" id="form1" method="post" class="formulario">
+    <form runat="server" id="form1" method="post" class="formulario" action="https://www.paypal.com/cgi-bin/webscr" target="_top">>
 
    	    <div id="principal">
            
@@ -139,7 +139,16 @@
                         <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
                         <asp:Button ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
                     </div> <!-- end busqueda -->
-                    <nav id="navPublicidad"></nav>
+                    <nav id="navPublicidad">
+                        <div id="donacion">
+                        <%--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">--%>
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="HX6YB67WD22VG">
+                            <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                        <%--</form>--%>
+                        </div>
+                    </nav>
 		        </section>
 
                 <section id="sectionContenido">

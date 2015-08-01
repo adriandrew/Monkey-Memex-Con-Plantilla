@@ -246,7 +246,6 @@ img{
     margin-bottom: 10px;
 }
 
-
 #navPublicidad{
     height: 920px;
 }
@@ -273,6 +272,11 @@ img{
 
 #btnBusqueda:hover {
     background-color: rgb(27, 27, 27);
+}
+
+#donacion{
+    height: 50px;
+    padding-left: 35px;
 }
 
 .formulario input[type="text"], input[type="password"], select {
