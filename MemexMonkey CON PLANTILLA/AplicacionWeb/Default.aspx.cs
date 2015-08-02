@@ -14,6 +14,8 @@ namespace AplicacionWeb
     public partial class Default : System.Web.UI.Page
     {
 
+        static Boolean resultadosActivados = false;
+
         #region Eventos
 
         protected void Page_Load(object sender, EventArgs e)
@@ -90,6 +92,15 @@ namespace AplicacionWeb
 
             var listaParcialImagenes = ( from elemento in listaTotalImagenes select elemento ).Skip ( posicionImagenes ).Take ( cantidadImagenes );
 
+            if ( listaParcialImagenes.Count() == 0 & !resultadosActivados ) 
+            {
+
+                htmlImagenes.AppendFormat(string.Format("<h2>{0}</h2>", "No hay más contenido que mostrar."));
+
+                resultadosActivados = true;
+
+            }
+            
             foreach (Entidades.ImagenesAspNet_Users elementoImagenes in listaParcialImagenes)
             {
 

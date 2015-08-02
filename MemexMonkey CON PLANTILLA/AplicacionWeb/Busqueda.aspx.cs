@@ -28,6 +28,8 @@ namespace AplicacionWeb
                
         #endregion
 
+        #region Eventos
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -35,6 +37,10 @@ namespace AplicacionWeb
 
         }
         
+        #endregion
+
+        #region Metods Privados
+
         private void AdministrarImagenes(string textoBusqueda)
         {
 
@@ -69,11 +75,13 @@ namespace AplicacionWeb
             if (string.IsNullOrEmpty(inyectarImagenes)) 
             {
 
-                imagenesBusqueda.InnerHtml = "<p>No se encontraron resultados con esta busqueda :(</p><br/><br/><p>Intenta una nueva busqueda por favor.</p>";
+                imagenesBusqueda.InnerHtml = string.Format("<p>{0}</p><br/><br/><p>{1}</p>", "No se encontraron resultados con esta busqueda :(", "Intenta una nueva busqueda por favor.");
 
             }
             else
             {
+
+                inyectarImagenes += string.Format("<h2>{0}</h2>", "No hay más contenido que mostrar.");
 
                 imagenesBusqueda.InnerHtml = inyectarImagenes;
 
@@ -193,6 +201,8 @@ namespace AplicacionWeb
             return inyectarImagen;
 
         }
+
+        #endregion
 
     }
 

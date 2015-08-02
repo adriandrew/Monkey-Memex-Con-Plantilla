@@ -31,7 +31,11 @@ namespace AplicacionWeb.Miembros
         protected void CreateUserWizard_CreatedUser(object sender, EventArgs e)
         {
 
+            // Aquí se define el rol de miembro.
             Roles.AddUserToRole(CreateUserWizard.UserName, "Miembros");
+
+            // Aquí se define el rol de administrador.
+            // Roles.AddUserToRole(CreateUserWizard.UserName, "Administradores");
 
         }
 

@@ -216,14 +216,14 @@ img{
 	background-color: rgba(0, 0, 0, 0.2);	
 }
 
-#sectionIzquierda nav, #sectionDerecha li{
+#sectionIzquierda nav, #sectionIzquierda div, #sectionDerecha li{
 	background-color: rgba(0, 0, 0, 0.5);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
 }
 
-#sectionIzquierda nav:hover, #sectionDerecha li:hover{
-	background-color: rgba(255, 255, 255, 0.5);
+#sectionIzquierda nav:hover, #sectionIzquierda div:hover, #sectionDerecha li:hover{
+	background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 #sectionIzquierda, #sectionContenido, #sectionDerecha{
@@ -231,28 +231,27 @@ img{
 }
 
 /* Section Izquierda */
+#sectionIzquierda nav, #sectionIzquierda div {
+    width: auto;
+}
+
+#sectionIzquierda div {
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
+}
+
 #sectionIzquierda{
 	width: 200px;
 	height: 1000px !important;
 	margin-right: 25px;
 }
 
-#navPublicidad, #busqueda{
-	width: auto;
-}
-
-#busqueda{
-    height: 70px;
-    margin-bottom: 10px;
+#divBusqueda{
+    height: 60px;
 }
 
 #navPublicidad{
-    height: 920px;
-}
-
-#busqueda:hover, #navPublicidad:hover{
-    background-color: black;
-	opacity: 0.7;
+    height: 805px;
 }
 
 #txtBusqueda{
@@ -270,13 +269,8 @@ img{
     height: 35px;
 }
 
-#btnBusqueda:hover {
-    background-color: rgb(27, 27, 27);
-}
-
-#donacion{
+#divDonacion{
     height: 50px;
-    padding-left: 35px;
 }
 
 .formulario input[type="text"], input[type="password"], select {
@@ -594,7 +588,16 @@ img{
 }
 
 #fancybox-content {
- border-color: black !important; /* or whatever */
+    border-color: black !important; 
+}
+
+.modalDialog{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 1000;
+    width: 200px;
+    height: 200px;
 }
 
 /* ---------------------------- Termina Otros -------------------------- */
