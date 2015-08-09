@@ -24,7 +24,7 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute ( "Individual", "Individual/{idImagen}", "~/Individual.aspx" );
 
-            rutas.MapPageRoute ( "Moderar", "Moderar", "~/Administradores/PanelControl.aspx" );
+            rutas.MapPageRoute("PanelControl", "PanelControl", "~/Administradores/PanelControl.aspx");
 
             rutas.MapPageRoute ( "EnviarAporte", "EnviarAporte", "~/Miembros/EnviarAporte.aspx" );
 

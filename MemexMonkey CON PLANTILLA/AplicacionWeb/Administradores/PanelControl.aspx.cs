@@ -15,14 +15,14 @@ namespace AplicacionWeb.Administradores
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if ( User.IsInRole ( "Administradores" ) )
+
+            if (!User.IsInRole("Administradores"))
+
+                Response.Redirect("Inicio");
+
+            else if (User.IsInRole("Administradores"))
 
                 AdministrarImagenes();
-
-            else if ( ! User.IsInRole ( "Administradores" ) )
-
-                Response.Redirect ( "../Inicio" );
 
         }
 
@@ -86,6 +86,29 @@ namespace AplicacionWeb.Administradores
             }
 
         }
+        
+        protected void linkModerar_Click(object sender, EventArgs e)
+        {
+
+            if (User.IsInRole("Administradores"))
+
+                AdministrarImagenes();
+
+        }
+
+        protected void linkLimpiarNoAprobados_Click(object sender, EventArgs e)
+        {
+
+            LimpiarImagenes(0);
+
+        }
+
+        protected void linkLimpiarAprobados_Click(object sender, EventArgs e)
+        {
+
+            LimpiarImagenes(1);
+
+        }
 
         #endregion
 
@@ -100,6 +123,102 @@ namespace AplicacionWeb.Administradores
 
         }
 
+        #region Limpieza de imagenes y registros basura.
+
+        private void LimpiarImagenes(int estatus)
+        {
+
+            Entidades.Imagenes imagenes = new Entidades.Imagenes();
+
+            List<Entidades.Imagenes> listaImagenes = new List<Entidades.Imagenes>();
+
+            if (estatus == 1)
+
+                listaImagenes = imagenes.ObtenerListadoPorEstatus(1, 20);
+
+            else if (estatus == 0)
+
+                listaImagenes = imagenes.ObtenerListadoPorEstatus(0, 20);
+            
+            foreach (Entidades.Imagenes elementoImagenes in listaImagenes)
+            {
+
+                if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
+                
+                    LimpiarVerificarArchivoImagen(elementoImagenes);
+
+            }
+
+        }
+
+        private void LimpiarVerificarArchivoImagen(Entidades.Imagenes elementoImagenes)
+        {
+
+            string idImagen = elementoImagenes.IdImagen.ToString();
+
+            string directorioRelativo = elementoImagenes.DirectorioRelativo.ToString();
+
+            string rutaRelativa = elementoImagenes.RutaRelativa.ToString();
+
+            System.IO.DirectoryInfo directorio = new System.IO.DirectoryInfo(HttpContext.Current.Server.MapPath(directorioRelativo));
+
+            if (directorio.Exists)
+            {
+
+                System.IO.FileInfo[] archivos = directorio.GetFiles();
+
+                bool esArchivoEncontrado = false;
+
+                foreach (System.IO.FileInfo archivo in archivos)
+                {
+
+                    string urlImagen = string.Format("{0}\\{1}", directorioRelativo, archivo);
+
+                    if (rutaRelativa.Equals(urlImagen))
+                    {
+
+                        esArchivoEncontrado = true;
+
+                        break;
+
+                    }
+
+                }
+
+                if (!esArchivoEncontrado)
+                {
+
+                    LimpiarEliminarArchivoImagen(directorioRelativo, rutaRelativa);
+
+                    LimpiarEliminarRegistroImagen(idImagen);
+
+                }
+
+            }
+            else if (!directorio.Exists)
+            {
+
+                LimpiarEliminarRegistroImagen(idImagen);
+
+            }
+
+        }
+
+        private void LimpiarEliminarRegistroImagen(string idImagen)
+        {
+
+            Entidades.Imagenes imagenes = new Entidades.Imagenes();
+
+            imagenes.IdImagen = Convert.ToInt32(idImagen);
+
+            imagenes.Eliminar();
+
+        }
+
+        #endregion
+
+        #region Administrar Imagenes
+
         private void AdministrarImagenes() 
         {
 
@@ -113,17 +232,12 @@ namespace AplicacionWeb.Administradores
             {
 
                 if ( ! string.IsNullOrEmpty ( elementoImagenes.DirectorioRelativo ) && ! string.IsNullOrEmpty ( elementoImagenes.RutaRelativa ) )
-                {
 
                     VerificarArchivoImagen ( elementoImagenes );
 
-                }
                 else if ( ! string.IsNullOrEmpty ( elementoImagenes.EnlaceExterno ) )
-                {
 
                     VerificarEnlaceImagen ( elementoImagenes );
-
-                }
 
             }
 
@@ -226,55 +340,6 @@ namespace AplicacionWeb.Administradores
 
         }
 
-        private void VerificarEnlaceImagen ( Entidades.Imagenes elementoImagenes )
-        {
-
-            string idImagen = elementoImagenes.IdImagen.ToString();
-
-            string idCategoria = elementoImagenes.IdCategoria.ToString();
-
-            string userId = elementoImagenes.UserId.ToString();
-
-            string esAprobado = elementoImagenes.EsAprobado.ToString();
-
-            string titulo = elementoImagenes.Titulo.ToString();
-
-            string directorioRelativo = elementoImagenes.DirectorioRelativo.ToString();
-
-            string rutaRelativa = elementoImagenes.RutaRelativa.ToString();
-
-            string enlaceExterno = elementoImagenes.EnlaceExterno.ToString();
-
-            string etiquetasBasicas = elementoImagenes.EtiquetasBasicas.ToString();
-
-            string etiquetasOpcionales = elementoImagenes.EtiquetasOpcionales.ToString();
-
-            string fechaSubida = elementoImagenes.FechaSubida.ToString();
-
-            string fechaPublicacion = elementoImagenes.FechaPublicacion.ToString();
-
-            Panel pnlImagen = CrearPanelImagen(idImagen);
-
-            pnlImagenes.Controls.Add(pnlImagen);
-
-            Image imgPendiente = CrearImagePendiente(enlaceExterno, titulo);
-
-            pnlImagen.Controls.Add(imgPendiente);
-
-            Panel pnlCalificar = CrearPanelCalificar(idImagen);
-
-            pnlImagen.Controls.Add(pnlCalificar);
-
-            Button btnAprobar = CrearButtonAprobar(idImagen);
-
-            pnlCalificar.Controls.Add(btnAprobar);
-
-            Button btnRechazar = CrearButtonRechazar ( idImagen );
-
-            pnlCalificar.Controls.Add(btnRechazar);
-
-        }
-
         private void CambiarColorFondo ( Button btnAprobar )
         {
 
@@ -349,17 +414,14 @@ namespace AplicacionWeb.Administradores
                 // Si es archivo hay que buscarlo para eliminarlo.
 
                 if ( ! string.IsNullOrEmpty ( directorioRelativo ) && ! string.IsNullOrEmpty ( rutaRelativa ) )
-                {
 
-                    EliminarArchivoImagen ( directorioRelativo, rutaRelativa );
-
-                }
-            
+                    LimpiarEliminarArchivoImagen ( directorioRelativo, rutaRelativa );
+           
             }
 
         }
 
-        private void EliminarArchivoImagen ( string directorioRelativo, string rutaRelativa )
+        private void LimpiarEliminarArchivoImagen ( string directorioRelativo, string rutaRelativa )
         {
 
             System.IO.DirectoryInfo directorioInformacion = new System.IO.DirectoryInfo ( HttpContext.Current.Server.MapPath ( directorioRelativo ) );
@@ -424,6 +486,8 @@ namespace AplicacionWeb.Administradores
 
             imgPendiente.AlternateText = titulo;
 
+            imgPendiente.ToolTip = titulo;
+
             imgPendiente.Attributes.Add( "style", "width: 540px; max-width: 540px;" );
 
             return imgPendiente;
@@ -485,6 +549,61 @@ namespace AplicacionWeb.Administradores
             return new Label { Text = "El directorio no existe." };
 
         }
+
+        #endregion
+
+        #region Administrar Enlaces
+
+        private void VerificarEnlaceImagen(Entidades.Imagenes elementoImagenes)
+        {
+
+            string idImagen = elementoImagenes.IdImagen.ToString();
+
+            string idCategoria = elementoImagenes.IdCategoria.ToString();
+
+            string userId = elementoImagenes.UserId.ToString();
+
+            string esAprobado = elementoImagenes.EsAprobado.ToString();
+
+            string titulo = elementoImagenes.Titulo.ToString();
+
+            string directorioRelativo = elementoImagenes.DirectorioRelativo.ToString();
+
+            string rutaRelativa = elementoImagenes.RutaRelativa.ToString();
+
+            string enlaceExterno = elementoImagenes.EnlaceExterno.ToString();
+
+            string etiquetasBasicas = elementoImagenes.EtiquetasBasicas.ToString();
+
+            string etiquetasOpcionales = elementoImagenes.EtiquetasOpcionales.ToString();
+
+            string fechaSubida = elementoImagenes.FechaSubida.ToString();
+
+            string fechaPublicacion = elementoImagenes.FechaPublicacion.ToString();
+
+            Panel pnlImagen = CrearPanelImagen(idImagen);
+
+            pnlImagenes.Controls.Add(pnlImagen);
+
+            Image imgPendiente = CrearImagePendiente(enlaceExterno, titulo);
+
+            pnlImagen.Controls.Add(imgPendiente);
+
+            Panel pnlCalificar = CrearPanelCalificar(idImagen);
+
+            pnlImagen.Controls.Add(pnlCalificar);
+
+            Button btnAprobar = CrearButtonAprobar(idImagen);
+
+            pnlCalificar.Controls.Add(btnAprobar);
+
+            Button btnRechazar = CrearButtonRechazar(idImagen);
+
+            pnlCalificar.Controls.Add(btnRechazar);
+
+        }
+
+        #endregion
 
         #endregion
         

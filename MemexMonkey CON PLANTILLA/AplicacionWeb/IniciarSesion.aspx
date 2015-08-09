@@ -46,7 +46,7 @@
                                                         <tr>
                                                             <td colspan="6" style="color:Red;">
                                                                 <asp:CheckBox ID="RememberMe" runat="server" ForeColor="Black" Text="Recordar la próxima vez." />
-                                                                <asp:Literal ID="FailureText" runat="server"></asp:Literal>
+                                                                <asp:Literal ID="FailureText" runat="server"></asp:Literal>                                                                
                                                                 <asp:LinkButton ID="LinkButton" runat="server" Font-Overline="False" PostBackUrl="Registrarse" OnClientClick="parent.CerrarFancyboxYRedireccionar('Registrarse');" CssClass="links"><p>Registrarse</p></asp:LinkButton>
                                                             </td>
                                                         </tr>
@@ -63,6 +63,8 @@
                                 <asp:LoginName ID="LoginName" runat="server" />
                                 <br />
                                 <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="links" />
+                                <div id="prueba" runat="server"></div>
+                                <asp:LinkButton ID="linkModerar" runat="server" ClientIDMode="Static" Font-Overline="False" PostBackUrl="PanelControl" OnClientClick="parent.CerrarFancyboxYRedireccionar('PanelControl');" CssClass="links" Visible="true"><p>Panel de Control</p></asp:LinkButton>
                                 <%--<br />--%>
 <%--                                    <asp:LinkButton ID="lnkEnviarAporteMiembros" runat="server" PostBackUrl="EnviarAporte">Enviar Aporte</asp:LinkButton>--%>
                             </LoggedInTemplate>

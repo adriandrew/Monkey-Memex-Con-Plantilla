@@ -180,7 +180,7 @@ namespace AplicacionWeb
                 if (!esArchivoEncontrado)
                 {
 
-                    string imagenNoEncontrada = string.Format("<h2>{0}</br>{1}</h2>", "No se encontro la imagen:", rutaRelativa);
+                    string imagenNoEncontrada = string.Format("<h2>{0}</br>{1}</h2>", "No se encontró la imagen:", rutaRelativa);
 
                     string imagen = string.Format("<div class={0}>{1}</div>", "imagen", imagenNoEncontrada);
 

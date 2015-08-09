@@ -279,7 +279,7 @@ namespace Entidades
             try
             {
 
-                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaPublicacion DESC";
+                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
 
                 SqlCommand comando = new SqlCommand();
 
@@ -366,7 +366,7 @@ namespace Entidades
             try
             {
 
-                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 AND ( Imagenes.EtiquetasBasicas LIKE '%'+@etiquetasBasicas+'%' OR Imagenes.EtiquetasOpcionales LIKE '%'+@etiquetasOpcionales+'%' OR Imagenes.Titulo LIKE '%'+@titulo+'%' ) ORDER BY FechaPublicacion DESC";
+                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 AND ( Imagenes.EtiquetasBasicas LIKE '%'+@etiquetasBasicas+'%' OR Imagenes.EtiquetasOpcionales LIKE '%'+@etiquetasOpcionales+'%' OR Imagenes.Titulo LIKE '%'+@titulo+'%' ) ORDER BY FechaSubida DESC";
 
                 SqlCommand comando = new SqlCommand();
 

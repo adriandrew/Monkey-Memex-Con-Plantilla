@@ -139,7 +139,9 @@ namespace AplicacionWeb.Miembros
 
                 imagenes.UserId = ( Guid ) Membership.GetUser().ProviderUserKey;
 
-                imagenes.EsAprobado = 1;
+                // Va en ceros porque aun no se sabe si será publicada.
+
+                imagenes.EsAprobado = 0;
 
                 imagenes.Titulo = txtTituloImagen.Text;
 

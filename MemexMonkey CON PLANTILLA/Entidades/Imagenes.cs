@@ -478,6 +478,85 @@ namespace Entidades
 
         }
 
+        public List<Imagenes> ObtenerListadoPorEstatus ( int estatus, int limite )
+        {
+
+            List<Imagenes> lista = new List<Imagenes>();
+
+            try
+            {
+
+                string sql = "SELECT TOP (@limite) * FROM Imagenes WHERE EsAprobado = @estatus ORDER BY FechaSubida DESC";
+
+                SqlCommand comando = new SqlCommand();
+
+                comando.Connection = BaseDatos.conexion;
+
+                comando.CommandText = sql;
+
+                comando.Parameters.AddWithValue("@limite", limite);
+
+                comando.Parameters.AddWithValue("@estatus", estatus);
+
+                BaseDatos.conexion.Open();
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                Imagenes imagenes;
+
+                while (reader.Read())
+                {
+
+                    imagenes = new Imagenes();
+
+                    imagenes.IdImagen = Convert.ToInt32(reader["IdImagen"]);
+
+                    imagenes.IdCategoria = Convert.ToInt32(reader["IdCategoria"]);
+
+                    imagenes.UserId = new Guid(reader["UserId"].ToString());
+
+                    imagenes.EsAprobado = Convert.ToInt32(reader["EsAprobado"]);
+
+                    imagenes.Titulo = reader["Titulo"].ToString();
+
+                    imagenes.DirectorioRelativo = reader["DirectorioRelativo"].ToString();
+
+                    imagenes.RutaRelativa = reader["RutaRelativa"].ToString();
+
+                    imagenes.EnlaceExterno = reader["EnlaceExterno"].ToString();
+
+                    imagenes.EtiquetasBasicas = reader["EtiquetasBasicas"].ToString();
+
+                    imagenes.EtiquetasOpcionales = reader["EtiquetasOpcionales"].ToString();
+
+                    imagenes.FechaSubida = Convert.ToDateTime(reader["FechaSubida"]);
+
+                    imagenes.FechaPublicacion = Convert.ToDateTime(reader["FechaPublicacion"].ToString());
+
+                    lista.Add(imagenes);
+
+                }
+
+                BaseDatos.conexion.Close();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
+            finally
+            {
+
+                BaseDatos.conexion.Close();
+
+            }
+
+            return lista;
+
+        }
+
         #endregion
 
     }

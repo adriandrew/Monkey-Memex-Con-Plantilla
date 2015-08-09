@@ -25,6 +25,40 @@ namespace AplicacionWeb
 
             //}
 
+
+            if (!IsPostBack)
+            {
+
+                try
+                {
+                    
+                    if (User.IsInRole("Administradores"))
+                    {
+
+                        LinkButton linkModerarr = (LinkButton) LoginView.FindControl("linkModerar");
+
+                        linkModerarr.Visible = true;
+
+                    }
+                    else if (!User.IsInRole("Administradores"))
+                    {
+                        
+                        LinkButton linkModerarr = (LinkButton) LoginView.FindControl("linkModerar");
+
+                        linkModerarr.Visible = false;
+                        
+                    }
+
+                }
+                catch
+                {
+                        
+                    // No se puso nada en este caso. Es una excepcion poco común.
+
+                }
+            
+            }
+
         }
         
     }
