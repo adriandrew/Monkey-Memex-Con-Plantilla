@@ -1,0 +1,54 @@
+@media all and (min-width: 800px) and (max-width: 879px) {
+
+#headerContenido, #section, #footer{
+	width: 800px;
+}
+
+#section{
+	height: 1041px;
+	position: relative;
+}
+
+#sectionIzquierda, #sectionContenido{
+	margin-top: 41px;
+}
+
+#sectionIzquierda{
+	width: 140px;
+	float: right;
+	margin-right: 0;
+}
+
+#sectionContenido{
+	margin-right: 10px;
+}
+
+#sectionDerecha{
+	width: 100%;
+	height: 41px;
+	position: absolute;
+}
+
+#sectionDerecha h2, #navTopicos, #navMasVotado{
+	display: none;
+}
+
+#sectionDerecha nav{
+	margin-bottom: 0;
+}
+
+#navCompeticiones{
+	height: 100%;
+}
+
+#navCompeticiones ul li{
+	width: 100px;
+	height: 100%;
+}
+
+#header, #section, #footer{
+	color: fuchsia !important;
+}
+
+}
+

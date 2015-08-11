@@ -8,24 +8,41 @@ using System.Web.Security;
 
 namespace AplicacionWeb.Administradores
 {
+
     public partial class PanelControl : System.Web.UI.Page
     {
-        
+
+        private static int estatus = -1;
+
         #region Eventos
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!User.IsInRole("Administradores"))
+            if (!this.IsPostBack)
+            {
 
-                Response.Redirect("Inicio");
+                if (!User.IsInRole("Administradores"))
+                {
 
-            else if (User.IsInRole("Administradores"))
+                    Response.Redirect("Inicio");
 
-                AdministrarImagenes();
+                }
+                else if (User.IsInRole("Administradores"))
+                {
+
+                    MostrarControles(false);
+
+                    CargarFechaActual();
+
+                    AdministrarImagenes();
+                
+                }
+
+            }
 
         }
-
+        
         protected void btnAprobar_Click(object sender, EventArgs e)
         {
 
@@ -89,24 +106,104 @@ namespace AplicacionWeb.Administradores
         
         protected void linkModerar_Click(object sender, EventArgs e)
         {
+            
+            MostrarControles(false);
 
-            if (User.IsInRole("Administradores"))
-
-                AdministrarImagenes();
-
+            MostrarModeracion(true);
+            
+            AdministrarImagenes();
+                        
         }
 
         protected void linkLimpiarNoAprobados_Click(object sender, EventArgs e)
         {
 
-            LimpiarImagenes(0);
+            MostrarControles(true);
+
+            MostrarModeracion(false);
+
+            estatus = 0;
 
         }
 
         protected void linkLimpiarAprobados_Click(object sender, EventArgs e)
         {
 
-            LimpiarImagenes(1);
+            MostrarControles(true);
+
+            MostrarModeracion(false);
+
+            estatus = 1;
+
+        }
+
+        protected void btnLimpiarRango_Click(object sender, EventArgs e)
+        {
+
+            if (estatus >= 0)
+            {
+
+                int cantidad = 0;
+
+                if (int.TryParse(txtCantidad.Text, out cantidad))
+                {
+
+                    cantidad = Convert.ToInt32(txtCantidad.Text);
+
+                    LimpiarImagenes(estatus, cantidad);
+                
+                }
+
+            }
+
+        }
+        
+        protected void btnLimpiarFecha_Click(object sender, EventArgs e)
+        {
+
+            if (estatus >= 0)
+            {
+
+                string fecha = DateTime.Today.ToShortDateString();
+
+                if (calFechas.SelectedDate != null)
+                {
+
+                    fecha = calFechas.SelectedDate.ToShortDateString();
+
+                }
+
+                LimpiarImagenes(estatus, fecha);
+
+            }
+            
+        }          
+
+        protected void rbRango_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rbRango.Checked) 
+            {
+
+                MostrarControlesRango(true);
+
+                MostrarControlesFecha(false);
+
+            }
+
+        }
+
+        protected void rbFecha_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rbFecha.Checked)
+            {
+
+                MostrarControlesFecha(true);
+
+                MostrarControlesRango(false);
+
+            }
 
         }
 
@@ -123,28 +220,77 @@ namespace AplicacionWeb.Administradores
 
         }
 
+        private void CargarFechaActual()
+        {
+
+            calFechas.SelectedDate = DateTime.Today;
+
+        }
+
+        private void MostrarModeracion(Boolean estado)
+        {
+
+            pnlImagenes.Visible = estado;
+
+        }
+
+        private void MostrarControles(Boolean estado)
+        {
+
+            divOpciones.Visible = estado;
+
+        }
+
+        private void MostrarControlesRango(Boolean estado)
+        {
+
+            divOpcionesRango.Visible = estado;            
+
+        }
+
+        private void MostrarControlesFecha(Boolean estado)
+        {
+
+            divOpcionesFecha.Visible = estado;
+
+        }
+
         #region Limpieza de imagenes y registros basura.
 
-        private void LimpiarImagenes(int estatus)
+        private void LimpiarImagenes(int estatus, string fecha)
         {
 
             Entidades.Imagenes imagenes = new Entidades.Imagenes();
 
             List<Entidades.Imagenes> listaImagenes = new List<Entidades.Imagenes>();
 
-            if (estatus == 1)
-
-                listaImagenes = imagenes.ObtenerListadoPorEstatus(1, 20);
-
-            else if (estatus == 0)
-
-                listaImagenes = imagenes.ObtenerListadoPorEstatus(0, 20);
+            listaImagenes = imagenes.ObtenerListadoPorEstatus(estatus, fecha);
             
             foreach (Entidades.Imagenes elementoImagenes in listaImagenes)
             {
 
                 if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
                 
+                    LimpiarVerificarArchivoImagen(elementoImagenes);
+
+            }
+
+        }
+
+        private void LimpiarImagenes(int estatus, int cantidad)
+        {
+
+            Entidades.Imagenes imagenes = new Entidades.Imagenes();
+
+            List<Entidades.Imagenes> listaImagenes = new List<Entidades.Imagenes>();
+
+            listaImagenes = imagenes.ObtenerListadoPorEstatus(estatus, cantidad);
+
+            foreach (Entidades.Imagenes elementoImagenes in listaImagenes)
+            {
+
+                if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
+
                     LimpiarVerificarArchivoImagen(elementoImagenes);
 
             }
@@ -605,7 +751,8 @@ namespace AplicacionWeb.Administradores
 
         #endregion
 
+
         #endregion
-        
+                
     }
 }

@@ -15,8 +15,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
-// para los componentes COM. Si necesita obtener acceso linkImagen un tipo de este ensamblado desde 
-// COM, establezca el atributo ComVisible como true en este tipo.
+// para los componentes COM. Si necesita obtener acceso linkImagen un estatus de este ensamblado desde 
+// COM, establezca el atributo ComVisible como true en este estatus.
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone linkImagen COM

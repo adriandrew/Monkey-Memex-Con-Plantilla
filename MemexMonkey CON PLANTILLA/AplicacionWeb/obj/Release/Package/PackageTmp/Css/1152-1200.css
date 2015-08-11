@@ -1,0 +1,19 @@
+@media all and (min-width: 1152px) and (max-width: 1199px) {
+
+#headerContenido, #section, #footer{
+	width: 1152px;
+}
+
+#sectionIzquierda{
+	width: 182px;	
+}
+
+#sectionIzquierda, #sectionContenido{
+	margin-right: 10px;
+}
+
+#header, #section, #footer{
+	color: green !important;
+}
+
+}

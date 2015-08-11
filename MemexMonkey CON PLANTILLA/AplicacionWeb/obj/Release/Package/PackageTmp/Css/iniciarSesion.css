@@ -1,0 +1,47 @@
+#bodyIniciarSesion 
+{
+    background-position: top;
+}
+
+#bodyIniciarSesion #principal
+{
+    width: 790px;
+    height: 140px;
+}
+
+#bodyIniciarSesion #section 
+{
+    width: auto;
+}
+
+#bodyIniciarSesion #sectionContenido
+{
+    width: 740px;
+    height: 100px !important;
+    margin: 0;
+}
+
+#bodyIniciarSesion .links p, #bodyIniciarSesion .links
+{
+   color: #6e6e6e !important;
+   text-align: right;
+   float: right;
+}
+
+#bodyIniciarSesion .links p:hover, #bodyIniciarSesion .links:hover
+{
+	color: white !important;
+	font-size: 27px;
+	transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+

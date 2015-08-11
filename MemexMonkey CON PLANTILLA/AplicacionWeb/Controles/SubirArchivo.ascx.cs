@@ -235,7 +235,7 @@ namespace AplicacionWeb.Controles
         #region Metodos Protegidos.
 
         /// <summary>
-        /// Verifica las extensiones de archivo permitidas. Si no se especificó ninguna, se puede subir cualquier tipo de archivo.
+        /// Verifica las extensiones de archivo permitidas. Si no se especificó ninguna, se puede subir cualquier estatus de archivo.
         /// </summary>
         /// <param name="archivosCargados"></param>
         /// <returns></returns>
