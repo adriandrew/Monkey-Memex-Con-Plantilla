@@ -38,3 +38,12 @@ C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\LogicaNegoci
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.dll
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\AplicacionWeb.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\AplicacionWeb.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\Entidades.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\LogicaNegocio.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\Entidades.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\bin\LogicaNegocio.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.dll
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\AplicacionWeb\obj\Release\AplicacionWeb.pdb

@@ -36,6 +36,8 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute("Busqueda", "Busqueda", "~/Busqueda.aspx");
 
+            rutas.MapPageRoute("AdministrarUsuarios", "AdministrarUsuarios", "~/PuertaTrasera/AdministrarUsuarios.aspx");
+
         }
 
         protected void Application_Start(object sender, EventArgs e)

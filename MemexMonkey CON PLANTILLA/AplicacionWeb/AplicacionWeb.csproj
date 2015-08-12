@@ -187,6 +187,7 @@
     <Content Include="IniciarSesion.aspx" />
     <Content Include="Miembros\AporteEnviado.aspx" />
     <Content Include="Miembros\EnviarAporte.aspx" />
+    <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <Content Include="robots.txt" />
@@ -264,6 +265,13 @@
     </Compile>
     <Compile Include="Miembros\EnviarAporte.aspx.designer.cs">
       <DependentUpon>EnviarAporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PuertaTrasera\AdministrarUsuarios.aspx.cs">
+      <DependentUpon>AdministrarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PuertaTrasera\AdministrarUsuarios.aspx.designer.cs">
+      <DependentUpon>AdministrarUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarMiembro.aspx.cs">
       <DependentUpon>RegistrarMiembro.aspx</DependentUpon>
