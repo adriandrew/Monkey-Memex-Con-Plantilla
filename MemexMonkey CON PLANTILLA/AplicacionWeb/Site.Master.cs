@@ -14,8 +14,6 @@ namespace AplicacionWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //Membership.DeleteUser("andrew", true);
-
             if (Membership.GetUser() == null)
             {
 
@@ -56,7 +54,6 @@ namespace AplicacionWeb
         protected void btnBusqueda_Click(object sender, EventArgs e)
         {
 
-            //txtBusqueda.Text = "prueba";
             AplicacionWeb.Busqueda.TextoBusqueda = txtBusqueda.Text;
 
             this.Response.Redirect("Busqueda");
