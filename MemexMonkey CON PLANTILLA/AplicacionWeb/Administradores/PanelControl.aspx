@@ -10,7 +10,7 @@
         <asp:LinkButton ID="linkLimpiarAprobados" runat="server" ClientIDMode="Static" CssClass="links" OnClick="linkLimpiarAprobados_Click">Limpiar Aprobados</asp:LinkButton>        
     </div> <%-- end divMenuPanelControl --%>
     <div id="divLimitar" runat="server">
-        <asp:TextBox ID="txtCantidadLimite" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtCantidadLimite" runat="server">500</asp:TextBox>
         <asp:Button ID="btnLimitarRango" runat="server" Text="Limitar Por Rango" OnClick="btnLimitarRango_Click" />
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCantidadLimite" ErrorMessage="Sólo numeros" ValidationExpression="\d+"></asp:RegularExpressionValidator>
     </div> <%--end divLimitar--%>

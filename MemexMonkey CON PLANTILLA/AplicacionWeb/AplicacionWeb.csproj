@@ -115,6 +115,8 @@
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
     <Content Include="Images\aprobado.jpg" />
+    <Content Include="Images\Autor\Andrew.jpg" />
+    <Content Include="Images\Autor\Andrew2.jpg" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\bg2.jpg" />
     <Content Include="Images\color.jpg" />
