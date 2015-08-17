@@ -157,11 +157,11 @@ namespace AplicacionWeb.Controles
 
                                 cantidadArchivos++;
 
-                                // Aqui se envia el directorio relativo de cada una de las imagenes del miembro de Memex.
+                                // Aqui se envia el directorio relativo de cada una de las comentarios del miembro de Memex.
 
                                 AplicacionWeb.Miembros.EnviarAporte.DirectorioRelativo = directorioRelativo;
 
-                                // Aqui se envia la ruta relativa de cada una de las imagenes del miembro de Memex.
+                                // Aqui se envia la ruta relativa de cada una de las comentarios del miembro de Memex.
 
                                 AplicacionWeb.Miembros.EnviarAporte.RutaRelativa = rutaRelativa;
                                 

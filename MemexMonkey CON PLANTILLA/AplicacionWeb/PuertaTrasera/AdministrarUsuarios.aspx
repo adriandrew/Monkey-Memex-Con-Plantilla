@@ -9,14 +9,16 @@
     </div>
     <div id="divContenidoSecreto" runat="server">
         <asp:Button ID="btnCambiarAAdministrador" runat="server" Text="Cambiar Usuario A Administrador" OnClick="btnCambiarAAdministrador_Click" />
+        <asp:Button ID="btnCambiarAMiembro" runat="server" Text="Cambiar Usuario A Miembro" OnClick="btnCambiarAMiembro_Click" />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar Usuario" OnClick="btnEliminar_Click" />
-        <asp:CreateUserWizard ID="CreateUserWizard" runat="server" OnCreatedUser="CreateUserWizard_CreatedUser" OnFinishButtonClick="CreateUserWizard_FinishButtonClick">
+        <asp:CreateUserWizard ID="CreateUserWizard" runat="server" OnCreatedUser="CreateUserWizard_CreatedUser" ClientIDMode="Static" OnContinueButtonClick="CreateUserWizard_ContinueButtonClick">
             <WizardSteps>
                 <asp:CreateUserWizardStep runat="server" />
                 <asp:CompleteWizardStep runat="server" />
             </WizardSteps>
         </asp:CreateUserWizard>
-        <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <div id="divGridUsuarios">
+            <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -29,5 +31,6 @@
         <SortedDescendingCellStyle BackColor="#D4DFE1" />
         <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
+        </div>
     </div>
 </asp:Content>

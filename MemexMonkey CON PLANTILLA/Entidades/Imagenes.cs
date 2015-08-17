@@ -253,6 +253,46 @@ namespace Entidades
 
         }
 
+        public void EliminarLimite(int cantidad)
+        {
+
+            try
+            {
+
+                string sqlTop = "SELECT TOP (@cantidad) IdImagen FROM Imagenes WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
+
+                string sqlFinal = "DELETE FROM Imagenes WHERE IdImagen NOT IN (" + sqlTop + ") AND EsAprobado = 1";
+
+                SqlCommand comando = new SqlCommand();
+
+                comando.Connection = BaseDatos.conexion;
+
+                comando.CommandText = sqlFinal;
+
+                comando.Parameters.AddWithValue("@cantidad", cantidad);
+
+                BaseDatos.conexion.Open();
+
+                comando.ExecuteNonQuery();
+
+                BaseDatos.conexion.Close();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
+            finally
+            {
+
+                BaseDatos.conexion.Close();
+
+            }
+
+        }
+
         public List < Imagenes > ObtenerPorIdImagen ( int idImagen )
         { 
             List < Imagenes > lista = new List < Imagenes > ();

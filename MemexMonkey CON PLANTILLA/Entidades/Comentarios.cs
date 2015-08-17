@@ -113,6 +113,85 @@ namespace Entidades
 
         }
 
+        public void Eliminar()
+        {
+
+            try
+            {
+
+                string sql = "DELETE FROM Comentarios WHERE IdImagen = @IdImagen";
+
+                SqlCommand comando = new SqlCommand();
+
+                comando.Connection = BaseDatos.conexion;
+
+                comando.CommandText = sql;
+
+                comando.Parameters.AddWithValue("@IdImagen", this.IdImagen);
+
+                BaseDatos.conexion.Open();
+
+                comando.ExecuteNonQuery();
+
+                BaseDatos.conexion.Close();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
+            finally
+            {
+
+                BaseDatos.conexion.Close();
+
+            }
+
+        }
+
+        // Pendiente.
+        public void EliminarLimite(int cantidad)
+        {
+
+            try
+            {
+
+                string sqlInner = "SELECT Imagenes.IdImagen FROM Imagenes, Comentarios WHERE Imagenes.IdImagen = Comentarios.IdImagen AND Imagenes.EsAprobado = 1";
+
+                string sqlFinal = "DELETE FROM Comentarios WHERE IdImagen NOT IN (" + sqlInner + ")";
+
+                SqlCommand comando = new SqlCommand();
+
+                comando.Connection = BaseDatos.conexion;
+
+                comando.CommandText = sqlFinal;
+
+                comando.Parameters.AddWithValue("@cantidad", cantidad);
+
+                BaseDatos.conexion.Open();
+
+                comando.ExecuteNonQuery();
+
+                BaseDatos.conexion.Close();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
+            finally
+            {
+
+                BaseDatos.conexion.Close();
+
+            }
+
+        }
+
         public List < Comentarios > ObtenerListadoPorIdImagen ( int idImagen )
         {
 

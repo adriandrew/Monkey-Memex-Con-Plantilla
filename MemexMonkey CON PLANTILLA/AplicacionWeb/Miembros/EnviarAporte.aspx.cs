@@ -52,6 +52,8 @@ namespace AplicacionWeb.Miembros
 
             AgregarOnFocus();
 
+            BotonPorDefecto();
+
         }
 
         protected void rblEscoger_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,6 +124,13 @@ namespace AplicacionWeb.Miembros
         #endregion
 
         #region Metodos Privados
+
+        private void BotonPorDefecto()
+        {
+
+            this.Form.DefaultButton = btnEnviarAporte.UniqueID;
+
+        }
 
         private void GuardarAporte() 
         {

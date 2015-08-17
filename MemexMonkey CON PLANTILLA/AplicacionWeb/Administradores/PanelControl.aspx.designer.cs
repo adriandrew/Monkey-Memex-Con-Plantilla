@@ -22,6 +22,15 @@ namespace AplicacionWeb.Administradores {
         protected global::System.Web.UI.WebControls.LinkButton linkModerar;
         
         /// <summary>
+        /// Control linkLimitar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkLimitar;
+        
+        /// <summary>
         /// Control linkLimpiarNoAprobados.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,42 @@ namespace AplicacionWeb.Administradores {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton linkLimpiarAprobados;
+        
+        /// <summary>
+        /// Control divLimitar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLimitar;
+        
+        /// <summary>
+        /// Control txtCantidadLimite.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadLimite;
+        
+        /// <summary>
+        /// Control btnLimitarRango.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLimitarRango;
+        
+        /// <summary>
+        /// Control RegularExpressionValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// Control divOpciones.
@@ -76,13 +121,13 @@ namespace AplicacionWeb.Administradores {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOpcionesRango;
         
         /// <summary>
-        /// Control txtCantidad.
+        /// Control txtCantidadRango.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadRango;
         
         /// <summary>
         /// Control btnLimpiarRango.

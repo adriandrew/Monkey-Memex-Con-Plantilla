@@ -56,7 +56,7 @@ p, ul, h1, h2, h3, h4, h5, h6{
 
 img{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	border: none;
 }
 
@@ -526,7 +526,7 @@ img{
 }
 /* ------------------------ Termina Equipos -------------------------- */
 
-/* ---------------------------- RedesSociales -------------------------- */
+/* ---------------------------- Redes Sociales -------------------------- */
 #facebook{
 	background-image: url("../Images/RedesSociales/facebook1.png");		
 }
@@ -558,7 +558,7 @@ img{
 #instagram:hover{
 	background-image: url("../Images/RedesSociales/instagram2.png");			
 }
-/* ---------------------------- Termina RedesSociales -------------------------- */
+/* ---------------------------- Termina Redes Sociales -------------------------- */
 
 /* ---------------------------- Tecnologias -------------------------- */
 #humanstxt{
@@ -574,18 +574,12 @@ img{
 
 
 /* ---------------------------- Otros -------------------------- */
-
-#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton, #ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
+/* Wizards */
+#StepNextButtonButton, #ContinueButtonButton{
+    width: 120px;
     height: 30px;
 }
-
-#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton{
-    width: 90px;
-}
-
-#ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
-    width: 80px;
-}
+/* Termina Wizards */
 
 #fancybox-content {
     border-color: black !important; 
@@ -600,8 +594,7 @@ img{
     height: 200px;
 }
 
-/* Propiedades generales para todos los links. */
-
+/* Propiedades generales para todos los links */
 .links p, .links
 {
    color: #6e6e6e !important;
@@ -615,9 +608,9 @@ img{
 	font-size: 27px;
 	transition: .5s;
 }
+/* Termina Propiedades generales para todos los links */
 
-/* Termina Propiedades generales para todos los links. */
-
+/* Panel de control */
 #divMenuPanelControl
 {
     width: auto;
@@ -628,7 +621,7 @@ img{
 {
    float: left;
    height: 100%;
-   width: 200px;
+   width: 150px;
    text-align: center;
 }
 
@@ -636,5 +629,38 @@ img{
 {
    background-color: rgba(0, 0, 0, 0.1);
 }
+/* Termina panel de control */
 
+/* Aporte enviado */
+#lblGracias
+{
+    display: block;
+    margin-bottom: 20px;    
+}
+
+#principalAporte a
+{
+    width: 50%; 
+    text-align: center;
+}
+/* Termina aporte enviado */
+
+.linkActivo
+{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.linkNoActivo
+{
+   background-color: none;
+}
+
+/* Administrador de usuarios */
+#divGridUsuarios
+{
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+/* Termina administrador de usuarios */
 /* ---------------------------- Termina Otros -------------------------- */

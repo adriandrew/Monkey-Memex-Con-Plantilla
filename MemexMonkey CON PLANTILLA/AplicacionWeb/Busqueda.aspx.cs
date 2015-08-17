@@ -163,7 +163,7 @@ namespace AplicacionWeb
 
                         inyectarImagen = string.Format("<div class={0}>{1}</div>", "imagen", contenidoDivImagen);
 
-                        // TODO. Pendiente optimizar y checar que se inyecten todas las imagenes buscadas, no nadamas una.
+                        // TODO. Pendiente optimizar y checar que se inyecten todas las comentarios buscadas, no nadamas una.
                         // Falta un return al metodo principal y despues hacer el innerhtml.
                         //htmlImagenes.AppendFormat(imagen);
 

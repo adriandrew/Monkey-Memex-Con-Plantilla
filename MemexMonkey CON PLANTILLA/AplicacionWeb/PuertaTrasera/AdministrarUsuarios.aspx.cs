@@ -22,7 +22,8 @@ namespace AplicacionWeb.PuertaTrasera
 
                 divContenidoSecreto.Visible = false;
 
-
+                this.Form.DefaultButton = btnIniciarSesion.UniqueID;
+                
             }
 
             CargarUsuarios();
@@ -39,6 +40,8 @@ namespace AplicacionWeb.PuertaTrasera
 
                 EliminarUsuario(nombre);
 
+                CargarUsuarios();
+
             }
 
         }
@@ -48,7 +51,11 @@ namespace AplicacionWeb.PuertaTrasera
 
             string nombre = CreateUserWizard.UserName;
 
-            AgregarUsuarioAdministrador(nombre);
+            string rol = "Administradores";
+
+            AgregarUsuarioARol(nombre, rol);
+
+            CargarUsuarios();
 
         }
         
@@ -60,7 +67,9 @@ namespace AplicacionWeb.PuertaTrasera
 
                 string nombre = gvUsuarios.Rows[gvUsuarios.SelectedIndex].Cells[1].Text;
 
-                AgregarUsuarioAdministrador(nombre);
+                string rol = "Administradores";
+
+                AgregarUsuarioARol(nombre, rol);
 
             }
 
@@ -74,6 +83,29 @@ namespace AplicacionWeb.PuertaTrasera
             string contraseña = txtContraseña.Text;
 
             ValidarSesionCorrecta(usuario, contraseña);
+
+        }
+
+        protected void CreateUserWizard_ContinueButtonClick(object sender, EventArgs e)
+        {
+
+            CargarUsuarios();
+
+        }
+
+        protected void btnCambiarAMiembro_Click(object sender, EventArgs e)
+        {
+
+            if (gvUsuarios.SelectedIndex >= 0)
+            {
+
+                string nombre = gvUsuarios.Rows[gvUsuarios.SelectedIndex].Cells[1].Text;
+
+                string rol = "Miembros";
+
+                AgregarUsuarioARol(nombre, rol);
+
+            }
 
         }
 
@@ -93,13 +125,13 @@ namespace AplicacionWeb.PuertaTrasera
 
         }
 
-        private void AgregarUsuarioAdministrador(string nombre)
+        private void AgregarUsuarioARol(string nombre, string rol)
         {
 
-            if (!Roles.IsUserInRole(nombre, "Administradores"))
+            if (!Roles.IsUserInRole(nombre, rol))
             {
 
-                Roles.AddUserToRole(nombre, "Administradores");
+                Roles.AddUserToRole(nombre, rol);
 
             }
 
@@ -129,13 +161,6 @@ namespace AplicacionWeb.PuertaTrasera
         }
         
         #endregion
-
-        protected void CreateUserWizard_FinishButtonClick(object sender, WizardNavigationEventArgs e)
-        {
-
-            CargarUsuarios();
-
-        }
         
     }
 }

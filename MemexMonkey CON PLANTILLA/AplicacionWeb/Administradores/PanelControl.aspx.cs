@@ -30,11 +30,27 @@ namespace AplicacionWeb.Administradores
                 }
                 else if (User.IsInRole("Administradores"))
                 {
+                                        
+                    CargarFechaActual();
+
+                    MostrarModeracion(true);
+
+                    MostrarLimitacion(false);
 
                     MostrarControles(false);
 
-                    CargarFechaActual();
+                    ActivarDesactivar(linkModerar, true);
 
+                    DesactivarTodos(linkLimitar, linkLimpiarAprobados, linkLimpiarNoAprobados);
+
+                }
+
+            }
+            else if (this.IsPostBack)
+            {
+                if (User.IsInRole("Administradores"))
+                {
+                
                     AdministrarImagenes();
                 
                 }
@@ -107,12 +123,35 @@ namespace AplicacionWeb.Administradores
         protected void linkModerar_Click(object sender, EventArgs e)
         {
             
+            MostrarLimitacion(false);
+            
             MostrarControles(false);
 
             MostrarModeracion(true);
-            
-            AdministrarImagenes();
                         
+            ActivarDesactivar(linkModerar, true);
+
+            DesactivarTodos(linkLimitar, linkLimpiarAprobados, linkLimpiarNoAprobados);
+
+            //AdministrarImagenes();
+            
+        }
+
+        protected void linkLimitar_Click(object sender, EventArgs e)
+        {
+
+            MostrarLimitacion(true);
+
+            MostrarControles(false);
+
+            MostrarModeracion(false);
+
+            ActivarDesactivar(linkLimitar, true);
+
+            DesactivarTodos(linkModerar, linkLimpiarAprobados, linkLimpiarNoAprobados);
+
+            //estatus = 0;
+
         }
 
         protected void linkLimpiarNoAprobados_Click(object sender, EventArgs e)
@@ -120,7 +159,13 @@ namespace AplicacionWeb.Administradores
 
             MostrarControles(true);
 
+            MostrarLimitacion(false);
+
             MostrarModeracion(false);
+            
+            ActivarDesactivar(linkLimpiarNoAprobados, true);
+
+            DesactivarTodos(linkModerar, linkLimitar, linkLimpiarAprobados);
 
             estatus = 0;
 
@@ -131,7 +176,13 @@ namespace AplicacionWeb.Administradores
 
             MostrarControles(true);
 
+            MostrarLimitacion(false);
+
             MostrarModeracion(false);
+
+            ActivarDesactivar(linkLimpiarAprobados, true);
+
+            DesactivarTodos(linkModerar, linkLimitar, linkLimpiarNoAprobados);
 
             estatus = 1;
 
@@ -145,10 +196,10 @@ namespace AplicacionWeb.Administradores
 
                 int cantidad = 0;
 
-                if (int.TryParse(txtCantidad.Text, out cantidad))
+                if (int.TryParse(txtCantidadRango.Text, out cantidad))
                 {
 
-                    cantidad = Convert.ToInt32(txtCantidad.Text);
+                    cantidad = Convert.ToInt32(txtCantidadRango.Text);
 
                     LimpiarImagenes(estatus, cantidad);
                 
@@ -157,7 +208,30 @@ namespace AplicacionWeb.Administradores
             }
 
         }
-        
+
+        protected void btnLimitarRango_Click(object sender, EventArgs e)
+        {
+
+            //if (estatus >= 0)
+            //{
+
+            int cantidad = 0;
+
+            if (int.TryParse(txtCantidadLimite.Text, out cantidad))
+            {
+
+                cantidad = Convert.ToInt32(txtCantidadLimite.Text);
+
+                LimitarEliminarRegistroImagen(cantidad);
+
+                LimitarEliminarRegistroComentarios(cantidad);
+
+            }
+
+            //}
+
+        }
+
         protected void btnLimpiarFecha_Click(object sender, EventArgs e)
         {
 
@@ -227,6 +301,29 @@ namespace AplicacionWeb.Administradores
 
         }
 
+        private void ActivarDesactivar(LinkButton link, bool estado)
+        {
+
+            string valor = estado ? "linkActivo" : "linkNoActivo";
+
+            link.CssClass = string.Format("{0} {1}", "links", valor);
+
+        }
+
+        private void DesactivarTodos(params LinkButton[] links)
+        {
+
+            string valor = "linkNoActivo";
+
+            for (int index = 0; index < links.Length; index++)
+            {
+
+                links[index].CssClass = string.Format("{0} {1}", "links", valor);
+
+            }
+
+        }
+
         private void MostrarModeracion(Boolean estado)
         {
 
@@ -248,6 +345,13 @@ namespace AplicacionWeb.Administradores
 
         }
 
+        private void MostrarLimitacion(Boolean estado)
+        {
+
+            divLimitar.Visible = estado;
+
+        }
+
         private void MostrarControlesFecha(Boolean estado)
         {
 
@@ -255,7 +359,7 @@ namespace AplicacionWeb.Administradores
 
         }
 
-        #region Limpieza de imagenes y registros basura.
+        #region Limpieza de comentarios y registros basura.
 
         private void LimpiarImagenes(int estatus, string fecha)
         {
@@ -294,6 +398,24 @@ namespace AplicacionWeb.Administradores
                     LimpiarVerificarArchivoImagen(elementoImagenes);
 
             }
+
+        }
+
+        private void LimitarEliminarRegistroImagen(int cantidad)
+        {
+
+            Entidades.Imagenes imagenes = new Entidades.Imagenes();
+
+            imagenes.EliminarLimite(cantidad);
+
+        }
+
+        private void LimitarEliminarRegistroComentarios(int cantidad)
+        {
+
+            Entidades.Comentarios comentarios = new Entidades.Comentarios();
+
+            comentarios.EliminarLimite(cantidad);
 
         }
 
@@ -338,6 +460,8 @@ namespace AplicacionWeb.Administradores
 
                     LimpiarEliminarRegistroImagen(idImagen);
 
+                    LimpiarEliminarRegistroComentarios(idImagen);
+
                 }
 
             }
@@ -345,6 +469,8 @@ namespace AplicacionWeb.Administradores
             {
 
                 LimpiarEliminarRegistroImagen(idImagen);
+
+                LimpiarEliminarRegistroComentarios(idImagen);
 
             }
 
@@ -358,6 +484,17 @@ namespace AplicacionWeb.Administradores
             imagenes.IdImagen = Convert.ToInt32(idImagen);
 
             imagenes.Eliminar();
+
+        }
+
+        private void LimpiarEliminarRegistroComentarios(string idImagen)
+        {
+
+            Entidades.Comentarios comentarios = new Entidades.Comentarios();
+
+            comentarios.IdImagen = Convert.ToInt32(idImagen);
+
+            comentarios.Eliminar();
 
         }
 
@@ -649,6 +786,8 @@ namespace AplicacionWeb.Administradores
 
             btnAprobar.Click += new EventHandler ( this.btnAprobar_Click );
 
+            btnAprobar.ClientIDMode = System.Web.UI.ClientIDMode.Static ;
+
             btnAprobar.Width = 177;
 
             btnAprobar.Height = 132;
@@ -667,6 +806,8 @@ namespace AplicacionWeb.Administradores
             btnRechazar.ID = string.Format ( "{0}{1}", "Rechazar | ", idImagen );
 
             btnRechazar.Click += new EventHandler ( this.btnRechazar_Click );
+
+            btnRechazar.ClientIDMode = System.Web.UI.ClientIDMode.Static;
 
             btnRechazar.Width = 177;
 
@@ -750,7 +891,6 @@ namespace AplicacionWeb.Administradores
         }
 
         #endregion
-
 
         #endregion
                 

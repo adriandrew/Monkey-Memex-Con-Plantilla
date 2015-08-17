@@ -22,7 +22,7 @@ namespace AplicacionWeb {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control imagenes.
+        /// Control comentarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
