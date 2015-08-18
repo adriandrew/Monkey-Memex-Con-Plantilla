@@ -255,7 +255,7 @@ img{
 }
 
 #navPublicidad{
-    height: 805px;
+    height: 710px;
 }
 
 #txtBusqueda{
@@ -697,4 +697,9 @@ img{
     overflow: scroll;
 }
 /* Termina administrador de usuarios */
+
+#divPrincipalPeticion {
+    font-family: monospace;
+}
+
 /* ---------------------------- Termina Otros -------------------------- */

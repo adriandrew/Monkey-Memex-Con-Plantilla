@@ -189,6 +189,7 @@
     <Content Include="IniciarSesion.aspx" />
     <Content Include="Miembros\AporteEnviado.aspx" />
     <Content Include="Miembros\EnviarAporte.aspx" />
+    <Content Include="Peticion.aspx" />
     <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
@@ -267,6 +268,13 @@
     </Compile>
     <Compile Include="Miembros\EnviarAporte.aspx.designer.cs">
       <DependentUpon>EnviarAporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Peticion.aspx.cs">
+      <DependentUpon>Peticion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Peticion.aspx.designer.cs">
+      <DependentUpon>Peticion.aspx</DependentUpon>
     </Compile>
     <Compile Include="PuertaTrasera\AdministrarUsuarios.aspx.cs">
       <DependentUpon>AdministrarUsuarios.aspx</DependentUpon>

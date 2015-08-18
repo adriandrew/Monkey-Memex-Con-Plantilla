@@ -38,6 +38,8 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute("AdministrarUsuarios", "AdministrarUsuarios", "~/PuertaTrasera/AdministrarUsuarios.aspx");
 
+            rutas.MapPageRoute("Peticion", "Peticion", "~/Peticion.aspx");
+
         }
 
         protected void Application_Start(object sender, EventArgs e)
