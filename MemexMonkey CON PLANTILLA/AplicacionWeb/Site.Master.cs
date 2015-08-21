@@ -11,6 +11,7 @@ namespace AplicacionWeb
 {
     public partial class Site : System.Web.UI.MasterPage
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -47,7 +48,9 @@ namespace AplicacionWeb
 
                 nombreUsuarioTexto.InnerText = "Hola " + nombreUsuarioActual;
 
-            }          
+            }
+
+            CargarImagenMejorPublicacionAyer();
 
         }
 
@@ -59,6 +62,72 @@ namespace AplicacionWeb
             this.Response.Redirect("Busqueda");
 
         }
+
+        #region Metodos Privados
+
+        private void CargarImagenMejorPublicacionAyer()
+        {
+
+            var htmlImagenes = new StringBuilder();
+
+            string inyectarImagenes = string.Empty;
+
+            Entidades.ImagenesAspNet_Users imagenes = new Entidades.ImagenesAspNet_Users();
+
+            List<Entidades.ImagenesAspNet_Users> listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
+
+            listaImagenes = imagenes.ObtenerMejorPublicacionAyer(DateTime.Today.AddDays(-1));
+
+            foreach (Entidades.ImagenesAspNet_Users elementoImagenes in listaImagenes)
+            {
+
+                if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
+                {
+
+                    inyectarImagenes += MostrarImagenDirectamente(htmlImagenes, elementoImagenes);
+
+                    break;
+
+                }
+                else if (!string.IsNullOrEmpty(elementoImagenes.EnlaceExterno))
+                {
+
+                    //VerificarEnlaceImagen(elementoImagenes);
+
+                }
+
+            }
+
+            navMasVotado.InnerHtml = inyectarImagenes;
+
+        }
+
+        private string MostrarImagenDirectamente(StringBuilder htmlImagenes, Entidades.ImagenesAspNet_Users elementoImagenes)
+        {
+
+            string idImagen = elementoImagenes.IdImagen.ToString();
+
+            string titulo = elementoImagenes.Titulo.ToString();
+
+            string rutaRelativa = elementoImagenes.RutaRelativa.ToString();
+
+            string inyectarImagen = string.Empty;
+
+            string urlImagen = string.Format("{0}", rutaRelativa);
+
+            string archivoImagen = string.Format("<img src='{0}' alt='{1}'>", urlImagen, titulo);
+
+            string linkImagen = string.Format("<a class={0} href={1}{2} onmouseover={3}>{4}</a>", "iframe", "Individual/", idImagen, "InvocarFancybox('75%','100%','false','0.8')", archivoImagen);
+
+            string contenidoDivImagen = string.Format("{0}", linkImagen);
+
+            inyectarImagen = string.Format("<div>{0}</div>", contenidoDivImagen);
+            
+            return inyectarImagen;
+
+        }
+
+        #endregion
 
     }
 }

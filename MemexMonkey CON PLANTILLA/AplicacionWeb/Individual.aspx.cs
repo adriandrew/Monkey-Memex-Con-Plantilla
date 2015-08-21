@@ -163,7 +163,7 @@ namespace AplicacionWeb
 
             string fechaPublicacionImagen = string.Format("<h4>{0}</h4>", fechaPublicacion);
 
-            string archivoImagen = string.Format("<img src='{0}{1}' alt='{2}'>", "..", rutaRelativa, titulo);
+            string archivoImagen = string.Format("<img src='{0}{1}' alt='{2}' title='{3}'>", "..", rutaRelativa, titulo, titulo);
 
             string etiquetas = string.Format("<h4>{0} | {1}</h4>", etiquetasBasicas, etiquetasOpcionales);
 

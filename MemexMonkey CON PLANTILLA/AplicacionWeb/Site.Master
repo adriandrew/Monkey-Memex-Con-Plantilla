@@ -145,9 +145,9 @@
                         </a> <!-- end linkDonacion -->
                     </div> <!-- end divDonacion -->
                     <div id="divPeticion">
-                        <a href="Peticion" class="links">Por favor lea: </br> Una petición personal de Adrián Andrew, fundador de memex.</a>
+                        <a href="Peticion" class="links">Por favor lea: <br/>Una petición personal de Adrián Andrew, fundador de memex.</a>
                         <a href="Peticion" title="Peticion">
-				            <img src="Images/Autor/Andrew2.jpg"/>
+				            <img src="Images/Autor/Andrew4.jpg"/>
 			            </a>
                     </div> <!-- end navPeticion -->
                     <nav id="navPublicidad">
@@ -192,7 +192,7 @@
 					        <li><a href="#"></a></li>
 				        </ul>
 			        </nav>
-			        <nav id="navMasVotado" title="Mas Votado">
+			        <nav id="navMasVotado" title="Mas Votado" runat="server">
 				        <ul>
 					        <li><a href="#"></a></li>
 				        </ul>

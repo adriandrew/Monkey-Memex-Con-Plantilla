@@ -9,25 +9,34 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="Busqueda.aspx">
-      <publishTime>07/16/2015 11:01:05</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Css/styles.css">
+      <publishTime>08/18/2015 01:29:15</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>07/06/2015 08:40:41</publishTime>
+      <publishTime>06/07/2015 08:40:41</publishTime>
     </File>
     <File Include="Error.aspx">
-      <publishTime>07/27/2015 08:29:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/10/2015 19:16:50</publishTime>
     </File>
     <File Include="humans.txt">
-      <publishTime>07/06/2015 08:40:41</publishTime>
+      <publishTime>06/07/2015 08:40:41</publishTime>
     </File>
     <File Include="Individual.aspx">
-      <publishTime>07/27/2015 09:04:03</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Peticion.aspx">
+      <publishTime>08/18/2015 01:16:50</publishTime>
     </File>
     <File Include="RegistrarMiembro.aspx">
-      <publishTime>07/27/2015 08:29:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="robots.txt">
-      <publishTime>07/06/2015 08:40:41</publishTime>
+      <publishTime>06/07/2015 08:40:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

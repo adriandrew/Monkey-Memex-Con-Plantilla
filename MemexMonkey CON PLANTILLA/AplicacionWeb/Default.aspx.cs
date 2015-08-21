@@ -74,7 +74,7 @@ namespace AplicacionWeb
 
         }
 
-        // Mierda, tengo que encontrar la manera mas optima para mostrar las putas comentarios, tengo que consultarlo con la almohada..
+        // Mierda, tengo que encontrar la manera mas optima para mostrar las putas imagenes, tengo que consultarlo con la almohada..
 
         [WebMethod]
         public static string MostrarImagenes ( int posicionImagenes, int cantidadImagenes )
