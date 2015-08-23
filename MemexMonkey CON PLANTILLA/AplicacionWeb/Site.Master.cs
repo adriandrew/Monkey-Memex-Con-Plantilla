@@ -50,7 +50,12 @@ namespace AplicacionWeb
 
             }
 
-            CargarImagenMejorPublicacionAyer();
+            if (!this.IsPostBack)
+            {
+
+                CargarAporteMasComentadoEnLaHistoria();
+
+            }
 
         }
 
@@ -65,7 +70,7 @@ namespace AplicacionWeb
 
         #region Metodos Privados
 
-        private void CargarImagenMejorPublicacionAyer()
+        private void CargarAporteMasComentadoEnLaHistoria()
         {
 
             var htmlImagenes = new StringBuilder();
@@ -76,25 +81,18 @@ namespace AplicacionWeb
 
             List<Entidades.ImagenesAspNet_Users> listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
 
-            listaImagenes = imagenes.ObtenerMejorPublicacionAyer(DateTime.Today.AddDays(-1));
+            listaImagenes = imagenes.ObtenerMasComentadoEnLaHistoria(DateTime.Today.AddDays(-1));
 
-            foreach (Entidades.ImagenesAspNet_Users elementoImagenes in listaImagenes)
+            if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).DirectorioRelativo) && !string.IsNullOrEmpty(listaImagenes.ElementAt(0).RutaRelativa))
             {
 
-                if (!string.IsNullOrEmpty(elementoImagenes.DirectorioRelativo) && !string.IsNullOrEmpty(elementoImagenes.RutaRelativa))
-                {
+                inyectarImagenes += MostrarImagenDirectamente(htmlImagenes, listaImagenes.ElementAt(0));
+                                   
+            }
+            else if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).EnlaceExterno))
+            {
 
-                    inyectarImagenes += MostrarImagenDirectamente(htmlImagenes, elementoImagenes);
-
-                    break;
-
-                }
-                else if (!string.IsNullOrEmpty(elementoImagenes.EnlaceExterno))
-                {
-
-                    //VerificarEnlaceImagen(elementoImagenes);
-
-                }
+                //VerificarEnlaceImagen(elementoImagenes);
 
             }
 
@@ -115,13 +113,15 @@ namespace AplicacionWeb
 
             string urlImagen = string.Format("{0}", rutaRelativa);
 
-            string archivoImagen = string.Format("<img src='{0}' alt='{1}'>", urlImagen, titulo);
+            string archivoImagen = string.Format("<img src='{0}' alt='{1}' title='{2}'>", urlImagen, titulo, "Lo mas comentado de la historia");
 
             string linkImagen = string.Format("<a class={0} href={1}{2} onmouseover={3}>{4}</a>", "iframe", "Individual/", idImagen, "InvocarFancybox('75%','100%','false','0.8')", archivoImagen);
 
             string contenidoDivImagen = string.Format("{0}", linkImagen);
 
-            inyectarImagen = string.Format("<div>{0}</div>", contenidoDivImagen);
+            string tituloNavegacion = string.Format("<h3>Lo mas comentado de la historia.</h3>");
+
+            inyectarImagen = string.Format("{0}{1}", tituloNavegacion, contenidoDivImagen);
             
             return inyectarImagen;
 

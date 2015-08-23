@@ -279,7 +279,7 @@ namespace Entidades
             try
             {
 
-                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
+                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = Aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
 
                 SqlCommand comando = new SqlCommand();
 
@@ -451,7 +451,7 @@ namespace Entidades
 
         }
 
-        public List<ImagenesAspNet_Users> ObtenerMejorPublicacionAyer(DateTime fecha)
+        public List<ImagenesAspNet_Users> ObtenerMasComentadoEnLaHistoria(DateTime fecha)
         {
 
             List<ImagenesAspNet_Users> lista = new List<ImagenesAspNet_Users>();
@@ -459,7 +459,9 @@ namespace Entidades
             try
             {
 
-                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
+                string subconsulta = "SELECT TOP(1) COUNT(IdImagen) AS Conteo, IdImagen FROM Comentarios GROUP BY IdImagen ORDER BY Conteo DESC";
+
+                string sql = "SELECT AspNet_Users.*, Imagenes.* FROM (SELECT Imagenes.* FROM Imagenes INNER JOIN (" + subconsulta + ") AS Comentarios ON Imagenes.IdImagen = Comentarios.IdImagen) AS Imagenes INNER JOIN AspNet_Users ON Imagenes.UserId = Aspnet_Users.UserId WHERE EsAprobado = 1 ORDER BY FechaSubida DESC";
 
                 SqlCommand comando = new SqlCommand();
 
