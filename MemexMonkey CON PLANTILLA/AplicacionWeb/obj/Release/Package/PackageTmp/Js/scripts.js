@@ -86,6 +86,8 @@ window.onload = function ()
 
     // El parametro es el nombre que le dimos al DIV. 
 
+    InsigniaGoogle();
+
 }
 
 function CerrarFancyboxYRedireccionar(url) {
@@ -98,6 +100,22 @@ function CerrarFancyboxYRedireccionar(url) {
     // self.parent.location.href = 'Registrarse'
 
 }
+
+function InsigniaGoogle(){
+
+    //<!-- Inserta esta etiqueta después de la última etiqueta de widget. -->
+    //<script type="text/javascript">
+    window.___gcfg = { lang: 'es-419' };
+
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    //</script>
+
+}
+
 
 
 // TODO. Intento de flappy bird al iniciar la pagina de error.

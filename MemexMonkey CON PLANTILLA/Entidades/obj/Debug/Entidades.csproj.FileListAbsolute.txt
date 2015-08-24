@@ -30,6 +30,5 @@ C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Debug\Ent
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Debug\Entidades.dll
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Debug\Entidades.pdb
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Debug\Entidades.dll
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Debug\Entidades.pdb

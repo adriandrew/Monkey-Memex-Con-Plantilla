@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
-        <div id="imagen" class="error">
+        <div id="imagen" class="error" runat="server">
             <h2> Y la publicación, donde está la publicación? </h2>
             <h4> Aporte por: Memex </h4>
             <h6> Fecha publicacion: 07-08-2014 </h6>
@@ -12,7 +12,7 @@
         </div> <!-- Termina imagen -->
 
         <!-- Falta checar esto del flappy bird para que se haga automaticamente -->
-        <a class="iframe" href="http://flappybird.io/" onmouseover="InvocarFancybox('75%','100%','false','0.8')">         
+        <a class="iframe links" href="http://flappybird.io/" onmouseover="InvocarFancybox('75%','100%','false','0.8')">         
             <h2>Click aqui para jugar flappybird</h2>
         </a>
 

@@ -105,3 +105,19 @@ h1, h2, h3, h4, h5, h6
     background-color: #333 !important;
 }
 /* Termina Facebook */
+
+/* Propiedades generales para todos los links */
+.links p, .links
+{
+   color: #6e6e6e !important;
+   text-align: left;
+   float: right;
+}
+
+.links p:hover, .links:hover
+{
+	color: white !important;
+	font-size: 27px;
+	transition: .5s;
+}
+/* Termina Propiedades generales para todos los links */

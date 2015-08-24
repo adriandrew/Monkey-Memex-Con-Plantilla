@@ -63,8 +63,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administradores\Estadisticas.aspx" />
     <Content Include="Administradores\PanelControl.aspx" />
     <Content Include="Busqueda.aspx" />
+    <Content Include="Chat.aspx" />
     <Content Include="Controles\SubirArchivo.ascx" />
     <Content Include="Css\1024-1080.css" />
     <Content Include="Css\1080-1152.css" />
@@ -86,6 +88,7 @@
     <Content Include="Css\iniciarSesion.css" />
     <Content Include="Css\styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Dinamico.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Fancybox\blank.gif" />
     <Content Include="Fancybox\fancybox-x.png" />
@@ -192,9 +195,9 @@
     <Content Include="Peticion.aspx" />
     <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
+    <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <Content Include="robots.txt" />
-    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -203,6 +206,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administradores\Estadisticas.aspx.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administradores\Estadisticas.aspx.designer.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administradores\PanelControl.aspx.cs">
       <DependentUpon>PanelControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +227,13 @@
     <Compile Include="Busqueda.aspx.designer.cs">
       <DependentUpon>Busqueda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controles\SubirArchivo.ascx.cs">
       <DependentUpon>SubirArchivo.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,6 +247,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dinamico.aspx.cs">
+      <DependentUpon>Dinamico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dinamico.aspx.designer.cs">
+      <DependentUpon>Dinamico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

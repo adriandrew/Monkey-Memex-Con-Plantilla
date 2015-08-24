@@ -451,7 +451,7 @@ namespace Entidades
 
         }
 
-        public List<ImagenesAspNet_Users> ObtenerMasComentadoEnLaHistoria(DateTime fecha)
+        public List<ImagenesAspNet_Users> ObtenerMasComentadoEnLaHistoria()
         {
 
             List<ImagenesAspNet_Users> lista = new List<ImagenesAspNet_Users>();
@@ -468,8 +468,6 @@ namespace Entidades
                 comando.Connection = BaseDatos.conexion;
 
                 comando.CommandText = sql;
-
-                comando.Parameters.AddWithValue("@fecha", fecha);
 
                 BaseDatos.conexion.Open();
 

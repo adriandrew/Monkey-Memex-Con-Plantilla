@@ -155,7 +155,7 @@
 		        </section>
 
                 <section id="sectionContenido">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">        
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">  
                         <%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -166,9 +166,7 @@
                 </section>
 
 		        <section id="sectionDerecha">
-                    <!-- Widget de perfil de Google+ -->                    
-                    <div id="perfilGoogle+" class="g-person" data-href="//plus.google.com/u/0/116827798869845298684" data-theme="dark" data-rel="author"></div>
-			        <nav id="navCompeticiones" title="Competiciones">
+                    <nav id="navCompeticiones" title="Competiciones">
 				        <ul>
 					        <li><a href="#" title="Liga Mexicana"><img src="Images/Ligas/LogoMexico.png"></a></li>
 					        <li><a href="#" title="Liga Española"><img src="Images/Ligas/LogoEspañola.png"></a></li>
@@ -197,10 +195,92 @@
 					        <li><a href="#"></a></li>
 				        </ul>
 			        </nav>
+                    <!-- Widget contador de visitas -->                    
+                    <div id="divContadorVisitas">
+                        <a href="http://www.contadorvisitasgratis.com" title="contador de visitas"><img src="http://counter7.freecounterstat.ovh/private/contadorvisitasgratis.php?c=bdff101d20c39655ba2b1966f044a51f" border="0" title="contador de visitas" alt="contador de visitas"></a>
+                    </div> 
+                    <!-- Widget de resultados de futbol mexicano -->
+                    <div id="divResultadosFutbol">
+                        <script type="text/javascript">
+                        <!--
+                        padding = "2";
+                        width = "300px";
+                        bgColor = "#45473D";
+                        linkColor = "#14A1A8";
+                        textColorA = "#EBEBE6";
+                        textColorB = "#9E9FA1";
+                        border = "1px solid #87888A";
+                        textFont = "14px Arial, Helvetica, Sans serif";
+                        //-->
+                        </script>
+                        <script lang="javascript" src="http://www.resultados-futbol.com/scripts/api/api.php?key=41d55642f6613d82dae41eac2ecc4d65&format=widget&req=w_results&category=68&grated=1&comments=1"></script>
+                        <a target="_blank" style="margin-left:110px;font-size:10px;color:#14A1A8;" href="http://www.resultados-futbol.com/">Resultados de F&uacute;tbol</a>
+                    </div>
+                    <!-- Widget de noticias del deporte -->
+                    <div id="divNoticiasDeporte">   
+                        <div id="glbd-widget"><div id="glbd-load" style="width: 300px; height: 500px; background: url(http://globedia.com/img/loading.gif) center no-repeat;"></div><div id="glbd-link" style="text-align:right; font-size:10px; font-family:'Trebuchet MS', Arial; margin: auto; width: 300px;"><a href="http://globedia.com" title="Noticias" target="_blank" style="color:#999; text-decoration:none;">globedia.com</a></div></div><script type="text/javascript" src="http://globedia.com/widgets/widget.js"></script><script type="text/javascript" src="http://globedia.com/widgets/widget.php?country=MX&category=deportes&order=votes&cols=1&num=50&width=300&height=500&title=Noticias%20del%20deporte&author=Adrian%20Andrew&images=false&summaries=true&votes=false"></script><script type="text/javascript">GlobediaWidget.init();</script>
+                    </div>   
+                    <!-- Widget de mapa de usuarios -->
+                    <div id="divMapaUsuarios">
+                        <a href="Dinamico" title="Mapa de usuarios" class="iframe" onclick="InvocarFancybox(790, 140, false, .8)" onmouseover="InvocarFancybox(790, 140, false, .8)"> 
+                            <script id="_waux0c">var _wau = _wau || [];
+                                _wau.push(["map", "xldf9fbchvrw", "x0c", "300", "150", "natural", "default-blue"]);
+                                (function () {
+                                    var s = document.createElement("script"); s.async = true;
+                                    s.src = "http://widgets.amung.us/map.js";
+                                    document.getElementsByTagName("head")[0].appendChild(s);
+                                })();
+                            </script>
+                        </a>
+                    </div>
+                    <!-- Widget de perfil de Google+ -->       
+                    <div id="divPerfilGoogle">
+                        <div class="g-person" data-href="//plus.google.com/u/0/116827798869845298684" data-theme="dark" data-rel="author"></div>
+                    </div>
+                    <!--Insignia de Facebook-->
+                    <div id="divPerfilFacebook">
+                    <!-- Facebook Badge START -->
+                        <a href="https://www.facebook.com/adrian.andrew.33" title="Adri&#xe1;n Andrew" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Adrián Andrew</a><span style="font-family: &#039;lucida grande&#039;,tahoma,verdana,arial,sans-serif;font-size: 11px;line-height: 16px;font-variant: normal;font-style: normal;font-weight: normal;color: #555555;text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/adrian.andrew.33" title="Adri&#xe1;n Andrew" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100007896124144.11120.488200261.png" style="border: 0px;" alt="" /></a>
+                    <!-- Facebook Badge END -->
+                    </div>
+                    <!-- Widget de chat de skype -->
+                    <div id="divPerfilSkype">
+                        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                        <div id="SkypeButton_Call_adriandrew91_1">
+                            <script type="text/javascript">
+                                Skype.ui({
+                                    "name": "chat",
+                                    "element": "SkypeButton_Call_adriandrew91_1",
+                                    "participants": ["adriandrew91"],
+                                    "imageSize": 32
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <!-- Widget de chat con usuarios -->
+                    <div id="divChatUsuarios">
+                        <iframe src="Chat"></iframe>
+                    </div>
+
+                    <!--Pagina de Facebook-->
+                    <!--<div id="divPaginaFacebook">
+                        <iframe allowtransparency='true' frameborder='0' scrolling='no' src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fadrian.andrew.33&width=240&colorscheme=light&connections=15&stream=false&header=false&height=350' style='border:none; overflow:hidden; width:240px; height:325px;'/></iframe> 
+                    </div>-->
+                    <!-- Texto desplazandose -->      
+                    <!-- <nav>
+                        <div class="n"><p><b><font color="#000000" face="georgia" size="4">
+                            <marquee width="400" scrollamount="5" bgcolor="#FFFFFF">Aquí tu texto</marquee>
+                        </font></b></p></div>
+                    </nav> -->
+                    <!-- Widget del clima -->                    
+                    <!--<div id="cont_bdeb373be8c5b8d8e1dc5b27b4174cdb">
+                      <span id="h_bdeb373be8c5b8d8e1dc5b27b4174cdb"><a id="a_bdeb373be8c5b8d8e1dc5b27b4174cdb" href="http://www.meteored.mx/clima_Culiacan-America+Norte-Mexico-Sinaloa-MMCL-1-22383.html" target="_blank" rel="nofollow" style="color:#808080;font-family:Helvetica;font-size:14px;">Clima Culiacan</a></span>
+                      <script type="text/javascript" async src="http://www.meteored.mx/wid_loader/bdeb373be8c5b8d8e1dc5b27b4174cdb"></script>
+                    </div> -->
 		        </section>
 	        </section>
 
-	       <%-- <footer id="footer">	
+        <!-- <footer id="footer">	
 		    <aside id="asideIconos">
 			    <a href="./humans.txt" target="_blank" id="humanstxt"><img src="Images/Tecnologias/humanstxt-bn.png"></a>
 			    <a href="http://www.monkey.net" target="_blank" id="monkey"><img src="Images/monkey.png"></a>
@@ -208,11 +288,49 @@
 		    <aside id="asideFondo">
 			    <img src="Images/map.png">
 		    </aside>
-	    </footer>--%>         
-
+	    </footer>-->         
+               
 	    </div> <!-- Termina Principal -->
 
     </form>
+
+    <!--Titulo de la pagina en movimiento.-->
+    <script lang="JavaScript">
+        var txt = "Memex. Memes de México y del mundo. ";
+
+        var espera = 140;
+
+        var refresco = null;
+
+        function rotulo_title() {
+
+            document.title = txt;
+
+            txt = txt.substring(1, txt.length) + txt.charAt(0);
+
+            refresco = setTimeout("rotulo_title()", espera);
+        }
+
+        rotulo_title();
+    </script>
+    <!--Boton de ir arriba.-->
+    <nav id="navIrArriba">                       
+        <a href="#" title="Ir arriba"><img alt="Ir arriba" border="0" src="http://2.bp.blogspot.com/_qgZA1ny_dAs/S0QFsV1WD7I/AAAAAAAADhs/ZBKrnpzqBrk/s200/arrow8a.png" style='position:fixed;bottom:0;right:0;'/></a>
+    </nav>
+    <!--Desastre en la web.-->
+    <!--<script language="javascript">
+        nd_mode = "burn";
+        nd_vAlign = "bottom";
+        nd_hAlign = "right";
+        nd_vMargin = "10";
+        nd_hMargin = "10";
+        nd_target = "_top";
+    </script>
+    <script language="javascript" src="http://www.netdisaster.com/js/mynd.js"></script>-->
+    <!--Efecto electrico a enlaces-->
+    <!--<style type="text/css"> a.navbar:hover{color:red; font-weight:bold;background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif);} 
+     a:hover, a.redlink:hover, a.navbar:hover {background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif); text-decoration:none; border:0px solid;} 
+     a:hover img {background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif); filter:alpha(finishopacity=0, style=2); } </style>-->
 
 </body>
 </html>

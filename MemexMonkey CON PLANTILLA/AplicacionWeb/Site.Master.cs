@@ -81,22 +81,27 @@ namespace AplicacionWeb
 
             List<Entidades.ImagenesAspNet_Users> listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
 
-            listaImagenes = imagenes.ObtenerMasComentadoEnLaHistoria(DateTime.Today.AddDays(-1));
+            listaImagenes = imagenes.ObtenerMasComentadoEnLaHistoria();
 
-            if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).DirectorioRelativo) && !string.IsNullOrEmpty(listaImagenes.ElementAt(0).RutaRelativa))
+            if (listaImagenes.Count > 0)
             {
 
-                inyectarImagenes += MostrarImagenDirectamente(htmlImagenes, listaImagenes.ElementAt(0));
-                                   
+                if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).DirectorioRelativo) && !string.IsNullOrEmpty(listaImagenes.ElementAt(0).RutaRelativa))
+                {
+
+                    inyectarImagenes += MostrarImagenDirectamente(htmlImagenes, listaImagenes.ElementAt(0));
+
+                }
+                else if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).EnlaceExterno))
+                {
+
+                    //VerificarEnlaceImagen(elementoImagenes);
+
+                }
+
+                navMasVotado.InnerHtml = inyectarImagenes;
+            
             }
-            else if (!string.IsNullOrEmpty(listaImagenes.ElementAt(0).EnlaceExterno))
-            {
-
-                //VerificarEnlaceImagen(elementoImagenes);
-
-            }
-
-            navMasVotado.InnerHtml = inyectarImagenes;
 
         }
 

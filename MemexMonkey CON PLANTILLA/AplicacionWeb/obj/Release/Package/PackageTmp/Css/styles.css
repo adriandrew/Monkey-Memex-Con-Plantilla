@@ -60,6 +60,10 @@ img{
 	border: none;
 }
 
+#sectionContenido img{
+    height: auto;
+}
+
 #principal, #header, #section, #footer{		
 	margin: 0 auto; 
 }
@@ -233,11 +237,11 @@ img{
 /* Section Izquierda */
 #sectionIzquierda nav, #sectionIzquierda div {
     width: auto;
+    margin-bottom: 10px;
 }
 
-#sectionIzquierda div {
-    padding: 10px 0px 10px 0px;
-    margin-bottom: 10px;
+#sectionIzquierda div{
+    padding: 10px 0px 10px 0px;    
 }
 
 #sectionIzquierda{
@@ -251,7 +255,7 @@ img{
 }
 
 #navPublicidad{
-    height: 805px;
+    height: 710px;
 }
 
 #txtBusqueda{
@@ -267,6 +271,31 @@ img{
 #btnBusqueda{
     width: 200px;
     height: 35px;
+}
+
+#divPeticion{
+    height: 400px;        
+}
+
+#divPeticion a:first-child{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#divPeticion a{
+    height: 90px;    
+    color: white !important;
+}
+
+#divPeticion img{
+    height: 320px;
+}
+
+#divPeticion:hover, #divPeticion a:hover {	
+	font-size: 17px;
+	transition: .5s;        
+    color: black !important;
+    font-weight: bold;
 }
 
 #divDonacion{
@@ -337,13 +366,18 @@ img{
 /* Termina Section Contenido */
 
 /* Section Derecha */
+#perfilGoogle+
+{
+    
+}
+
 #sectionDerecha{
 	width: 300px;
 	max-height: 1000px;
 }
 
-#sectionDerecha nav{
-	margin-bottom: 10px;
+#sectionDerecha nav, #sectionDerecha div{
+	margin-bottom: 10px !important;
 }
 
 #sectionDerecha nav:last-child{
@@ -526,7 +560,7 @@ img{
 }
 /* ------------------------ Termina Equipos -------------------------- */
 
-/* ---------------------------- RedesSociales -------------------------- */
+/* ---------------------------- Redes Sociales -------------------------- */
 #facebook{
 	background-image: url("../Images/RedesSociales/facebook1.png");		
 }
@@ -558,7 +592,7 @@ img{
 #instagram:hover{
 	background-image: url("../Images/RedesSociales/instagram2.png");			
 }
-/* ---------------------------- Termina RedesSociales -------------------------- */
+/* ---------------------------- Termina Redes Sociales -------------------------- */
 
 /* ---------------------------- Tecnologias -------------------------- */
 #humanstxt{
@@ -574,18 +608,12 @@ img{
 
 
 /* ---------------------------- Otros -------------------------- */
-
-#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton, #ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
+/* Wizards */
+#StepNextButtonButton, #ContinueButtonButton{
+    width: 120px;
     height: 30px;
 }
-
-#ContentPlaceHolder_CreateUserWizard___CustomNav0_StepNextButtonButton{
-    width: 90px;
-}
-
-#ContentPlaceHolder_CreateUserWizard_CompleteStepContainer_ContinueButton{
-    width: 80px;
-}
+/* Termina Wizards */
 
 #fancybox-content {
     border-color: black !important; 
@@ -600,12 +628,11 @@ img{
     height: 200px;
 }
 
-/* Propiedades generales para todos los links. */
-
+/* Propiedades generales para todos los links */
 .links p, .links
 {
    color: #6e6e6e !important;
-   text-align: right;
+   text-align: left;
    float: right;
 }
 
@@ -615,9 +642,9 @@ img{
 	font-size: 27px;
 	transition: .5s;
 }
+/* Termina Propiedades generales para todos los links */
 
-/* Termina Propiedades generales para todos los links. */
-
+/* Panel de control */
 #divMenuPanelControl
 {
     width: auto;
@@ -628,13 +655,51 @@ img{
 {
    float: left;
    height: 100%;
-   width: 200px;
+   width: 150px;
    text-align: center;
 }
 
 #divMenuPanelControl .links:hover
 {
    background-color: rgba(0, 0, 0, 0.1);
+}
+/* Termina panel de control */
+
+/* Aporte enviado */
+#lblGracias
+{
+    display: block;
+    margin-bottom: 20px;    
+}
+
+#principalAporte a
+{
+    width: 50%; 
+    text-align: center;
+}
+/* Termina aporte enviado */
+
+.linkActivo
+{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.linkNoActivo
+{
+   background-color: none;
+}
+
+/* Administrador de usuarios */
+#divGridUsuarios
+{
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+/* Termina administrador de usuarios */
+
+#divPrincipalPeticion {
+    font-family: monospace;
 }
 
 /* ---------------------------- Termina Otros -------------------------- */

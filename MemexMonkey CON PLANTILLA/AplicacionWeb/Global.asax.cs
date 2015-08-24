@@ -40,6 +40,12 @@ namespace AplicacionWeb
 
             rutas.MapPageRoute("Peticion", "Peticion", "~/Peticion.aspx");
 
+            rutas.MapPageRoute("Dinamico", "Dinamico", "~/Dinamico.aspx");
+
+            rutas.MapPageRoute("Chat", "Chat", "~/Chat.aspx");
+
+            rutas.MapPageRoute("Estadisticas", "Estadisticas", "~/Administradores/Estadisticas.aspx");
+
         }
 
         protected void Application_Start(object sender, EventArgs e)
