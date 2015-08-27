@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="Css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="Css/iniciarSesion.css"/>
 </head>
-<body id="bodyIniciarSesion" background="Images/color2.jpg">
+<body id="bodyIniciarSesion" background="Images/fondo.jpg">
     <form id="formularioIniciarSesion" runat="server" class="formulario">        
         <div id="principal">
             <section id="section">

@@ -88,6 +88,16 @@ window.onload = function ()
 
     InsigniaGoogle();
 
+    DetectarCarga();
+
+}
+
+// Carga manual.
+
+function DetectarCarga() {
+
+    document.getElementById("carga").style.display = "none";
+
 }
 
 function CerrarFancyboxYRedireccionar(url) {

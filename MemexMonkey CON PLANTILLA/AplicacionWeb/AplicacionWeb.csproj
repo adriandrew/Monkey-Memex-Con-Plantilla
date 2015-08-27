@@ -118,15 +118,13 @@
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
     <Content Include="Images\aprobado.jpg" />
+    <Content Include="Images\arriba.png" />
     <Content Include="Images\Autor\Andrew.jpg" />
-    <Content Include="Images\Autor\Andrew2.jpg" />
-    <Content Include="Images\bg.jpg" />
-    <Content Include="Images\bg2.jpg" />
-    <Content Include="Images\color.jpg" />
-    <Content Include="Images\color2.jpg" />
-    <Content Include="Images\color3.jpg" />
-    <Content Include="Images\color4.jpg" />
-    <Content Include="Images\dislike.png" />
+    <Content Include="Images\cargandoGrande.gif" />
+    <Content Include="Images\cargandoGrandeee.gif" />
+    <Content Include="Images\cargandoMediano.gif" />
+    <Content Include="Images\contador.png" />
+    <Content Include="Images\encabezado.jpg" />
     <Content Include="Images\Equipos\america.png" />
     <Content Include="Images\Equipos\atlante.png" />
     <Content Include="Images\Equipos\atlas.png" />
@@ -148,17 +146,12 @@
     <Content Include="Images\Equipos\veracruz.png" />
     <Content Include="Images\estatusDentro.png" />
     <Content Include="Images\estatusFuera.png" />
-    <Content Include="Images\icoInfo.png" />
-    <Content Include="Images\icoNew.png" />
-    <Content Include="Images\iconoBusqueda.png" />
-    <Content Include="Images\icoWarning.png" />
+    <Content Include="Images\fondo.jpg" />
     <Content Include="Images\Ligas\LogoEspañola.png" />
     <Content Include="Images\Ligas\LogoLibertadores.png" />
     <Content Include="Images\Ligas\LogoMexico.png" />
     <Content Include="Images\Ligas\LogoPremier.png" />
     <Content Include="Images\Ligas\LogoUEFA.png" />
-    <Content Include="Images\like.png" />
-    <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\lupa.png" />
     <Content Include="Images\map.png" />
@@ -195,15 +188,8 @@
     <Content Include="Peticion.aspx" />
     <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
-    <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <Content Include="robots.txt" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administradores\Estadisticas.aspx.cs">

@@ -5,6 +5,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
+    <!-- Animacion al cargar pagina, es una carga manual. -->
+    <div id="carga">
+        <img src="Images/cargandoGrande.gif" />
+    </div>
+
     <div id="imagenes" class="default"></div>
 
     <%--<a class="iframe" data-fancybox-type="iframe" href="http://monkey.somee.com/">Prueba iframe</a>--%>

@@ -8,20 +8,26 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <_PublishTargetUrl>ftp://Monkey.somee.com/www.Monkey.somee.com</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Administradores/Estadisticas.aspx">
+      <publishTime>08/24/2015 00:24:30</publishTime>
+    </File>
     <File Include="Administradores/PanelControl.aspx">
       <publishTime>08/16/2015 20:39:32</publishTime>
     </File>
     <File Include="bin/AplicacionWeb.dll">
-      <publishTime>08/22/2015 19:41:37</publishTime>
+      <publishTime>08/27/2015 01:36:24</publishTime>
     </File>
     <File Include="bin/Entidades.dll">
-      <publishTime>08/22/2015 19:41:36</publishTime>
+      <publishTime>08/27/2015 01:36:23</publishTime>
     </File>
     <File Include="bin/LogicaNegocio.dll">
-      <publishTime>08/09/2015 02:10:15</publishTime>
+      <publishTime>08/27/2015 01:36:23</publishTime>
     </File>
     <File Include="Busqueda.aspx">
       <publishTime>07/16/2015 02:45:59</publishTime>
+    </File>
+    <File Include="Chat.aspx">
+      <publishTime>08/23/2015 22:55:29</publishTime>
     </File>
     <File Include="Controles/SubirArchivo.ascx">
       <publishTime>07/10/2015 19:16:50</publishTime>
@@ -81,10 +87,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>08/08/2015 18:59:39</publishTime>
     </File>
     <File Include="Css/styles.css">
-      <publishTime>08/18/2015 01:29:15</publishTime>
+      <publishTime>08/26/2015 23:20:34</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/27/2015 01:09:04</publishTime>
+    </File>
+    <File Include="Dinamico.aspx">
+      <publishTime>08/23/2015 20:49:02</publishTime>
     </File>
     <File Include="Error.aspx">
       <publishTime>08/16/2015 14:41:31</publishTime>
@@ -171,34 +180,52 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:54</publishTime>
     </File>
     <File Include="Images/aprobado.jpg">
-      <publishTime>07/10/2015 19:16:51</publishTime>
+      <publishTime>08/27/2015 00:06:07</publishTime>
+    </File>
+    <File Include="Images/arriba.png">
+      <publishTime>08/27/2015 00:09:48</publishTime>
     </File>
     <File Include="Images/Autor/Andrew.jpg">
-      <publishTime>03/21/2014 11:22:46</publishTime>
+      <publishTime>08/22/2015 00:34:29</publishTime>
     </File>
     <File Include="Images/Autor/Andrew2.jpg">
-      <publishTime>02/03/2014 11:11:41</publishTime>
+      <publishTime>03/02/2014 11:11:41</publishTime>
     </File>
     <File Include="Images/bg.jpg">
-      <publishTime>07/10/2015 19:16:51</publishTime>
+      <publishTime>10/07/2015 19:16:51</publishTime>
     </File>
     <File Include="Images/bg2.jpg">
-      <publishTime>07/10/2015 19:16:51</publishTime>
+      <publishTime>10/07/2015 19:16:51</publishTime>
+    </File>
+    <File Include="Images/cargandoGrande.gif">
+      <publishTime>08/02/2015 03:04:47</publishTime>
+    </File>
+    <File Include="Images/cargandoGrandeee.gif">
+      <publishTime>08/02/2015 03:05:06</publishTime>
+    </File>
+    <File Include="Images/cargandoMediano.gif">
+      <publishTime>08/27/2015 00:49:23</publishTime>
     </File>
     <File Include="Images/color.jpg">
-      <publishTime>07/10/2015 19:16:51</publishTime>
+      <publishTime>10/07/2015 19:16:51</publishTime>
     </File>
     <File Include="Images/color2.jpg">
-      <publishTime>07/10/2015 19:16:52</publishTime>
+      <publishTime>10/07/2015 19:16:52</publishTime>
     </File>
     <File Include="Images/color3.jpg">
-      <publishTime>07/10/2015 19:16:52</publishTime>
+      <publishTime>10/07/2015 19:16:52</publishTime>
     </File>
     <File Include="Images/color4.jpg">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
+    </File>
+    <File Include="Images/contador.png">
+      <publishTime>08/23/2015 17:15:53</publishTime>
     </File>
     <File Include="Images/dislike.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
+    </File>
+    <File Include="Images/encabezado.jpg">
+      <publishTime>08/27/2015 00:04:53</publishTime>
     </File>
     <File Include="Images/Equipos/america.png">
       <publishTime>07/10/2015 19:16:50</publishTime>
@@ -258,22 +285,25 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:50</publishTime>
     </File>
     <File Include="Images/estatusDentro.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>08/26/2015 23:39:45</publishTime>
     </File>
     <File Include="Images/estatusFuera.png">
-      <publishTime>07/12/2015 17:28:50</publishTime>
+      <publishTime>08/26/2015 23:41:31</publishTime>
+    </File>
+    <File Include="Images/fondo.jpg">
+      <publishTime>08/27/2015 00:23:04</publishTime>
     </File>
     <File Include="Images/icoInfo.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
     </File>
     <File Include="Images/icoNew.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
     </File>
     <File Include="Images/iconoBusqueda.png">
-      <publishTime>07/14/2015 01:21:55</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Images/icoWarning.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
     </File>
     <File Include="Images/Ligas/LogoEspañola.png">
       <publishTime>07/10/2015 19:16:50</publishTime>
@@ -291,28 +321,28 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:51</publishTime>
     </File>
     <File Include="Images/like.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>10/07/2015 19:16:53</publishTime>
     </File>
     <File Include="Images/loading.gif">
-      <publishTime>02/08/2015 03:02:20</publishTime>
+      <publishTime>08/02/2015 03:02:20</publishTime>
     </File>
     <File Include="Images/logo.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>08/26/2015 23:37:23</publishTime>
     </File>
     <File Include="Images/lupa.png">
       <publishTime>07/17/2015 00:03:02</publishTime>
     </File>
     <File Include="Images/map.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>08/27/2015 00:07:41</publishTime>
     </File>
     <File Include="Images/monkey.png">
-      <publishTime>07/10/2015 19:16:53</publishTime>
+      <publishTime>08/27/2015 00:06:50</publishTime>
     </File>
     <File Include="Images/nocturn.png">
-      <publishTime>07/10/2015 19:16:54</publishTime>
+      <publishTime>08/27/2015 00:07:20</publishTime>
     </File>
     <File Include="Images/rechazado.jpg">
-      <publishTime>07/10/2015 19:16:54</publishTime>
+      <publishTime>08/27/2015 00:06:21</publishTime>
     </File>
     <File Include="Images/RedesSociales/facebook.png">
       <publishTime>07/10/2015 19:16:51</publishTime>
@@ -369,13 +399,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:51</publishTime>
     </File>
     <File Include="Images/XaviReclama.jpg">
-      <publishTime>07/10/2015 19:16:51</publishTime>
+      <publishTime>08/27/2015 00:09:25</publishTime>
     </File>
     <File Include="Individual.aspx">
       <publishTime>07/28/2015 19:14:51</publishTime>
     </File>
     <File Include="IniciarSesion.aspx">
-      <publishTime>08/09/2015 02:51:07</publishTime>
+      <publishTime>08/26/2015 23:52:27</publishTime>
     </File>
     <File Include="Js/jquery-1.4.3.min.js">
       <publishTime>07/10/2015 19:16:54</publishTime>
@@ -384,10 +414,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:54</publishTime>
     </File>
     <File Include="Js/scripts.js">
-      <publishTime>08/16/2015 21:47:59</publishTime>
+      <publishTime>08/27/2015 01:04:57</publishTime>
     </File>
     <File Include="Js/scrolling.js">
-      <publishTime>02/08/2015 03:19:28</publishTime>
+      <publishTime>08/27/2015 01:05:13</publishTime>
     </File>
     <File Include="Miembros/AporteEnviado.aspx">
       <publishTime>08/16/2015 11:46:34</publishTime>
@@ -408,16 +438,16 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:55</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>08/22/2015 00:34:29</publishTime>
+      <publishTime>08/27/2015 01:08:27</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/22/2015 19:41:45</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.Debug.config">
-      <publishTime>08/10/2015 21:26:04</publishTime>
+      <publishTime>10/08/2015 21:26:04</publishTime>
     </File>
     <File Include="Web.Release.config">
-      <publishTime>08/10/2015 21:26:04</publishTime>
+      <publishTime>10/08/2015 21:26:04</publishTime>
     </File>
   </ItemGroup>
 </Project>

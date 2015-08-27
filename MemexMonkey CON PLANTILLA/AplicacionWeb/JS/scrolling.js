@@ -46,7 +46,7 @@ function MostrarCarga() {
 
     $ ( '#divLoadProgress' ).remove();
 
-    var $loadDiv = $('<div class="modalDialog" id="divLoadProgress" style="display: none;"><div><img src="Images/loading.gif"></div></div>').appendTo('body');
+    var $loadDiv = $('<div class="modalDialog" id="divLoadProgress" style="display: none;"><div><img src="Images/cargandoMediano.gif"></div></div>').appendTo('body');
 
     $loadDiv.fadeIn();
 
