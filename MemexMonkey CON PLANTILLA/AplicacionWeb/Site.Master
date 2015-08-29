@@ -103,7 +103,8 @@
 				    <ul>
 					    <li><a href="#" id="ahora">Ahora</a></li>
 					    <li><a href="#" id="mejores">Mejores</a></li>
-					    <li><a href="#" id="clasicos" onclick="MuestraOculta('navCompeticiones')">Competiciones</a></li>
+                        <!-- TODO. Pendiente lo de las competiciones-->
+					    <li><a href="#" id="clasicos" onclick="MuestraOculta('')">Competiciones</a></li>
 					    <li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
 				    </ul> 
 			    </nav> <!-- end navPrincipal -->
@@ -141,13 +142,13 @@
                     </div> <!-- end divBusqueda -->
                     <div id="divDonacion">
                         <a id="linkDonacion" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J3R9LKQXYYBMN" target="_blank">
-                            <img src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                            <img src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal, la forma más segura y rápida de pagar en línea."/>
                         </a> <!-- end linkDonacion -->
                     </div> <!-- end divDonacion -->
                     <div id="divPeticion">
                         <a href="Peticion" class="links">Por favor lea: <br/>Una petición personal de Adrián Andrew, fundador de memex.</a>
                         <a href="Peticion" title="Peticion">
-				            <img src="Images/Autor/Andrew.jpg" alt="Autor Andrew"/>
+				            <img src="Images/Autor/Andrew.jpg" alt="Autor Adrián Andrew"/>
 			            </a>
                     </div> <!-- end navPeticion -->
                     <nav id="navPublicidad">
@@ -156,28 +157,10 @@
 
                 <section id="sectionContenido">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">  
-                        <%--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>--%>        
                     </asp:ContentPlaceHolder>
                 </section>
 
 		        <section id="sectionDerecha">
-                    <nav id="navCompeticiones" title="Competiciones">
-				        <ul>
-					        <li><a href="#" title="Liga Mexicana"><img src="Images/Ligas/LogoMexico.png"></a></li>
-					        <li><a href="#" title="Liga Española"><img src="Images/Ligas/LogoEspañola.png"></a></li>
-					        <li><a href="#" title="Liga Premier"><img src="Images/Ligas/LogoPremier.png"></a></li>
-					        <li><a href="#" title="UEFA Champions"><img src="Images/Ligas/LogoUEFA.png"></a></li>
-					        <li><a href="#" title="Libertadores"><img src="Images/Ligas/LogoLibertadores.png"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-				        </ul>
-			        </nav>
 			        <nav id="navTopicos" title="Topicos">
 				        <ul>
 					        <li><a href="#"></a></li>
@@ -191,9 +174,6 @@
 				        </ul>
 			        </nav>
 			        <nav id="navMasVotado" title="Mas Votado" runat="server">
-				        <ul>
-					        <li><a href="#"></a></li>
-				        </ul>
 			        </nav>
                     <!-- Widget contador de visitas -->                    
                     <div id="divContadorVisitas">
@@ -315,7 +295,7 @@
     </script>
     <!--Boton de ir arriba.-->
     <nav id="navIrArriba">                       
-        <a href="#" title="Ir arriba"><img alt="Ir arriba" border="0" src="http://2.bp.blogspot.com/_qgZA1ny_dAs/S0QFsV1WD7I/AAAAAAAADhs/ZBKrnpzqBrk/s200/arrow8a.png" style='position:fixed;bottom:0;right:0;'/></a>
+        <a href="#" title="Ir arriba"><img alt="Ir arriba" src="Images/arriba.png"/></a>
     </nav>
     <!--Desastre en la web.-->
     <!--<script language="javascript">

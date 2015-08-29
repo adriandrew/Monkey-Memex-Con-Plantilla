@@ -37,15 +37,6 @@
 	margin-bottom: 0;
 }
 
-#navCompeticiones{
-	height: 100%;
-}
-
-#navCompeticiones ul li{
-	width: 100px;
-	height: 100%;
-}
-
 #header, #section, #footer{
 	color: fuchsia !important;
 }
