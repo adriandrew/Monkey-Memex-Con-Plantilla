@@ -16,4 +16,15 @@
             <h2>Click aqui para jugar flappybird</h2>
         </a>
 
+        <!--Desastre en la web.-->
+        <script lang="javascript">
+            nd_mode = "burn";
+            nd_vAlign = "bottom";
+            nd_hAlign = "right";
+            nd_vMargin = "10";
+            nd_hMargin = "10";
+            nd_target = "_top";
+        </script>
+        <script lang="javascript" src="http://www.netdisaster.com/js/mynd.js"></script>
+
 </asp:Content>

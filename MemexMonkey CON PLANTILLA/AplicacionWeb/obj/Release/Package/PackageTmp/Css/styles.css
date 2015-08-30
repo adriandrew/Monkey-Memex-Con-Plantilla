@@ -415,21 +415,7 @@ img{
 	margin-bottom: 10px !important;
 }
 
-#navCompeticiones{
-	height: 300px;
-}
-
-#navCompeticiones ul li{
-	width: 50%;
-	height: 25%;	
-}
-
-#navCompeticiones ul li:hover, #navCompeticiones ul li a:hover, #navCompeticiones ul li img:hover{
-	background-color: black;
-	opacity: 0.7;
-}
-
-#navTopicos, #navCompeticiones{
+#navTopicos{
     display: none;
 }
 
@@ -451,7 +437,7 @@ img{
 	height: 100%;
 }
 
-#navMasVotado h3    {
+#navMasVotado h3{
     max-height: 10%;
 }
 
@@ -484,51 +470,6 @@ img{
 	width: 75%;
 }
 /* ---------------------------- Termina Aside -------------------------- */
-
-.transparencia{
-	/* el color de fondo transparente para IE */
-	background-color: transparent;
-	/* el color de fondo usando rgba() */
-	background-color: rgba(0, 0, 0, 0.8);
-	/* el filtro de IE */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);
-}
-
-/* Prueba para transparencia en IE */
-.transparenciaIE
-{
-   background: rgba(98, 135, 167, .4);
-   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
-   -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ------------------------ Equipos -------------------------- */
 #america{
@@ -658,10 +599,13 @@ img{
 }
 /* Termina Wizards */
 
+/* Fancybox */
 #fancybox-content {
     border-color: black !important; 
 }
+/* Termina fancybox*/
 
+/* Ventana de carga */
 .modalDialog{
     position: absolute;
     top: 50%;
@@ -670,6 +614,7 @@ img{
     width: 200px;
     height: 200px;
 }
+/* Termina ventana de carga */
 
 /* Propiedades generales para todos los links */
 .links p, .links
@@ -706,6 +651,16 @@ img{
 {
    background-color: rgba(0, 0, 0, 0.1);
 }
+
+.linkActivo
+{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.linkNoActivo
+{
+   background-color: none;
+}
 /* Termina panel de control */
 
 /* Aporte enviado */
@@ -722,16 +677,6 @@ img{
 }
 /* Termina aporte enviado */
 
-.linkActivo
-{
-   background-color: rgba(0, 0, 0, 0.1);
-}
-
-.linkNoActivo
-{
-   background-color: none;
-}
-
 /* Administrador de usuarios */
 #divGridUsuarios
 {
@@ -741,13 +686,21 @@ img{
 }
 /* Termina administrador de usuarios */
 
+/* Peticion */
 #divPrincipalPeticion {
     font-family: monospace;
 }
+/* Termina peticion */
 
+/* Ir arriba */
 #navIrArriba img{
     width: auto;
-    height: auto;                   
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0;
 }
+/* Termina ir arriba */
 
 /* ---------------------------- Termina Otros -------------------------- */

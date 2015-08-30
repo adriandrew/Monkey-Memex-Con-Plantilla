@@ -11,28 +11,13 @@
 
     <title>Memex Monkey</title>
 
-    <link rel="icon" type="image/png" href="Images/logo.png"/>
-	<link rel="author" href="./humans.txt"/>
-	<link rel="stylesheet" type="text/css" href="Css/styles.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/200-240.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/240-320.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/320-360.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/360-480.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/480-540.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/540-600.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/600-640.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/640-720.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/720-768.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/768-800.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/800-880.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/880-960.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/960-1024.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/1024-1080.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/1080-1152.css"/>
-	<link rel="stylesheet" type="text/css" href="Css/1152-1200.css"/>
+    <link rel="icon" type="image/png" href="Images/logo.png" />
+	<link rel="author" href="./humans.txt" />
 
     <!-- Css -->
-    <link href="~/Css/individual.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="Css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="Css/mediaQueries.css" />
+    <link rel="stylesheet" type="text/css" href="~/Css/individual.css" />
     <!-- Css Fancybox -->
 	<link href="~/Fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
         
@@ -177,7 +162,7 @@
 			        </nav>
                     <!-- Widget contador de visitas -->                    
                     <div id="divContadorVisitas">
-                        <a href="http://www.contadorvisitasgratis.com" title="contador de visitas"><img src="http://counter7.freecounterstat.ovh/private/contadorvisitasgratis.php?c=bdff101d20c39655ba2b1966f044a51f" border="0" title="contador de visitas" alt="contador de visitas"></a>
+                        <a href="http://www.contadorvisitasgratis.com" title="contador de visitas"><img src="http://counter7.freecounterstat.ovh/private/contadorvisitasgratis.php?c=bdff101d20c39655ba2b1966f044a51f" border="0" title="contador de visitas" alt="contador de visitas"/></a>
                     </div> 
                     <!-- Widget de resultados de futbol mexicano -->
                     <div id="divResultadosFutbol">
@@ -246,17 +231,6 @@
                     <!--<div id="divPaginaFacebook">
                         <iframe allowtransparency='true' frameborder='0' scrolling='no' src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fadrian.andrew.33&width=240&colorscheme=light&connections=15&stream=false&header=false&height=350' style='border:none; overflow:hidden; width:240px; height:325px;'/></iframe> 
                     </div>-->
-                    <!-- Texto desplazandose -->      
-                    <!-- <nav>
-                        <div class="n"><p><b><font color="#000000" face="georgia" size="4">
-                            <marquee width="400" scrollamount="5" bgcolor="#FFFFFF">Aquí tu texto</marquee>
-                        </font></b></p></div>
-                    </nav> -->
-                    <!-- Widget del clima -->                    
-                    <!--<div id="cont_bdeb373be8c5b8d8e1dc5b27b4174cdb">
-                      <span id="h_bdeb373be8c5b8d8e1dc5b27b4174cdb"><a id="a_bdeb373be8c5b8d8e1dc5b27b4174cdb" href="http://www.meteored.mx/clima_Culiacan-America+Norte-Mexico-Sinaloa-MMCL-1-22383.html" target="_blank" rel="nofollow" style="color:#808080;font-family:Helvetica;font-size:14px;">Clima Culiacan</a></span>
-                      <script type="text/javascript" async src="http://www.meteored.mx/wid_loader/bdeb373be8c5b8d8e1dc5b27b4174cdb"></script>
-                    </div> -->
 		        </section>
 	        </section>
 
@@ -276,6 +250,7 @@
 
     <!--Titulo de la pagina en movimiento.-->
     <script lang="JavaScript">
+
         var txt = "Memex. Memes de México y del mundo. ";
 
         var espera = 140;
@@ -292,21 +267,12 @@
         }
 
         rotulo_title();
+
     </script>
     <!--Boton de ir arriba.-->
     <nav id="navIrArriba">                       
         <a href="#" title="Ir arriba"><img alt="Ir arriba" src="Images/arriba.png"/></a>
     </nav>
-    <!--Desastre en la web.-->
-    <!--<script language="javascript">
-        nd_mode = "burn";
-        nd_vAlign = "bottom";
-        nd_hAlign = "right";
-        nd_vMargin = "10";
-        nd_hMargin = "10";
-        nd_target = "_top";
-    </script>
-    <script language="javascript" src="http://www.netdisaster.com/js/mynd.js"></script>-->
     <!--Efecto electrico a enlaces-->
     <!--<style type="text/css"> a.navbar:hover{color:red; font-weight:bold;background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif);} 
      a:hover, a.redlink:hover, a.navbar:hover {background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif); text-decoration:none; border:0px solid;} 

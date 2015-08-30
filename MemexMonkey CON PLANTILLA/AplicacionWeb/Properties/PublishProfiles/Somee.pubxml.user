@@ -15,7 +15,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>08/16/2015 20:39:32</publishTime>
     </File>
     <File Include="bin/AplicacionWeb.dll">
-      <publishTime>08/27/2015 01:36:24</publishTime>
+      <publishTime>08/29/2015 14:15:14</publishTime>
     </File>
     <File Include="bin/Entidades.dll">
       <publishTime>08/27/2015 01:36:23</publishTime>
@@ -60,22 +60,22 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:50</publishTime>
     </File>
     <File Include="Css/600-640.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/640-720.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/720-768.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/768-800.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/800-880.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/880-960.css">
-      <publishTime>07/10/2015 19:16:50</publishTime>
+      <publishTime>08/29/2015 13:52:39</publishTime>
     </File>
     <File Include="Css/960-1024.css">
       <publishTime>07/10/2015 19:16:50</publishTime>
@@ -87,7 +87,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>08/08/2015 18:59:39</publishTime>
     </File>
     <File Include="Css/styles.css">
-      <publishTime>08/26/2015 23:20:34</publishTime>
+      <publishTime>08/29/2015 14:03:27</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>08/27/2015 01:09:04</publishTime>
@@ -186,7 +186,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>08/27/2015 00:09:48</publishTime>
     </File>
     <File Include="Images/Autor/Andrew.jpg">
-      <publishTime>08/22/2015 00:34:29</publishTime>
+      <publishTime>08/29/2015 12:22:36</publishTime>
     </File>
     <File Include="Images/Autor/Andrew2.jpg">
       <publishTime>03/02/2014 11:11:41</publishTime>
@@ -438,7 +438,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>07/10/2015 19:16:55</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>08/27/2015 01:08:27</publishTime>
+      <publishTime>08/29/2015 14:23:29</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
