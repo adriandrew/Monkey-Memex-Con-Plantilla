@@ -108,7 +108,6 @@
     <Content Include="Images\cargandoGrande.gif" />
     <Content Include="Images\cargandoGrandeee.gif" />
     <Content Include="Images\cargandoMediano.gif" />
-    <Content Include="Images\contador.png" />
     <Content Include="Images\encabezado.jpg" />
     <Content Include="Images\Equipos\america.png" />
     <Content Include="Images\Equipos\atlante.png" />
@@ -132,11 +131,6 @@
     <Content Include="Images\estatusDentro.png" />
     <Content Include="Images\estatusFuera.png" />
     <Content Include="Images\fondo.jpg" />
-    <Content Include="Images\Ligas\LogoEspañola.png" />
-    <Content Include="Images\Ligas\LogoLibertadores.png" />
-    <Content Include="Images\Ligas\LogoMexico.png" />
-    <Content Include="Images\Ligas\LogoPremier.png" />
-    <Content Include="Images\Ligas\LogoUEFA.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\lupa.png" />
     <Content Include="Images\map.png" />
@@ -173,9 +167,9 @@
     <Content Include="Peticion.aspx" />
     <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
+    <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <Content Include="robots.txt" />
-    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

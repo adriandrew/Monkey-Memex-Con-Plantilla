@@ -25,5 +25,6 @@ C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Release\E
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Release\Entidades.dll
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Release\Entidades.pdb
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Release\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Release\Entidades.dll
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\Entidades\obj\Release\Entidades.pdb

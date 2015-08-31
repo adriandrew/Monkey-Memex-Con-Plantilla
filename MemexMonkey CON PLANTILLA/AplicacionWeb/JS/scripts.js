@@ -98,6 +98,8 @@ function DetectarCarga() {
 
     document.getElementById("carga").style.display = "none";
 
+    $('#carga').remove();
+
 }
 
 function CerrarFancyboxYRedireccionar(url) {
@@ -125,8 +127,6 @@ function InsigniaGoogle(){
     //</script>
 
 }
-
-
 
 // TODO. Intento de flappy bird al iniciar la pagina de error.
 //$(document).ready(function () {

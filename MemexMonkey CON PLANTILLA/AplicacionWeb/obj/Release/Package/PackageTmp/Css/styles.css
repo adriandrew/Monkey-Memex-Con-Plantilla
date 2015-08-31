@@ -87,6 +87,14 @@ img{
 	float: left; 
 }
 
+#logoAbajo{
+	width: 50px;
+	height: 50px;
+    position: fixed; 
+    top: 0;
+}
+
+
 #logo:hover{
 	border-bottom: 1px solid gray; 
 }
@@ -360,7 +368,7 @@ img{
 	font-size: 25px;
 	padding: 20px 25px;
 	margin-right: 25px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.7);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
 }
@@ -373,7 +381,7 @@ img{
 /* Section Derecha */
 #divPerfilGoogle
 {
-    height: 332px;
+    height: 352px;
 }
 
 #divPerfilSkype img, #divChat img{
@@ -413,19 +421,6 @@ img{
 
 #sectionDerecha nav, #sectionDerecha div{
 	margin-bottom: 10px !important;
-}
-
-#navTopicos{
-    display: none;
-}
-
-#navTopicos{
-	height: 400px;
-}
-
-#navTopicos ul li {
-	width: 50%;
-	height: 25%;
 }
 
 #navMasVotado{
@@ -693,13 +688,17 @@ img{
 /* Termina peticion */
 
 /* Ir arriba */
-#navIrArriba img{
-    width: auto;
-    height: auto;
+#navIrArriba, #navIrArriba a, #navIrArriba img{
+    width: 50px;
+    height: 50px;
     position: fixed;
     bottom: 0;
     right: 0;
     border: 0;
+}
+
+#navIrArriba img:hover{
+    background-color: rgba(255, 255, 255, .2);
 }
 /* Termina ir arriba */
 

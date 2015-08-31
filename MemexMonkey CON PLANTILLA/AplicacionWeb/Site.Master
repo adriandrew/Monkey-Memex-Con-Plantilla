@@ -138,6 +138,9 @@
                     </div> <!-- end navPeticion -->
                     <nav id="navPublicidad">
                     </nav> <!-- end navPublicidad -->
+                    <a href="Inicio" title="Memex" id="logoAbajo">
+                        <img src="Images/logo.png"/>
+                    </a>
 		        </section>
 
                 <section id="sectionContenido">
@@ -146,18 +149,6 @@
                 </section>
 
 		        <section id="sectionDerecha">
-			        <nav id="navTopicos" title="Topicos">
-				        <ul>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-					        <li><a href="#"></a></li>
-				        </ul>
-			        </nav>
 			        <nav id="navMasVotado" title="Mas Votado" runat="server">
 			        </nav>
                     <!-- Widget contador de visitas -->                    
