@@ -167,7 +167,9 @@
     <Content Include="Peticion.aspx" />
     <Content Include="PuertaTrasera\AdministrarUsuarios.aspx" />
     <Content Include="RegistrarMiembro.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <Content Include="robots.txt" />
     <None Include="Web.Debug.config">

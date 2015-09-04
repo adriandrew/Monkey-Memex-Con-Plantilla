@@ -64,8 +64,8 @@ function ControlarScroll() {
 
     $ ( window ) .scroll ( function () {        
         
-        if ( $ ( window ) .scrollTop() == $ ( document ).height() - $ ( window ).height() ) {
-
+        if ($(window).scrollTop() == $(document).height() - $(window).height() ) {
+                
             if ( posicionImagenes == 0 ) {
 
                 posicionImagenes = cantidadImagenes;
