@@ -96,6 +96,8 @@ window.onload = function ()
 
 function DetectarCarga() {
 
+    document.getElementById("carga").style.display = "none";
+
     $('#carga').remove();
 
 }

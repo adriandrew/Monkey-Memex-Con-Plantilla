@@ -8,6 +8,27 @@ body{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 	/*overflow-y: hidden !important;*/ 
 }
+ 
+/* Luces de neon en texto */
+h1 {
+      text-shadow: 0 0 10px #fff,
+                   0 0 20px #fff,
+                   0 0 30px #fff,
+                   0 0 40px #ff00de,
+                   0 0 70px #ff00de,
+                   0 0 80px #ff00de,
+                   0 0 100px #ff00de,
+                   0 0 150px #ff00de;
+}
+
+/* Efecto fade in y reflect en imagenes*/
+img:hover {
+    /*opacity: 1;*/
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.5)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
 
 input, textarea{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
@@ -94,8 +115,7 @@ img{
     top: 0;
 }
 
-
-#logo:hover{
+#logo:hover, #logoAbajo:hover{
 	border-bottom: 1px solid gray; 
 }
 
@@ -688,7 +708,7 @@ img{
 /* Termina peticion */
 
 /* Ir arriba */
-#navIrArriba, #navIrArriba a, #navIrArriba img{
+#navIrArriba{
     width: 50px;
     height: 50px;
     position: fixed;
@@ -697,7 +717,7 @@ img{
     border: 0;
 }
 
-#navIrArriba img:hover{
+#navIrArriba:hover{
     background-color: rgba(255, 255, 255, .2);
 }
 /* Termina ir arriba */

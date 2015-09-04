@@ -115,8 +115,7 @@ img{
     top: 0;
 }
 
-
-#logo:hover{
+#logo:hover, #logoAbajo:hover{
 	border-bottom: 1px solid gray; 
 }
 
