@@ -9,9 +9,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="mostrarMapaGrande">
+    <div id="divMapaGrande">
         <script id="_waux0c">var _wau = _wau || [];
-            _wau.push(["map", "xldf9fbchvrw", "x0c", "600", "300", "natural", "default-blue"]);
+            _wau.push(["map", "xldf9fbchvrw", "x0c", "285", "110", "natural", "default-blue"]);
             (function () {
                 var s = document.createElement("script"); s.async = true;
                 s.src = "http://widgets.amung.us/map.js";

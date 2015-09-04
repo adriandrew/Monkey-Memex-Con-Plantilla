@@ -1,20 +1,16 @@
-﻿#bodyIndividual 
-{
+﻿#bodyIndividual{
     background-color: lightgray;
 }
 
-a
-{
+a{
     display: block;
 }
 
-a img:hover
-{
+a img:hover{
     opacity: 0.9;
 }
 
-#contenido
-{
+#contenido{
     /* Es para limitar el tamano del contenido y que tenga su scroll pero tengo que programar su funcionamiento.
     overflow-y: auto;
     height: 1000px;
@@ -25,37 +21,31 @@ a img:hover
     height: 1000px;
 }
 
-.default, .error, .imagen, .imagen a
-{
+.default, .error, .imagen, .imagen a{
     width: 600px;
     max-width: 600px;
 }
 
-.default, .individuales, .error
-{
+.default, .individuales, .error{
     margin: 0 auto;
 }
 
 /* TODO. Quitar esta declaracion cuando se una el backend y front end */
-h1, h2, h3, h4, h5, h6
-{
+h1, h2, h3, h4, h5, h6{
     margin: 0;
     padding: 0;
 }
 
-.default h3, .default h4, .default h5, .default h6, .individuales h3, .individuales h4, .individuales h5, .individuales h6, .error h3, .error h4, .error h5, .error h6
-{
-    color: gray;
+.default h3, .default h4, .default h5, .default h6, .individuales h3, .individuales h4, .individuales h5, .individuales h6, .error h3, .error h4, .error h5, .error h6{
+    color: #3E3C3C;
     text-align: justify;
 }
 
-.imagen
-{
+.imagen{
     margin-bottom: 50px;
 }
 
-.imagen img
-{
+.imagen img{
     border: solid 20px black;
     width: 560px;
 }
@@ -65,13 +55,11 @@ h1, h2, h3, h4, h5, h6
 }
 
 /* Individuales */
-.individuales
-{
+.individuales{
     width: 90%;
 }
 
-.imagenIndividual, .imagenIndividual img
-{
+.imagenIndividual, .imagenIndividual img{
     width: 100%;
 }
 /* Termina individuales */
@@ -82,40 +70,20 @@ h1, h2, h3, h4, h5, h6
 }
 /* Termina errores */
 
-/* Control para subir archivos */
-.fileUploadControl
-{
-    width: 500px;
-}
-
-.mensajeError
-{
-    color: red;
-}
-
-.mensajeCorrecto
-{
-    color: green;
-}
-/* Termina control para subir archivos */
-
 /* Facebook */
-.fb-comments 
-{
+.fb-comments{
     background-color: #333 !important;
 }
 /* Termina Facebook */
 
 /* Propiedades generales para todos los links */
-.links p, .links
-{
+.links p, .links{
    color: #6e6e6e !important;
    text-align: left;
    float: right;
 }
 
-.links p:hover, .links:hover
-{
+.links p:hover, .links:hover{
 	color: white !important;
 	font-size: 27px;
 	transition: .5s;

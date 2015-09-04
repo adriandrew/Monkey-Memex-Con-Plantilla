@@ -334,6 +334,10 @@ img{
     height: 50px;
 }
 
+#divDonacion a{
+    padding: 0 10px 0 10px;
+}
+
 .formulario input[type="text"], input[type="password"], select {
     background: 10px 6px #6e6e6e;
     color: white !important;
