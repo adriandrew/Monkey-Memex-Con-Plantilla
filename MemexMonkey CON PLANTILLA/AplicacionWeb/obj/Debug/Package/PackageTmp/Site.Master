@@ -1,0 +1,264 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AplicacionWeb.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <!-- Deshabilita la escala inicial del iPhone -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Memex Monkey</title>
+
+        <link rel="icon" type="image/png" href="Images/logo.png" />
+	    <link rel="author" href="./humans.txt" />
+
+        <!-- Css -->
+	    <link rel="stylesheet" type="text/css" href="Css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="Css/mediaQueries.css" />
+        <link rel="stylesheet" type="text/css" href="~/Css/individual.css" />
+        <!-- Css Fancybox -->
+	    <link href="~/Fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+        
+        <!-- jQuery -->
+        <script src="../Js/jquery-1.4.3.min.js" type="text/javascript"></script>    
+        <script>!window.jQuery && document.write('<script src="../Js/jquery-1.4.3.min.js"><\/script>');</script>
+
+        <!-- Fancybox -->
+	    <script type="text/javascript" src="../Fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	    <script type="text/javascript" src="../Fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+        <!-- Scripts -->
+        <script src="../Js/scrolling.js" type="text/javascript"></script>
+        <script src="../Js/scripts.js" type="text/javascript"></script>
+    
+        <!-- Es para checar si es IE y añade el script HTML5SHIV para renderizar con HTML5 -->	
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+	    <!-- TODO. PENDIENTE, no funcionó. Es para las media queries en IE. -->
+	    <!--[if lt IE 9]>
+	        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	    <![endif]-->
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+
+    <body background="Images/fondo.jpg">
+    
+        <!--[if lt IE 7]>
+            <p class="chromeframe">Estas usando una version <strong>muy antigua</strong> de navegador. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> o <a href="http://www.google.com/chromeframe/?redirect=true">activa Google Chrome Frame</a> para mejorar tu experiencia.</p>
+	    <![endif]-->
+
+        <form runat="server" id="form1" method="post" class="formulario">
+
+   	        <div id="principal">
+           
+                <header id="header">
+		            <div id="headerContenido">
+			        <a href="Inicio" title="Memex" id="logo">
+				        <img src="Images/logo.png"/>
+			        </a>
+			        <div id="headerTexto">
+				        <h1>MeMex</h1>
+			        </div>
+                    <div id="nombreUsuario">
+				        <p id="nombreUsuarioTexto" runat="server">Hola</p>
+			        </div> <!-- end nombreUsuario -->
+                    <div id="mostrarLogin" runat="server">
+                        <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(790, 140, false, .8)">
+				            <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
+			            </a>
+                    </div> <!-- end mostrarLogin -->                                   
+                    <div id="enviarAporte">
+                        <asp:LinkButton ID="lnkEnviarAporteNoMiembros" runat="server" PostBackUrl="Registrarse">Enviar Aporte</asp:LinkButton>
+                    </div> <!-- end enviarAporte -->
+			        <div id="headerCompartir">
+				        <ul>
+					        <li><a href="http://www.facebook.com" title="Facebook" id="facebook"></a></li>
+					        <li><a href="http://www.twitter.com" title="Twitter" id="twitter"></a></li>
+					        <li><a href="http://www.plus.google.com" title="Google+" id="googlePlus"></a></li>
+					        <li><a href="http://www.instagram.com" title="Instagram" id="instagram"></a></li>
+				        </ul>
+			        </div> <!-- end headerCompartir -->
+			        <nav id="navPrincipal">
+				        <ul>
+					        <li><a href="#" id="ahora">Ahora</a></li>
+					        <li><a href="#" id="mejores">Mejores</a></li>
+                            <!-- TODO. Pendiente lo de las competiciones-->
+					        <li><a href="#" id="clasicos" onclick="MuestraOculta('')">Competiciones</a></li>
+					        <li><a href="#" id="equipos" onclick="MuestraOculta('navEquipos')">Equipos</a></li>
+				        </ul> 
+			        </nav> <!-- end navPrincipal -->
+
+			        <nav id="navEquipos">
+				        <ul>
+					        <li><a href="#" title="América" id="america"></a></li>
+					        <li><a href="#" title="Atlante" id="atlante"></a></li>
+					        <li><a href="#" title="Atlas" id="atlas"></a></li>
+					        <li><a href="#" title="Chiapas" id="chiapas"></a></li>
+					        <li><a href="#" title="Cruz Azul" id="cruzAzul"></a></li>
+				            <li><a href="#" title="Guadalajara" id="guadalajara"></a></li>
+					        <li><a href="#" title="León" id="leon"></a></li>
+					        <li><a href="#" title="Monterrey" id="monterrey"></a></li>
+					        <li><a href="#" title="Morelia" id="morelia"></a></li>
+					        <li><a href="#" title="Pachuca" id="pachuca"></a></li>
+					        <li><a href="#" title="Puebla" id="puebla"></a></li>
+					        <li><a href="#" title="Pumas" id="pumas"></a></li>
+					        <li><a href="#" title="Querétaro" id="queretaro"></a></li>
+					        <li><a href="#" title="Santos" id="santos"></a></li>
+					        <li><a href="#" title="Tigres" id="tigres"></a></li>
+					        <li><a href="#" title="Tijuana" id="tijuana"></a></li>
+					        <li><a href="#" title="Toluca" id="toluca"></a></li>
+					        <li><a href="#" title="Veracruz" id="veracruz"></a></li>
+				        </ul>
+			        </nav> <!-- end navEquipos -->
+		            </div> <!-- end headerContenido -->
+	            </header>
+
+                <section id="section">
+		            <section id="sectionIzquierda">
+                        <div id="divBusqueda">
+                            <asp:TextBox ID="txtBusqueda" runat="server"></asp:TextBox>
+                            <asp:Button ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
+                        </div> <!-- end divBusqueda -->
+                        <div id="divDonacion">
+                            <a id="linkDonacion" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J3R9LKQXYYBMN" target="_blank">
+                                <img src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal, la forma más segura y rápida de pagar en línea."/>
+                            </a> <!-- end linkDonacion -->
+                        </div> <!-- end divDonacion -->
+                        <div id="divPeticion">
+                            <a href="Peticion" class="links">Por favor lea: <br/>Una petición personal de Adrián Andrew, fundador de memex.</a>
+                            <a href="Peticion" title="Peticion">
+				                <img src="Images/Autor/Andrew.jpg" alt="Autor Adrián Andrew"/>
+			                </a>
+                        </div> <!-- end navPeticion -->
+                        <nav id="navPublicidad">
+                        </nav> <!-- end navPublicidad -->
+                        <a href="Inicio" title="Memex" id="logoAbajo">
+                            <img src="Images/logo.png"/>
+                        </a>
+		            </section>
+
+                    <section id="sectionContenido">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">  
+                        </asp:ContentPlaceHolder>
+                    </section>
+
+		            <section id="sectionDerecha">
+			            <nav id="navMasVotado" title="Mas Votado" runat="server">
+			            </nav>
+                        <!-- Widget contador de visitas -->                    
+                        <div id="divContadorVisitas">
+                            <a href="http://www.contadorvisitasgratis.com" title="contador de visitas"><img src="http://counter7.freecounterstat.ovh/private/contadorvisitasgratis.php?c=bdff101d20c39655ba2b1966f044a51f" border="0" title="contador de visitas" alt="contador de visitas"/></a>
+                        </div> 
+                        <!-- Widget de resultados de futbol mexicano -->
+                        <div id="divResultadosFutbol">
+                            <script type="text/javascript">
+                            <!--
+                            padding = "2";
+                            width = "300px";
+                            bgColor = "#45473D";
+                            linkColor = "#14A1A8";
+                            textColorA = "#EBEBE6";
+                            textColorB = "#9E9FA1";
+                            border = "1px solid #87888A";
+                            textFont = "14px Arial, Helvetica, Sans serif";
+                            //-->
+                            </script>
+                            <script lang="javascript" src="http://www.resultados-futbol.com/scripts/api/api.php?key=41d55642f6613d82dae41eac2ecc4d65&format=widget&req=w_results&category=68&grated=1&comments=1"></script>
+                            <a target="_blank" style="margin-left:110px;font-size:10px;color:#14A1A8;" href="http://www.resultados-futbol.com/">Resultados de F&uacute;tbol</a>
+                        </div>
+                        <!-- Widget de noticias del deporte -->
+                        <div id="divNoticiasDeporte">   
+                            <div id="glbd-widget"><div id="glbd-load" style="width: 300px; height: 500px; background: url(http://globedia.com/img/loading.gif) center no-repeat;"></div><div id="glbd-link" style="text-align:right; font-size:10px; font-family:'Trebuchet MS', Arial; margin: auto; width: 300px;"><a href="http://globedia.com" title="Noticias" target="_blank" style="color:#999; text-decoration:none;">globedia.com</a></div></div><script type="text/javascript" src="http://globedia.com/widgets/widget.js"></script><script type="text/javascript" src="http://globedia.com/widgets/widget.php?country=MX&category=deportes&order=votes&cols=1&num=50&width=300&height=500&title=Noticias%20del%20deporte&author=Adrian%20Andrew&images=false&summaries=true&votes=false"></script><script type="text/javascript">GlobediaWidget.init();</script>
+                        </div>   
+                        <!-- Widget de mapa de usuarios -->
+                        <div id="divMapaUsuarios">
+                            <iframe src="Dinamico"></iframe>
+                        </div>
+                        <!-- Widget de perfil de Google+ -->       
+                        <div id="divPerfilGoogle">
+                            <div class="g-person" data-href="//plus.google.com/u/0/116827798869845298684" data-theme="dark" data-rel="author"></div>
+                        </div>
+                        <!--Insignia de Facebook-->
+                        <div id="divPerfilFacebook">
+                        <!-- Facebook Badge START -->
+                            <a href="https://www.facebook.com/adrian.andrew.33" title="Adri&#xe1;n Andrew" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Adrián Andrew</a><span style="font-family: &#039;lucida grande&#039;,tahoma,verdana,arial,sans-serif;font-size: 11px;line-height: 16px;font-variant: normal;font-style: normal;font-weight: normal;color: #555555;text-decoration: none;">&nbsp;|&nbsp;</span><a href="https://www.facebook.com/adrian.andrew.33" title="Adri&#xe1;n Andrew" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100007896124144.11120.488200261.png" style="border: 0px;" alt="" /></a>
+                        <!-- Facebook Badge END -->
+                        </div>
+                        <!-- Widget de chat de skype -->
+                        <div id="divPerfilSkype">
+                            <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                            <div id="SkypeButton_Call_adriandrew91_1">
+                                <script type="text/javascript">
+                                    Skype.ui({
+                                        "name": "chat",
+                                        "element": "SkypeButton_Call_adriandrew91_1",
+                                        "participants": ["adriandrew91"],
+                                        "imageSize": 32
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <!-- Widget de chat con usuarios -->
+                        <div id="divChatUsuarios">
+                            <iframe src="Chat"></iframe>
+                        </div>
+
+                        <!--Pagina de Facebook-->
+                        <!--<div id="divPaginaFacebook">
+                            <iframe allowtransparency='true' frameborder='0' scrolling='no' src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fadrian.andrew.33&width=240&colorscheme=light&connections=15&stream=false&header=false&height=350' style='border:none; overflow:hidden; width:240px; height:325px;'/></iframe> 
+                        </div>-->
+		            </section>
+	            </section>
+
+            <!-- <footer id="footer">	
+		        <aside id="asideIconos">
+			        <a href="./humans.txt" target="_blank" id="humanstxt"><img src="Images/Tecnologias/humanstxt-bn.png"></a>
+			        <a href="http://www.monkey.net" target="_blank" id="monkey"><img src="Images/monkey.png"></a>
+		        </aside>
+		        <aside id="asideFondo">
+			        <img src="Images/map.png">
+		        </aside>
+	        </footer>-->         
+               
+	        </div> <!-- Termina Principal -->
+
+        </form>
+
+        <!--Titulo de la pagina en movimiento.-->
+        <script lang="JavaScript">
+
+            var txt = "Memex. Memes de México y del mundo. ";
+
+            var espera = 140;
+
+            var refresco = null;
+
+            function rotulo_title() {
+
+                document.title = txt;
+
+                txt = txt.substring(1, txt.length) + txt.charAt(0);
+
+                refresco = setTimeout("rotulo_title()", espera);
+            }
+
+            rotulo_title();
+
+        </script>
+        <!--Boton de ir arriba.-->
+        <nav id="navIrArriba">                       
+            <a href="#" title="Ir arriba"><img alt="Ir arriba" src="Images/arriba.png"/></a>
+        </nav>
+        <!--Efecto electrico a enlaces-->
+        <!--<style type="text/css"> a.navbar:hover{color:red; font-weight:bold;background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif);} 
+         a:hover, a.redlink:hover, a.navbar:hover {background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif); text-decoration:none; border:0px solid;} 
+         a:hover img {background-image:url(https://communityojda.files.wordpress.com/2011/04/lupa.gif); filter:alpha(finishopacity=0, style=2); } </style>-->
+
+    </body>
+</html>

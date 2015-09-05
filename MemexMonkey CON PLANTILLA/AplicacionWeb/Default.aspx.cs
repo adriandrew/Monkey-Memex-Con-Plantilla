@@ -14,45 +14,33 @@ namespace AplicacionWeb
     public partial class Default : System.Web.UI.Page
     {
 
+        #region Variables Globales
+
         static Boolean resultadosActivados = false;
+
+        public static List<Entidades.ImagenesAspNet_Users> listaTotalImagenes;
+
+        #endregion
 
         #region Eventos
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            // Se verifica la conexion a la base de datos.
+            // Se verifican los archivos.
 
-            if ( ! IsPostBack )
-            {
+            //if ( ! IsPostBack )
+            //{
  
-                VerificarConexionBaseDatos();
-
                 //VerificarArchivos();
 
-            }                      
+            //}                      
 
         }
 
         #endregion
 
         #region Metodos Publicos
-
-        public void VerificarConexionBaseDatos()
-        {
-
-            Entidades.ConexionBaseDatos conexionBaseDatos = new Entidades.ConexionBaseDatos();
-
-            bool esConexionCorrecta = conexionBaseDatos.VerificarConexionBaseDatos();
-
-            if ( ! esConexionCorrecta )
-            { 
-
-                Response.Redirect("Error");
-
-            }
-          
-        }
 
         public void VerificarArchivos()
         { 
@@ -85,10 +73,15 @@ namespace AplicacionWeb
             Default defaultt = new Default();
 
             Entidades.ImagenesAspNet_Users imagenesUsuarios = new Entidades.ImagenesAspNet_Users();
+            
+            if (listaTotalImagenes == null)
+            {
 
-            List<Entidades.ImagenesAspNet_Users> listaTotalImagenes = new List<Entidades.ImagenesAspNet_Users>();
+                listaTotalImagenes = new List<Entidades.ImagenesAspNet_Users>();
 
-            listaTotalImagenes = imagenesUsuarios.ObtenerListadoAprobados();
+                listaTotalImagenes = imagenesUsuarios.ObtenerListadoAprobados();
+
+            }
 
             var listaParcialImagenes = ( from elemento in listaTotalImagenes select elemento ).Skip ( posicionImagenes ).Take ( cantidadImagenes );
 
@@ -109,7 +102,13 @@ namespace AplicacionWeb
                 if ( ! string.IsNullOrEmpty ( elementoImagenes.DirectorioRelativo.ToString() ) && ! string.IsNullOrEmpty ( elementoImagenes.RutaRelativa.ToString() ) )
                 {
 
-                    defaultt.VerificarArchivoImagen(htmlImagenes, elementoImagenes);
+                    // Carga lenta.
+
+                    //defaultt.VerificarArchivoImagen(htmlImagenes, elementoImagenes);
+
+                    // Carga rapida.
+
+                    defaultt.MostrarImagenDirectamente(htmlImagenes, elementoImagenes);
 
                 }
                 else if ( ! string.IsNullOrEmpty ( elementoImagenes.EnlaceExterno.ToString() ) )
@@ -128,6 +127,8 @@ namespace AplicacionWeb
         #endregion
 
         #region Metodos Privados
+
+        #region Metodos con busqueda completamente de los archivos en sus directorios. Es el metodo mas lento.
 
         private void VerificarArchivoImagen ( StringBuilder htmlImagenes, Entidades.ImagenesAspNet_Users elementoImagenes )
         {
@@ -292,6 +293,51 @@ namespace AplicacionWeb
             htmlImagenes.AppendFormat(imagen);
 
         }
+
+        #endregion
+
+        #region Metodos con busqueda completamente optimizada.
+
+        private void MostrarImagenDirectamente(StringBuilder htmlImagenes, Entidades.ImagenesAspNet_Users elementoImagenes)
+        {
+
+            string idImagen = elementoImagenes.IdImagen.ToString();
+
+            string titulo = elementoImagenes.Titulo.ToString();
+
+            string rutaRelativa = elementoImagenes.RutaRelativa.ToString();
+
+            string enlaceExterno = elementoImagenes.EnlaceExterno.ToString();
+
+            string etiquetasBasicas = elementoImagenes.EtiquetasBasicas.ToString();
+
+            string etiquetasOpcionales = elementoImagenes.EtiquetasOpcionales.ToString();
+
+            string fechaPublicacion = elementoImagenes.FechaPublicacion.ToString();
+
+            string userName = elementoImagenes.UserName;
+                      
+            string tituloImagen = string.Format("<h2>{0}</h2>", titulo);
+
+            string nombreUsuario = string.Format("<h3>{0}{1}</h3>", "Aporte por: ", userName);
+
+            string fechaPublicacionImagen = string.Format("<h4>{0}</h4>", fechaPublicacion);
+
+            string archivoImagen = string.Format("<img src='{0}' alt='{1}'>", rutaRelativa, titulo);
+
+            string linkImagen = string.Format("<a class={0} href={1}{2} onmouseover={3}>{4}</a>", "iframe", "Individual/", idImagen, "InvocarFancybox('75%','100%','false','0.8')", archivoImagen);
+
+            string etiquetas = string.Format("<h4>{0} | {1}</h4>", etiquetasBasicas, etiquetasOpcionales);
+
+            string contenidoDivImagen = string.Format("{0}{1}{2}{3}{4}", tituloImagen, nombreUsuario, fechaPublicacionImagen, linkImagen, etiquetas);
+
+            string imagen = string.Format("<div class={0}>{1}</div>", "imagen", contenidoDivImagen);
+
+            htmlImagenes.AppendFormat(imagen);
+            
+        }
+
+        #endregion
 
         #endregion
 

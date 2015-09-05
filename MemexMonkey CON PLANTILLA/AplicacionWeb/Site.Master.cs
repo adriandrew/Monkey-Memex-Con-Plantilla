@@ -12,51 +12,40 @@ namespace AplicacionWeb
     public partial class Site : System.Web.UI.MasterPage
     {
 
+        #region Variables Globales
+
+        public static bool esPrimeraVez = true;
+
+        public static bool esConexionCorrecta = false;
+
+        public static List<Entidades.ImagenesAspNet_Users> listaImagenes;
+
+        #endregion
+
+        #region Eventos
+
         protected void Page_Load(object sender, EventArgs e)
         {
+                    
+            if (esPrimeraVez) { 
 
-            if (Membership.GetUser() == null)
-            {
-
-                // Se redirecciona si es que no está loggueado.
-                lnkEnviarAporteNoMiembros.PostBackUrl = "Registrarse";
-
-                // Se cambia la imagen si el usuario no esta loggueado.
-                imagenStatus.Src = "Images/estatusFuera.png";
-                
-                imagenStatus.Alt = "Usuario Anonimo";
-
-                imagenStatus.Attributes.Add("title", "Usuario Anonimo");
-
-                nombreUsuarioTexto.InnerText = "Hola Usuario Anonimo";
-
-            }
-            else
-            {
-
-                // Se redirecciona para que pueda enviar aportes.
-                lnkEnviarAporteNoMiembros.PostBackUrl = "EnviarAporte";
-
-                // Se cambia la imagen si el usuario esta loggueado, obviamente hasta que se recargue la pagina.
-                imagenStatus.Src = "Images/estatusDentro.png";
-
-                string nombreUsuarioActual = HttpContext.Current.User.Identity.Name;
-
-                imagenStatus.Alt = nombreUsuarioActual;
-
-                imagenStatus.Attributes.Add("title",  nombreUsuarioActual);
-
-                nombreUsuarioTexto.InnerText = "Hola " + nombreUsuarioActual;
+                VerificarConexionBaseDatos();
 
             }
 
-            if (!this.IsPostBack)
-            {
+            if (esConexionCorrecta) {
+            
+                if (!this.IsPostBack)
+                {
 
-                CargarAporteMasComentadoEnLaHistoria();
+                    CargarAporteMasComentadoEnLaHistoria();
+
+                }
+
+                VerificarEstatusUsuarios();
 
             }
-
+            
         }
 
         protected void btnBusqueda_Click(object sender, EventArgs e)
@@ -68,7 +57,27 @@ namespace AplicacionWeb
 
         }
 
+        #endregion
+
         #region Metodos Privados
+
+        public void VerificarConexionBaseDatos()
+        {
+
+            esPrimeraVez = false;
+
+            Entidades.ConexionBaseDatos conexionBaseDatos = new Entidades.ConexionBaseDatos();
+
+            esConexionCorrecta = conexionBaseDatos.VerificarConexionBaseDatos();
+
+            if (!esConexionCorrecta)
+            {
+
+                Response.Redirect("Error");
+                
+            }
+            
+        }
 
         private void CargarAporteMasComentadoEnLaHistoria()
         {
@@ -79,10 +88,15 @@ namespace AplicacionWeb
 
             Entidades.ImagenesAspNet_Users imagenes = new Entidades.ImagenesAspNet_Users();
 
-            List<Entidades.ImagenesAspNet_Users> listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
+            if (listaImagenes == null)
+            {
 
-            listaImagenes = imagenes.ObtenerMasComentadoEnLaHistoria();
+                listaImagenes = new List<Entidades.ImagenesAspNet_Users>();
 
+                listaImagenes = imagenes.ObtenerMasComentadoEnLaHistoria();
+
+            }
+            
             if (listaImagenes.Count > 0)
             {
 
@@ -132,6 +146,49 @@ namespace AplicacionWeb
 
         }
 
+        private void VerificarEstatusUsuarios() {
+
+            if (Membership.GetUser() == null)
+            {
+
+                // Se redirecciona si es que no está loggueado.
+
+                lnkEnviarAporteNoMiembros.PostBackUrl = "Registrarse";
+
+                // Se cambia la imagen si el usuario no esta loggueado.
+
+                imagenStatus.Src = "Images/estatusFuera.png";
+
+                imagenStatus.Alt = "Usuario Anonimo";
+
+                imagenStatus.Attributes.Add("title", "Usuario Anonimo");
+
+                nombreUsuarioTexto.InnerText = "Hola Usuario Anonimo";
+
+            }
+            else
+            {
+
+                // Se redirecciona para que pueda enviar aportes.
+
+                lnkEnviarAporteNoMiembros.PostBackUrl = "EnviarAporte";
+
+                // Se cambia la imagen si el usuario esta loggueado, obviamente hasta que se recargue la pagina.
+
+                imagenStatus.Src = "Images/estatusDentro.png";
+
+                string nombreUsuarioActual = HttpContext.Current.User.Identity.Name;
+
+                imagenStatus.Alt = nombreUsuarioActual;
+
+                imagenStatus.Attributes.Add("title", nombreUsuarioActual);
+
+                nombreUsuarioTexto.InnerText = "Hola " + nombreUsuarioActual;
+
+            }
+
+        }
+        
         #endregion
 
     }

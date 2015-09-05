@@ -1,0 +1,740 @@
+/* Es para la imagen elegante de fondo, la imagen de color. */
+body{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+    background-attachment: fixed;
+	margin: 0 auto;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	/*overflow-y: hidden !important;*/ 
+}
+ 
+/* Efecto fade in y reflect en imagenes */
+img:hover{
+    /*opacity: 1;*/
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.5)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+/* Luces de neon en texto */
+h1{
+	font-weight: lighter !important;
+	font-size: 40px;
+
+    text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #ff00de,
+                0 0 70px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de,
+                0 0 150px #ff00de;
+}
+
+input, textarea{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+body, html{
+    height: 100%;
+}
+
+section{
+    height: 100% !important;
+    /*background-color: blue;*/
+}
+
+/* Nuevas etiquetas de HTML5 para que se muestren bien en IE */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+
+
+a{
+	text-decoration: none;
+	display: block;
+	width: auto;
+    height: 100%;   
+	color: inherit;
+	text-align: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+a:hover{
+    cursor: hand;
+    cursor: pointer;
+}
+
+li{
+	list-style: none;
+	float: left;	
+}
+
+p, ul, h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+#sectionContenido img{
+    height: auto;
+}
+
+#principal, #header, #section, #footer{		
+	margin: 0 auto; 
+}
+
+#header, #section, #footer{
+	color: white;
+	color: #6e6e6e;
+}
+
+#section, #footer{
+	width: 1200px;
+}
+
+#logo{
+	width: 50px;
+	float: left; 
+}
+
+#logoAbajo{
+	width: 50px;
+	height: 50px;
+    position: fixed; 
+    top: 0;
+}
+
+#logo:hover, #logoAbajo:hover{
+	border-bottom: 1px solid gray; 
+}
+
+/* --------------------------- Header --------------------------*/
+#header{	
+	min-width: 100% !important;	
+	height: 50px;
+	background: black; 
+	background: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid black;
+
+	background-image: url("../images/encabezado.jpg");
+	background-position: top;
+}
+
+#header:after #navPrincipal {
+    display: none;
+}
+
+#headerContenido{
+	width: 1200px;
+	height: inherit;
+	margin: 0 auto;
+}
+
+#headerTexto, #mostrarLogin{
+	margin-left: 10px;
+}
+
+#headerTexto, #nombreUsuario{
+	float: left;
+    height: inherit;
+}
+
+#nombreUsuarioTexto {
+    padding-left: 10px;
+}
+
+#mostrarLogin{
+    float: right;
+    width: 25px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#mostrarLogin:hover {
+    margin-top: 0px;
+    width: 35px;
+    height: 40px;
+    padding: 5px 0px 6px 0px;
+    border-bottom: 1px solid gray; 
+    transition: .5s;
+}
+
+#enviarAporte{
+    width: 150px;
+    height: 50px;
+    float: right;
+}
+
+#enviarAporte a{
+    line-height: 50px;
+    text-align: center;
+}
+
+#enviarAporte a:hover{
+	color: white;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: .5s;
+}
+
+#headerCompartir{
+	width: 200px;
+	height: 100%;
+	float: right;
+}
+
+#headerCompartir ul li{
+	width: 25%;
+	height: 100%;
+}
+
+#headerCompartir ul li a{
+	background-size: cover;
+}
+
+#navPrincipal, #navEquipos, #section{
+	clear: both;
+}
+
+/* Nav Principal */
+#navPrincipal{
+	height: 50px;
+	/* Gris con transparencia 
+	background-color: rgba(77, 76, 76, 0.2);*/
+	border-bottom: 1px groove white;
+}
+
+#navPrincipal ul li{
+	width: 25%;
+	line-height: 50px;
+}
+
+#navPrincipal ul li:hover{
+	color: white;
+	border-bottom: 1px solid white !important;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: .5s;
+}
+
+/* Termina Nav Principal */
+
+/* Nav Equipos */
+#navEquipos{
+	height: 50px;
+}
+
+#navEquipos ul li{
+	width: 5.555%;
+	height: 100%;
+}
+
+#navEquipos ul li:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+/* Termina Nav Equipos */
+/* ----------------------------Termina Header --------------------------*/
+
+
+/* ----------------------------Section --------------------------*/
+#section{ 
+	height: 1000px;	
+	background-color: rgba(0, 0, 0, 0.2);	
+}
+
+#sectionIzquierda nav, #sectionIzquierda div, #sectionDerecha div, #sectionDerecha li{
+	background-color: rgba(0, 0, 0, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
+}
+
+#sectionIzquierda nav:hover, #sectionIzquierda div:hover, #sectionDerecha div:hover, #sectionDerecha li:hover{
+	background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#sectionIzquierda, #sectionContenido, #sectionDerecha{
+	float: left;
+}
+
+/* Section Izquierda */
+#sectionIzquierda nav, #sectionIzquierda div {
+    width: auto;
+    margin-bottom: 10px;
+}
+
+#sectionIzquierda div{
+    padding: 10px 0px 10px 0px;    
+}
+
+#sectionIzquierda{
+	width: 200px;
+	height: 1000px !important;
+	margin-right: 25px;
+}
+
+#divBusqueda{
+    height: 60px;
+}
+
+#navPublicidad{
+    height: 710px;
+}
+
+#txtBusqueda{
+    width: 150px;
+    background: url(../Images/lupa.png) no-repeat 10px 6px #6e6e6e;
+}
+
+#txtBusqueda:focus {
+    background-color: lightgray;
+    color: black !important;
+}
+
+#btnBusqueda{
+    width: 200px;
+    height: 35px;
+}
+
+#divPeticion{
+    height: 400px;        
+}
+
+#divPeticion a:first-child{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#divPeticion a{
+    height: 90px;    
+    color: white !important;
+}
+
+#divPeticion img{
+    height: 320px;
+}
+
+#divPeticion:hover, #divPeticion a:hover {	
+	font-size: 17px;
+	transition: .5s;        
+    color: black !important;
+    font-weight: bold;
+}
+
+#divDonacion{
+    height: 50px;
+}
+
+#divDonacion a{
+    padding: 0 10px 0 10px;
+}
+
+.formulario input[type="text"], input[type="password"], select {
+    background: 10px 6px #6e6e6e;
+    color: white !important;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    width: 100px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.formulario input[type="submit"]{
+    /*background-color: #6e6e6e;*/
+    background-color: rgb(41, 40, 40) !important;
+    color: white !important;
+    /*width: calc(100% + 25px) !important;*/
+    border: gray 2px solid !important;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22); 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44); 
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.formulario input[type="text"]:focus, input[type="password"]:focus {
+    width: 150px;
+}
+/* Termina Section Izquierda */
+
+/* Section Contenido */
+#sectionContenido{
+    color: #3E3C3C;
+	width: 600px;
+	height: 960px;
+	font-size: 25px;
+	padding: 20px 25px;
+	margin-right: 25px;
+	background-color: rgba(255, 255, 255, 0.7);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#886287a7', endColorstr='#886287a7');
+}
+
+#sectionContenido:hover{
+	color: black;
+}
+/* Termina Section Contenido */
+
+/* Section Derecha */
+#divPerfilGoogle
+{
+    height: 352px;
+}
+
+#divPerfilSkype img, #divChat img{
+    width: auto;
+    height: auto;
+}
+
+#divChatUsuarios, #divChatUsuarios iframe{
+    height: 400px;
+}
+
+#divNoticiasDeporte, #divNoticiasDeporte div{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#divChatUsuarios{
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#divMapaUsuarios{
+    height: 125px;
+}
+
+#divMapaUsuarios iframe{
+    border: none;
+}
+
+/*#divChat{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+}*/
+
+#divPaginaFacebook img{
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+#sectionDerecha{
+	width: 300px;
+	max-height: 1000px;
+}
+
+#sectionDerecha nav, #sectionDerecha div{
+	margin-bottom: 10px !important;
+}
+
+#navMasVotado{
+	height: 250px;
+}
+
+#navMasVotado ul li{
+	width: 100%;
+	height: 100%;
+}
+
+#navMasVotado h3{
+    max-height: 10%;
+}
+
+#navMasVotado img{
+    max-height: 90%;
+}
+/* Termina Section Derecha */
+/* ----------------------------Termina Section --------------------------*/
+
+/* ----------------------------Footer --------------------------*/
+#footer{
+	background-color: black;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 150px;
+	clear: both;
+}
+/* ----------------------------End Footer --------------------------*/
+
+/* ----------------------------Aside --------------------------*/
+#asideIconos, #asideFondo{
+	float: left;
+	height: 100%;
+}
+
+#asideIconos{
+	width: 25%;
+}
+
+#asideFondo{
+	width: 75%;
+}
+/* ----------------------------Termina Aside --------------------------*/
+
+/* ------------------------Equipos --------------------------*/
+#america{
+	background-image: url("../Images/Equipos/america.png");	
+}
+
+#atlante{
+	background-image: url("../Images/Equipos/atlante.png");	
+}
+
+#atlas{
+	background-image: url("../Images/Equipos/atlas.png");	
+}
+
+#chiapas{
+	background-image: url("../Images/Equipos/chiapas.png");	
+}
+
+#cruzAzul{
+	background-image: url("../Images/Equipos/cruzAzul.png");	
+}
+
+#guadalajara{
+	background-image: url("../Images/Equipos/guadalajara.png");	
+}
+
+#leon{
+	background-image: url("../Images/Equipos/leon.png");	
+}
+
+#monterrey{
+	background-image: url("../Images/Equipos/monterrey.png");	
+}
+
+#morelia{
+	background-image: url("../Images/Equipos/morelia.png");	
+}
+
+#pachuca{
+	background-image: url("../Images/Equipos/pachuca.png");	
+}
+
+#puebla{
+	background-image: url("../Images/Equipos/puebla.png");	
+}
+
+#pumas{
+	background-image: url("../Images/Equipos/pumas.png");	
+}
+
+#queretaro{
+	background-image: url("../Images/Equipos/queretaro.png");	
+}
+
+#santos{
+	background-image: url("../Images/Equipos/santos.png");	
+}
+
+#tigres{
+	background-image: url("../Images/Equipos/tigres.png");	
+}
+#tijuana{
+	background-image: url("../Images/Equipos/tijuana.png");	
+}
+
+#toluca{
+	background-image: url("../Images/Equipos/toluca.png");	
+}
+
+#veracruz{
+	background-image: url("../Images/Equipos/veracruz.png");	
+}
+/* ----------------------- Termina Equipos --------------------------*/
+
+/* ----------------------------Redes Sociales --------------------------*/
+#facebook{
+	background-image: url("../Images/RedesSociales/facebook1.png");		
+}
+
+#facebook:hover{
+	background-image: url("../Images/RedesSociales/facebook2.png");			
+}
+
+#twitter{
+	background-image: url("../Images/RedesSociales/twitter1.png");		
+}
+
+#twitter:hover{
+	background-image: url("../Images/RedesSociales/twitter2.png");			
+}
+
+#googlePlus{
+	background-image: url("../Images/RedesSociales/googlePlus1.png");		
+}
+
+#googlePlus:hover{
+	background-image: url("../Images/RedesSociales/googlePlus2.png");			
+}
+
+#instagram{
+	background-image: url("../Images/RedesSociales/instagram1.png");		
+}
+
+#instagram:hover{
+	background-image: url("../Images/RedesSociales/instagram2.png");			
+}
+/* ----------------------------Termina Redes Sociales --------------------------*/
+
+/* ----------------------------Tecnologias --------------------------*/
+#humanstxt{
+	margin: 0 auto;
+	width: 50%;
+	height: 30%;
+}
+
+#monkey{
+	height: 70%;
+}
+/* ----------------------------Termina Tecnologias ------------------------- */
+
+/* ----------------------------Control para subir archivos ----------------------------*/
+.fileUploadControl{
+    width: 500px;
+}
+
+.mensajeError{
+    color: red;
+}
+
+.mensajeCorrecto{
+    color: green;
+}
+/* ----------------------------Termina control para subir archivos ----------------------------*/
+
+/* ----------------------------Otros --------------------------*/
+/* Wizards */
+#StepNextButtonButton, #ContinueButtonButton{
+    width: 120px;
+    height: 30px;
+}
+/* Termina Wizards */
+
+/* Fancybox */
+#fancybox-content{
+    border-color: black !important; 
+}
+/* Termina fancybox */
+
+/* Ventana de carga */
+.modalDialog{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 1000;
+    width: 200px;
+    height: 200px;
+}
+/* Termina ventana de carga */
+
+/* Propiedades generales para todos los links */
+.links p, .links{
+   color: #6e6e6e !important;
+   text-align: left;
+   float: right;
+}
+
+.links p:hover, .links:hover{
+	color: white !important;
+	font-size: 27px;
+	transition: .5s;
+}
+/* Termina Propiedades generales para todos los links */
+
+/* Panel de control */
+#divMenuPanelControl{
+    width: auto;
+    height: 70px;
+}
+
+#divMenuPanelControl .links{
+   float: left;
+   height: 100%;
+   width: 150px;
+   text-align: center;
+}
+
+#divMenuPanelControl .links:hover{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.linkActivo{
+   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.linkNoActivo{
+   background-color: none;
+}
+/* Termina panel de control */
+
+/* Aporte enviado */
+#lblGracias{
+    display: block;
+    margin-bottom: 20px;    
+}
+
+#principalAporte a{
+    width: 50%; 
+    text-align: center;
+}
+/* Termina aporte enviado */
+
+/* Administrador de usuarios */
+#divGridUsuarios{
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+/* Termina administrador de usuarios */
+
+/* Peticion */
+#divPrincipalPeticion{
+    font-family: monospace;
+}
+/* Termina peticion */
+
+/* Ir arriba */
+#navIrArriba{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0;
+}
+
+#navIrArriba:hover{
+    background-color: rgba(255, 255, 255, .2);
+}
+/* Termina ir arriba */
+ 
+/* ----------------------------Termina Otros --------------------------*/
