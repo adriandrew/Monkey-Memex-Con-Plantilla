@@ -1,8 +1,8 @@
 /* Es para la imagen elegante de fondo, la imagen de color. */
 body{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+	background-repeat: repeat;
+	/*background-size: cover;*/
+	background-position: center;
     background-attachment: fixed;
 	margin: 0 auto;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
@@ -338,6 +338,10 @@ img{
     padding: 0 10px 0 10px;
 }
 
+#divBusqueda input[type="submit"]{
+    width: 100%;
+}
+
 .formulario input[type="text"], input[type="password"], select {
     background: 10px 6px #6e6e6e;
     color: white !important;
@@ -646,13 +650,13 @@ img{
 /* Termina fancybox */
 
 /* Ventana de carga */
-.modalDialog{
+.cargando{
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 45%;
     z-index: 1000;
-    width: 200px;
-    height: 200px;
+    width: 75px;
+    height: 75px;
 }
 /* Termina ventana de carga */
 
@@ -736,5 +740,16 @@ img{
     background-color: rgba(255, 255, 255, .2);
 }
 /* Termina ir arriba */
+
+/* Carga */
+
+#divCarga {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+/* Termina carga */
+
  
 /* ----------------------------Termina Otros --------------------------*/

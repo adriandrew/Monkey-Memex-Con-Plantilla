@@ -94,7 +94,7 @@
 				        </ul> 
 			        </nav> <!-- end navPrincipal -->
 
-			        <nav id="navEquipos">
+			     <%--   <nav id="navEquipos">
 				        <ul>
 					        <li><a href="#" title="América" id="america"></a></li>
 					        <li><a href="#" title="Atlante" id="atlante"></a></li>
@@ -115,7 +115,7 @@
 					        <li><a href="#" title="Toluca" id="toluca"></a></li>
 					        <li><a href="#" title="Veracruz" id="veracruz"></a></li>
 				        </ul>
-			        </nav> <!-- end navEquipos -->
+			        </nav> <!-- end navEquipos -->--%>
 		            </div> <!-- end headerContenido -->
 	            </header>
 

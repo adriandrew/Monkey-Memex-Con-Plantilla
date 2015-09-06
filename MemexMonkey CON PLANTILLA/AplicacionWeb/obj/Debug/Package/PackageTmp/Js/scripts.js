@@ -80,12 +80,10 @@ function InvocarFancybox(ancho, alto, autoescala, opacidad) {
 window.onload = function ()
 {
 
-    // Hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente. 
+    // Hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente. El parametro es el nombre que le dimos al div. 
 
     MuestraOculta('navEquipos');
-
-    // El parametro es el nombre que le dimos al DIV. 
-
+    
     InsigniaGoogle();
 
     DetectarCarga();
@@ -96,9 +94,9 @@ window.onload = function ()
 
 function DetectarCarga() {
 
-    document.getElementById("carga").style.display = "none";
+    document.getElementById("divCarga").style.display = "none";
 
-    $('#carga').remove();
+    $('#divCarga').remove();
 
 }
 

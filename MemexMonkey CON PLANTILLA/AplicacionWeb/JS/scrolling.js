@@ -44,9 +44,9 @@ function CargarContenido ( posicionImagenes, cantidadImagenes ) {
 
 function MostrarCarga() {
 
-    $ ( '#divLoadProgress' ).remove();
+    $ ( '#divCargandoo' ).remove();
 
-    var $loadDiv = $('<div class="modalDialog" id="divLoadProgress" style="display: none;"><div><img src="Images/cargandoMediano.gif"></div></div>').appendTo('body');
+    var $loadDiv = $('<div class="cargando" id="divCargandoo" style="display: none;"><div><img src="Images/cargando.gif"></div></div>').appendTo('body');
 
     $loadDiv.fadeIn();
 
@@ -54,7 +54,7 @@ function MostrarCarga() {
 
 function OcultarCarga() {
 
-    $ ( '#divLoadProgress' ).remove();
+    $ ( '#divCargandoo' ).remove();
 
 }
 

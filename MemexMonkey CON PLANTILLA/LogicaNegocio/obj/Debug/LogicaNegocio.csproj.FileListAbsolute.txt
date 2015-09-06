@@ -18,5 +18,6 @@ C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\Logica
 C:\Users\Andrew\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
 C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\bin\Debug\LogicaNegocio.dll
 C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 C:\Users\Administrator\Desktop\MemexMonkey CON PLANTILLA\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

@@ -443,181 +443,291 @@ body{
 
 @media all and (min-width: 800px) and (max-width: 879px) {
 
-#headerContenido, #section, #footer{
-	width: 800px;
-}
+    #headerContenido, #section, #footer{
+        width: 800px;
+    }
 
-#section{
-	height: 1041px;
-	position: relative;
-}
+    #section{
+        height: 1041px;
+        position: relative;
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-top: 41px;
-}
+    #sectionIzquierda, #sectionDerecha {
+        width: 140px;
+    }
 
-#sectionIzquierda{
-	width: 140px;
-	float: right;
-	margin-right: 0;
-}
+    #sectionIzquierda{
+        float: right;
+        margin-right: 0;
+        height: inherit !important;
+    }
 
-#sectionContenido{
-	margin-right: 10px;
-}
+    #sectionContenido{
+        margin-right: 10px;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	height: 41px;
-	position: absolute;
-}
+    #sectionDerecha{
+        float: right;
+        clear: right;
+    }
 
-#sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #sectionDerecha nav{
+        margin-bottom: 0;
+    }
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
+    #navPublicidad{
+        display: none;
+    }
 
-#header, #section, #footer{
-	color: fuchsia !important;
-}
+    #divBusqueda input[type="text"]{
+        width: 90px;
+    }    
+
+    #navMasVotado h3 {
+        font-size: 13px;
+    }
+
+    #logo {
+        border: none;
+    }
+
+    #logo img{
+        display: none;
+    }
+
+    #logoAbajo {
+        left: 0px;
+    }
+
+    #header, #section, #footer{
+        color: fuchsia !important;
+    }
 
 }
 
 @media all and (min-width: 880px) and (max-width: 959px) {
 
-#headerContenido, #section, #footer{
-	width: 880px;
-}
+    #headerContenido, #section, #footer{
+	    width: 880px;
+    }
+            
+    #section{
+	    height: 1045px;
+	    position: relative;
+    }
+    
+    #sectionIzquierda{
+	    width: 220px;
+	    float: right;
+	    margin-right: 0;
+        height: inherit !important;
+    }
 
-#section{
-	height: 1045px;
-	position: relative;
-}
+    #sectionContenido{
+	    margin-right: 10px;
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-top: 45px;
-}
+    #sectionDerecha, #sectionDerecha div, #sectionDerecha table{
+	    width: 220px;
+	    height: auto;
+    }
 
-#sectionIzquierda{
-	width: 220px;
-	float: right;
-	margin-right: 0;
-}
+    #sectionDerecha {
+        clear: right;
+    }
 
-#sectionContenido{
-	margin-right: 10px;
-}
+    #sectionDerecha nav{
+	    margin-bottom: 0;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	height: 45px;
-	position: absolute;
-}
+    #navPublicidad{
+        display: none;
+    }
 
-#sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #divBusqueda input[type="text"]{
+        width: 170px;
+    }    
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
+    #navMasVotado h3 {
+        font-size: 13px;
+    }
 
-#header, #section, #footer{
-	color: red !important;
-}
+    #logo {
+        border: none;
+    }
 
+    #logo img{
+        display: none;
+    }
+
+    #logoAbajo {
+        left: 0px;
+    }
+
+    #header, #section, #footer{
+	    color: red !important;
+    }
+    
 }
 
 @media all and (min-width: 960px) and (max-width: 1023px) {
 
-#headerContenido, #section, #footer{
-	width: 960px;
-}
+    #headerContenido, #section, #footer{
+	    width: 960px;
+    }
 
-#section{
-	height: 1100px;
-}
+    #section{
+	    height: 1100px;
+    }
 
-#sectionIzquierda{
-	height: 100px;
-	width: 100%;
-}
+    #sectionIzquierda{
+	    float: right;
+        width: 300px;
+        margin-right: 0;
+        height: inherit !important;
+    }
 
-#sectionContenido{
-	margin-right: 10px;
-}
+    #sectionContenido{
+	    margin-right: 10px;
+    }
 
-#header, #section, #footer{
-	color: blue !important;
-}
+    #sectionDerecha {
+        clear: right;
+        float: right;
+    }
+
+    #header, #section, #footer{
+	    color: blue !important;
+    }
+
+    #navPublicidad{
+        display: none;
+    }
+
+    #divBusqueda input[type="text"]{
+        width: 250px;
+    }    
+
+    #logo {
+        border: none;
+    }
+
+    #logo img{
+        display: none;
+    }
+
+    #logoAbajo {
+        left: 0px;
+    }
 
 }
 
 @media all and (min-width: 1024px) and (max-width: 1079px) {
 
-#headerContenido, #section, #footer{
-	width: 1024px;
-}
+    #headerContenido, #section, #footer{
+	    width: 1024px;
+    }
 
-#section{
-	height: 1100px;
-}
+    #section{
+	    height: 1100px;
+    }
 
-#sectionIzquierda{
-	height: 100px;
-	width: 100%;
-}
+    #sectionIzquierda{
+	    float: right;
+        width: 300px;
+        margin-right: 0;
+        height: inherit !important;
+    }
+    
+    #sectionContenido{
+	    padding: 20px 50px;
+	    margin-right: 24px;
+    }
 
-#sectionContenido{
-	padding: 20px 50px;
-	margin-right: 24px;
-}
+    #sectionDerecha {
+        clear: right;
+        float: right;
+    }
 
-#header, #section, #footer{
-	color: orange !important;
-}
+    #header, #section, #footer{
+	    color: orange !important;
+    }
+
+    #navPublicidad{
+        display: none;
+    }
+
+    #divBusqueda input[type="text"]{
+        width: 250px;
+    }    
+
+    #logo {
+        border: none;
+    }
+
+    #logo img{
+        display: none;
+    }
+
+    #logoAbajo {
+        left: 0px;
+    }
 
 }
 
 @media all and (min-width: 1080px) and (max-width: 1151px) {
 
-#headerContenido, #section, #footer{
-	width: 1080px;
-}
+    #headerContenido, #section, #footer{
+	    width: 1080px;
+    }
 
-#sectionIzquierda{
-	width: 110px;	
-}
+    #sectionIzquierda{
+	    width: 110px;	
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-right: 10px;
-}
+    #sectionIzquierda, #sectionContenido{
+	    margin-right: 10px;
+    }
 
-#header, #section, #footer{
-	color: black !important;
-}
+    #sectionDerecha {
+        clear: right;
+        float: right;
+    }
 
+    #header, #section, #footer{
+	    color: black !important;
+    }
+
+    #divDonacion a{
+        padding: 0;
+    }
+
+    #divBusqueda input[type="text"]{
+        width: 60px;
+    }
+    
 }
 
 @media all and (min-width: 1152px) and (max-width: 1199px) {
 
-#headerContenido, #section, #footer{
-	width: 1152px;
-}
+    #headerContenido, #section, #footer{
+	    width: 1152px;
+    }
 
-#sectionIzquierda{
-	width: 182px;	
-}
+    #sectionIzquierda{
+	    width: 182px;	
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-right: 10px;
-}
+    #sectionIzquierda, #sectionContenido{
+	    margin-right: 10px;
+    }
 
-#header, #section, #footer{
-	color: green !important;
-}
+    #header, #section, #footer{
+	    color: green !important;
+    }
+
+    #divBusqueda input[type="text"]{
+        width: 130px;
+    }
 
 }

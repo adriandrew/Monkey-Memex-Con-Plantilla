@@ -736,5 +736,16 @@ img{
     background-color: rgba(255, 255, 255, .2);
 }
 /* Termina ir arriba */
+
+/* Carga */
+
+#divCarga {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+/* Termina carga */
+
  
 /* ----------------------------Termina Otros --------------------------*/
