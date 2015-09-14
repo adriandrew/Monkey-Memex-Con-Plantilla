@@ -1,443 +1,569 @@
 @media all and (min-width: 200px) and (max-width: 239px) {
 
-body{
-	font-size: 11px !important;
-}
+    body{
+	    font-size: 11px !important;
+    }
 
-#headerContenido, #section, #footer{
-	width: 200px;
-}
+    #headerContenido, #section, #footer{
+	    width: 200px;
+    }
 
-#navEquipos, #sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #navEquipos, #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#headerCompartir{
-	clear: both;
-	height: 40px;
-}
+    #headerCompartir{
+        display: none;
+    }
 
-#headerCompartir ul li a{
-	background-position: inherit;
-}
+    #navPrincipal, #enviarAporte{
+	    height: 25px;	
+    }
 
-#navPrincipal{
-	height: 30px;	
-}
+    #nombreUsuario {
+        height: 50px;
+    }
 
-#navPrincipal ul li{
-	line-height: 30px;
-}
+    #enviarAporte{
+        width: 100%;
+        float: left;
+    }
 
-#navPrincipal ul li:hover{
-	font-size: 12px;
-}
+    #navPrincipal a, #enviarAporte a {
+        line-height: 25px;
+    }
 
-#section{
-	height: 970px;
-}
+    #navPrincipal ul li{
+	    line-height: 30px;
+    }
 
-#sectionContenido{
-	width: auto;
-	margin: 0;
-	padding: 5px 0;
-}
+    #navPrincipal ul li:hover{
+	    font-size: 12px;
+    }
 
-#footer{
-	height: 60px;
-}
+    #section{
+	    height: 970px;
+    }
 
-#humanstxt{
-	width: 100%;
-	margin: 0;
-}
+    #sectionContenido{
+	    width: auto;
+	    margin: 0;
+	    padding: 5px 0;
+        font-size: 12px;
+    }
 
-#header, #section, #footer{
-	color: seagreen !important;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 200px;
+    }
+
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 200px;
+    }
+
+    #footer{
+	    height: 60px;
+    }
+
+    #humanstxt{
+	    width: 100%;
+	    margin: 0;
+    }
+
+    #header, #section, #footer{
+	    color: seagreen !important;
+    }
 
 }
 
 @media all and (min-width: 240px) and (max-width: 319px) {
 
-body{
-	font-size: 14px !important;
-}
+    body{
+	    font-size: 14px !important;
+    }
 
-#headerContenido, #section, #footer{
-	width: 240px;
-}
+    #headerContenido, #section, #footer{
+	    width: 240px;
+    }
 
-#headerTexto, #sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #headerTexto, #headerCompartir, #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#headerCompartir{
-	width: 185px;
-}
+    #headerCompartir{
+	    width: 185px;
+    }
 
-#navPrincipal ul li:hover{
-	font-size: 16px;
-}
+    #navPrincipal ul li:hover{
+	    font-size: 16px;
+    }
 
-#navEquipos{
-	height: 80px;
-}
+    #navEquipos{
+	    height: 80px;
+    }
 
-#navEquipos ul li{
-	width: 11.111%;
-	height: 50%;
-}
+    #navEquipos ul li{
+	    width: 11.111%;
+	    height: 50%;
+    }
 
-#section{
-	height: 980px;
-}
+    #section{
+	    height: 980px;
+    }
 
-#sectionContenido{
-	width: auto;
-	margin-right: 0;
-	padding: 10px 0;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 240px;
+    }
 
-#footer{
-	height: 60px;
-}
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 240px;
+    }
 
-#humanstxt{
-	width: 100%;
-	margin: 0;
-}
+    #sectionContenido{
+	    width: auto;
+	    margin-right: 0;
+	    padding: 10px 0;
+        font-size: 15px;
+    }
 
-#header, #section, #footer{
-	color: greenyellow !important;
-}
+    #footer{
+	    height: 60px;
+    }
+
+    #humanstxt{
+	    width: 100%;
+	    margin: 0;
+    }
+
+    #header, #section, #footer{
+	    color: greenyellow !important;
+    }
 
 }
 
 @media all and (min-width: 320px) and (max-width: 359px) {
 
-#headerContenido, #section, #footer{
-	width: 320px;
-}
+    #headerContenido, #section, #footer{
+	    width: 320px;
+    }
 
-#headerTexto h1, #sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #headerTexto h1, #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#navEquipos{
-	height: 80px;
-}
+    #enviarAporte {
+        width: 110px;
+    }
 
-#navEquipos ul li{
-	width: 11.111%;
-	height: 50%;
-}
+    #enviarAporte a:hover {
+        font-size: 14px;    
+    }
 
-#sectionContenido{
-	width: auto; 
-	margin-right: 0;
-	padding: 20px 10px;
-}
+    #navEquipos{
+	    height: 80px;
+    }
 
-#footer{
-	height: 80px;
-}
+    #navEquipos ul li{
+	    width: 11.111%;
+	    height: 50%;
+    }
 
-#humanstxt{
-	width: 100%;
-	margin: 0;
-}
+    #enviarAporte {
+        clear: right;
+    }
 
-#header, #section, #footer{
-	color: red !important;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 300px;
+    }
+
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 300px;
+    }
+
+    #sectionContenido{
+	    width: auto; 
+	    margin-right: 0;
+	    padding: 10px;
+    }
+
+    #footer{
+	    height: 80px;
+    }
+
+    #humanstxt{
+	    width: 100%;
+	    margin: 0;
+    }
+
+    #header, #section, #footer{
+	    color: red !important;
+    }
 
 }
 
 @media all and (min-width: 360px) and (max-width: 479px) {
 
-#headerContenido, #section, #footer{
-	width: 360px;
-}
+    #headerContenido, #section, #footer{
+	    width: 360px;
+    }
 
-#headerTexto h1, #sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #headerTexto h1, #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#navEquipos{
-	height: 80px;
-}
+    #navEquipos{
+	    height: 80px;
+    }
 
-#navEquipos ul li{
-	width: 11.111%;
-	height: 50%;
-}
+    #navEquipos ul li{
+	    width: 11.111%;
+	    height: 50%;
+    }
 
-#sectionContenido{
-	width: auto;
-	margin: 0; 
-	padding: 20px 10px;
-}
+    #enviarAporte {
+        clear: right;
+    }
 
-#footer{
-	height: 80px;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 340px;
+    }
 
-#humanstxt{
-	width: 80%;
-}
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 340px;
+    }
 
-#header, #section, #footer{
-	color: seagreen !important;
-}
+    #sectionContenido{
+	    width: auto;
+	    margin: 0; 
+	    padding: 20px 10px;
+    }
+
+    #footer{
+	    height: 80px;
+    }
+
+    #humanstxt{
+	    width: 80%;
+    }
+
+    #header, #section, #footer{
+	    color: seagreen !important;
+    }
 
 }
 
 @media all and (min-width: 480px) and (max-width: 539px) {
 
-#headerContenido, #section, #footer{
-	width: 480px;
-}
+    #headerContenido, #section, #footer {
+        width: 480px;
+    }
 
-#navEquipos{
-	height: 40px;
-}
+    #navEquipos {
+        height: 40px;
+    }
 
-#sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #headerCompartir {
+        float: left;
+    }
 
-#sectionContenido{
-	width: auto;
-	margin: 0; 
-	padding: 20px 10px;
-}
+    #enviarAporte {
+        clear: right;
+    }
+    
+    #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#humanstxt{
-	width: 70%;
-}
+    #sectionContenido{
+	    width: auto;
+	    margin: 0; 
+	    padding: 20px 10px;
+    }
 
-#header, #section, #footer{
-	color: crimson !important;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 460px;
+    }
+
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 460px;
+    }
+
+    #humanstxt{
+	    width: 70%;
+    }
+
+    #header, #section, #footer{
+	    color: crimson !important;
+    }
 
 }
 
 @media all and (min-width: 540px) and (max-width: 599px) {
 
-#headerContenido, #section, #footer{
-	width: 540px;
-}
+    #headerContenido, #section, #footer{
+	    width: 540px;
+    }
 
-#navEquipos{
-	height: 40px;
-}
+    #navEquipos{
+	    height: 40px;
+    }
 
-#sectionIzquierda, #sectionDerecha{
-	display: none;
-}
+    #headerCompartir {
+        display: none;
+    }
 
-#sectionContenido{
-	width: auto; 
-	margin-right: 0;
-	padding: 20px;
-}
+    #enviarAporte{
+        width: 100px;
+    }
 
-#humanstxt{
-	width: 70%;
-}
+    #enviarAporte:hover, #enviarAporte a:hover {
+        font-size: 12px;
+    }
 
-#header, #section, #footer{
-	color: gold !important;
-}
+    #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
+
+    #sectionContenido{ 
+	    width: 520px; 
+	    margin-right: 0px;
+	    padding: 10px;
+    }
+
+    #imagenes{
+        padding: 0px;
+        width: 520px;
+    }
+
+    #imagenes div{
+        padding: 0px;
+        width: 520px;
+    }
+
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 520px;
+    }
+
+    #humanstxt{
+	    width: 70%;
+    }
+
+    #header, #section, #footer{
+	    color: gold !important;
+    }
 
 }
 
 @media all and (min-width: 600px) and (max-width: 639px) {
 
-#headerContenido, #section, #footer{
-	width: 600px;
-}
+    #headerContenido, #section, #footer{
+	    width: 600px;
+    }
 
-#section{
-	position: relative;
-	height: 1120px;
-}
+    #section{
+	    height: 1120px;
+    }
 
-#sectionIzquierda, #sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#navEquipos{
-	height: 40px;
-}
+    #headerCompartir {
+        display: none;
+    }
 
-#sectionContenido{
-	margin-right: 0;	
-	margin-top: 120px;
-	padding: 20px 0;
-}
+    #navEquipos{
+	    height: 40px;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	position: absolute;
-}
+    #imagenes, #imagenes div{
+        padding: 0px;
+        width: 590px;
+    }
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
+    #imagenes a, #imagenes a img{
+        padding: 0px;
+        border: 0px;
+        width: 590px;
+    }
 
-#humanstxt{
-	width: 60%;
-}
+    #sectionContenido{
+        width: 590px;
+	    margin: 0;
+	    padding: 20px 5px;
+    }
 
-#header, #section, #footer{
-	color: aquamarine !important;
-}
+    #humanstxt{
+	    width: 60%;
+    }
+
+    #header, #section, #footer{
+	    color: aquamarine !important;
+    }
 
 }
 
 @media all and (min-width: 640px) and (max-width: 719px) {
 
-#headerContenido, #section, #footer{
-	width: 640px;
-}
+    #headerContenido{
+	    position: relative;
+    }
 
-#section{
-	position: relative;
-	height: 1120px;
-}
+    #headerContenido, #section, #footer{
+	    width: 640px;
+    }
 
-#sectionIzquierda, #sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #headerCompartir {
+        display: none;
+    }
 
-#navEquipos{
-	height: 40px;
-}
+    #section{
+	    height: 1120px;
+    }
 
-#sectionContenido{
-	margin-right: 0;
-	margin-top: 120px;
-	padding: 20px;
-}
+    #navEquipos{
+	    height: 40px;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	position: absolute;
-}
+    #sectionContenido{
+	    margin: 0;
+	    padding: 20px;
+    }
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
+    #sectionIzquierda, #sectionDerecha{
+	    display: none;
+    }
 
-#humanstxt{
-	width: 60%;
-}
+    #humanstxt{
+	    width: 60%;
+    }
 
-#header, #section, #footer{
-	color: brown !important;
-}
+    #header, #section, #footer{
+	    color: brown !important;
+    }
 	
 }
 
 @media all and (min-width: 720px) and (max-width: 767px) {
 
-#headerContenido{
-	position: relative;
-}
+    #headerContenido{
+	    position: relative;
+    }
 
-#headerContenido, #section, #footer{
-	width: 720px;
-}
+    #headerContenido, #section, #footer{
+	    width: 720px;
+    }
 
-#section{
-	height: 1037px;
-}
+    #section{
+	    height: 1037px;
+    }
 
-#navEquipos{
-	width: 55px;
-	height: auto;
-	position: absolute;
-	top: 137px;
-	right: 0;
-}
+    #navEquipos{
+	    width: 55px;
+	    height: auto;
+	    position: absolute;
+	    top: 137px;
+	    right: 0;
+    }
 
-#navEquipos ul li {
-	width: 100%;
-	height: 50px;
-}
+    #navEquipos ul li {
+	    width: 100%;
+	    height: 50px;
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-top: 37px;
-}
+    #sectionContenido{
+	    margin-right: 5px;
+    }
 
-#sectionIzquierda, #sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #sectionIzquierda, #sectionDerecha{
+        display: none;
+    }
 
-#sectionContenido{
-	margin-right: 10px;
-}
+    #headerCompartir {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        max-width: 50px;
+        height: 200px;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	height: 37px;
-	position: absolute;
-}
+    #headerCompartir ul li {
+        height: 50px;
+        width: 50px;
+        float: left;
+    }
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
-
-#header, #section, #footer{
-	color: gray !important;
-}
+    #header, #section, #footer{
+	    color: gray !important;
+    }
 
 }
 
 @media all and (min-width: 768px) and (max-width: 799px) {
 
-#headerContenido, #section, #footer{
-	width: 768px;
-}
+    #headerContenido, #section, #footer{
+	    width: 768px;
+    }
 
-#section{
-	height: 1039px;
-	position: relative;
-}
+    #section{
+	    height: 1039px;
+	    position: relative;
+    }
 
-#sectionIzquierda, #sectionContenido{
-	margin-top: 39px;
-}
+    #sectionIzquierda{
+	    width: 113px;
+	    float: right;
+	    margin: 0;
+    }
 
-#sectionIzquierda{
-	width: 108px;
-	float: right;
-	margin-right: 0;
-}
+    #sectionContenido{
+        margin-top: 0;
+	    margin-right: 5px;
+    }
 
-#sectionContenido{
-	margin-right: 10px;
-}
+    #sectionDerecha{
+        display: none;
+    }
 
-#sectionDerecha{
-	width: 100%;
-	height: 39px;
-	position: absolute;
-}
+    #divPeticion .links, #divPeticion .links:hover {
+        font-size: 12px;
+    }
 
-#sectionDerecha h2, #navMasVotado{
-	display: none;
-}
+    #divBusqueda input[type="text"]{
+        width: 62px;
+    }   
 
-#sectionDerecha nav{
-	margin-bottom: 0;
-}
+    #logo {
+        border: none;
+    }
 
-#header, #section, #footer{
-	color: yellow !important;
-}
+    #logo img{
+        display: none;
+    }
+
+    #logoAbajo {
+        left: 0px;
+    }
+
+    #header, #section, #footer{
+	    color: yellow !important;
+    }
 
 }
 
