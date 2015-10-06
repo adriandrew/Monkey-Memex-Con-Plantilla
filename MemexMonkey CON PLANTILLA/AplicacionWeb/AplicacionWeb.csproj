@@ -105,9 +105,7 @@
     <Content Include="Images\aprobado.jpg" />
     <Content Include="Images\arriba.png" />
     <Content Include="Images\Autor\Andrew.jpg" />
-    <Content Include="Images\cargandoGrande.gif" />
-    <Content Include="Images\cargandoGrandeee.gif" />
-    <Content Include="Images\cargandoMediano.gif" />
+    <Content Include="Images\cargando.gif" />
     <Content Include="Images\encabezado.jpg" />
     <Content Include="Images\Equipos\america.png" />
     <Content Include="Images\Equipos\atlante.png" />

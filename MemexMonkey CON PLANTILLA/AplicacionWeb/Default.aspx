@@ -5,10 +5,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
-    <!-- Animacion al cargar pagina, es una carga manual. -->
+<%--    <!-- Animacion al cargar pagina, es una carga manual. -->
     <div id="divCarga">
         <img src="Images/cargando.gif" />
-    </div>
+    </div>--%>
 
     <div id="imagenes" class="default"></div>
 

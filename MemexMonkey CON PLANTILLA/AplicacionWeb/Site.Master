@@ -68,6 +68,10 @@
                     <div id="nombreUsuario">
 				        <p id="nombreUsuarioTexto" runat="server">Hola</p>
 			        </div> <!-- end nombreUsuario -->
+                    <!-- Animacion al cargar pagina, es una carga manual. -->
+                    <div id="divCarga">
+                        <img src="Images/cargando.gif" />
+                    </div>
                     <div id="mostrarLogin" runat="server">
                         <a href="IniciarSesion" id="logoLogin" class ="iframe" onmouseover="InvocarFancybox(790, 140, false, .8)">
 				            <img runat="server" id="imagenStatus" src="Images/estatusFuera.png"/>
